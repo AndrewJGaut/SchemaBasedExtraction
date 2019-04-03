@@ -6,7 +6,12 @@ def getJsonForPerson(person_name):
 '''
 
 
-
+'''
+Preconditions:
+    url is a DBPedia url with a name at the end
+Postcondition:
+    Returns the name in plain English (i.e. without the preceding url and the underscore)
+'''
 def getNameFromUrl(url):
     words = url.split('/')
     name = words[-1]
