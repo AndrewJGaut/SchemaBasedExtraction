@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e593a32-2978-4eb0-87f6-91302b2e26a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/FindAllGenderedPages.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/FindGenderedPages2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/dbpedia_query.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/ParseDBPedia.py" afterPath="$PROJECT_DIR$/Tests/ParseDBPedia.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/tests2.py" afterPath="$PROJECT_DIR$/Tests/tests2.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tests/FindAllGenderedPages.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tests/FindGenderedPages2.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/ParseDBPedia.py" afterPath="$PROJECT_DIR$/DBPedia/ParseDBPedia.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/dbpedia_query.txt" afterPath="$PROJECT_DIR$/DBPedia/dbpedia_query.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,10 +20,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ParseDBPedia.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Tests/ParseDBPedia.py">
+      <file leaf-file-name="ParseDBPedia.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
+            <state relative-caret-position="2145">
               <caret line="143" column="1" lean-forward="false" selection-start-line="143" selection-start-column="1" selection-end-line="143" selection-end-column="1" />
               <folding />
             </state>
@@ -42,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests2.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tests2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/tests2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -52,30 +50,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindAllGenderedPages.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/FindAllGenderedPages.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FindGenderedPages2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/FindGenderedPages2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="9" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="dbpedia_query.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/dbpedia_query.txt">
+        <entry file="file://$PROJECT_DIR$/DBPedia/dbpedia_query.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="65">
               <caret line="8432" column="40" lean-forward="true" selection-start-line="8432" selection-start-column="4" selection-end-line="8432" selection-end-column="40" />
@@ -162,12 +138,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DBPedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DBPedia" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.GetBarackObama">
     <configuration default="false" name="GetBarackObama" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -182,7 +178,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SchemaBasedExtraction" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/ParseDBPedia.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DBPedia/ParseDBPedia.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -402,9 +398,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="691" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -430,7 +426,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Tests/ParseDBPedia.py</url>
+          <url>file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py</url>
           <line>128</line>
         </line-breakpoint>
       </breakpoints>
@@ -439,29 +435,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Tests/dbpedia_query.txt">
+    <entry file="file://$PROJECT_DIR$/DBPedia/dbpedia_query.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
           <caret line="8432" column="40" lean-forward="true" selection-start-line="8432" selection-start-column="4" selection-end-line="8432" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/FindGenderedPages2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="9" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/FindAllGenderedPages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -497,10 +475,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/ParseDBPedia.py">
+    <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
+        <state relative-caret-position="2145">
           <caret line="143" column="1" lean-forward="false" selection-start-line="143" selection-start-column="1" selection-end-line="143" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/FindAllGenderedPages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-106">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/FindGenderedPages2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
