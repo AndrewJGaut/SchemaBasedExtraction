@@ -43,7 +43,7 @@ def formatName(name):
 
 print(formatName("Andrew Gaut"))
 '''
-
+'''
 def getAttributeForPerson(person_name, attribute):
     person_json = requests.get('http://dbpedia.org/data/' + person_name + '.json').json()
     person_data = person_json['http://dbpedia.org/resource/' + person_name]
@@ -108,3 +108,14 @@ print("********")
 print(females)
 
 writeKeysToFiles(males, females)
+'''
+
+def getNameFromUrl(url):
+    words = url.split('/')
+    name = words[-1]
+    if '(' in name:
+        name = name[0:name.rindex('(') - 1]
+    name = name.replace('_', ' ')
+    return name
+
+print(getNameFromUrl('http://dbpedia.org/resource/John_Kemeny_Jr._(film_producer)'))
