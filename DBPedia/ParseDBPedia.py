@@ -43,11 +43,9 @@ def getNameFromUrl(url):
     words = url.split('/')
     name = words[-1]
     if '(' in name:
-        name = name[0:name.rindex('(') - 1] # avoid noisy data
-    names = name.split('_')
-    fname = names[0]
-    lname = names[-1]
-    return fname + " " + lname
+        name = name[0:name.rindex('(') - 1]
+    name = name.replace('_', ' ')
+    return name
 
 '''
 Precondition:
