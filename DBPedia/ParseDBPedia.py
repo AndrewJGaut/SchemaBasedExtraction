@@ -4,7 +4,7 @@ It then outputs a list of the names of these entities to two files
 '''
 
 import requests
-
+import os
 
 
 
@@ -42,7 +42,11 @@ Postcondition:
 def getNameFromUrl(url):
     words = url.split('/')
     name = words[-1]
-    fname, lname = name.split('_')
+    if '(' in name:
+        name = name[0:name.rindex('(') - 1] # avoid noisy data
+    names = name.split('_')
+    fname = names[0]
+    lname = names[-1]
     return fname + " " + lname
 
 '''
@@ -107,11 +111,13 @@ Precondition:
 Postcondition:
     writes these names to files so that we have all males and all females
 '''
-def writeKeysToFiles(males, females):
-    with open('male_names.txt', 'w') as file:
+def writeKeysToFiles(parent_dir, males, females):
+    os.makedirs(parent_dir, exist_ok=True)
+
+    with open(os.path.join(parent_dir, 'male_names.txt'), 'w') as file:
         for name in males:
             file.write(name+'\n')
-    with open('female_names.txt', 'w') as file:
+    with open(os.path.join(parent_dir, 'male_names.txt'), 'w') as file:
         for name in females:
             file.write(name+'\n')
 
@@ -129,7 +135,7 @@ if __name__ == '__main__':
     print(getAttributeForPerson('Britney_Spears', 'gender'))
 
     males, females = getGenderedLists()
-    writeKeysToFiles(males, females)
+    writeKeysToFiles('QueryPeople/', males, females)
 
 
 
