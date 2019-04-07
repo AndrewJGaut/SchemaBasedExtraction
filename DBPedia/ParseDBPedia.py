@@ -10,12 +10,13 @@ import os
 
 '''
 Preconditions:
-    person_name is a valid name for a person WITH ALL SPACES IN THE NAME SEPERATED BY UNDERSCORES
+    person_name is a valid name for a person on Wikipedia
     attribute is a valid wikipedia attribute
 Postcondition:
     returns value for that attribute for that person.
 '''
 def getAttributeForPerson(person_name, attribute):
+    person_name = formatName(person_name)
     person_json = requests.get('http://dbpedia.org/data/' + person_name + '.json').json()
     person_data = person_json['http://dbpedia.org/resource/' + person_name]
     try:
@@ -27,12 +28,17 @@ def getAttributeForPerson(person_name, attribute):
             try:
                 person_attr = person_data['http://dbpedia.org/property/' + attribute][0]['value']
             except:
-                return 'ERROR: could not find attribute'
+                try:
+                    person_attr = person_data['http://www.w3.org/1999/02/22-rdf-syntax-ns#' + attribute][0]['value']
+                except:
+                    try:
+                        person_attr = person_data['http://purl.org/linguistics/gold/' + attribute][0]['value']
+                    except:
+                        return 'ERROR: could not find attribute'
 
     if('/' in person_attr or '_' in person_attr):
         person_attr = getNameFromUrl(person_attr)
     return person_attr
-
 '''
 Preconditions:
     url is a DBPedia url with a name at the end
