@@ -43,8 +43,17 @@ def formatName(name):
 
 print(formatName("Andrew Gaut"))
 '''
-'''
+
+def getNameFromUrl(url):
+    words = url.split('/')
+    name = words[-1]
+    if '(' in name:
+        name = name[0:name.rindex('(') - 1]
+    name = name.replace('_', ' ')
+    return name
+
 def getAttributeForPerson(person_name, attribute):
+    person_name = formatName(person_name)
     person_json = requests.get('http://dbpedia.org/data/' + person_name + '.json').json()
     person_data = person_json['http://dbpedia.org/resource/' + person_name]
     try:
@@ -56,12 +65,19 @@ def getAttributeForPerson(person_name, attribute):
             try:
                 person_attr = person_data['http://dbpedia.org/property/' + attribute][0]['value']
             except:
-                return 'ERROR: could not find attribute'
+                try:
+                    person_attr = person_data['http://www.w3.org/1999/02/22-rdf-syntax-ns#' + attribute][0]['value']
+                except:
+                    try:
+                        person_attr = person_data['http://purl.org/linguistics/gold/' + attribute][0]['value']
+                    except:
+                        return 'ERROR: could not find attribute'
 
     if('/' in person_attr or '_' in person_attr):
         person_attr = getNameFromUrl(person_attr)
     return person_attr
 
+'''
 def formatName(name):
     words = name.split()
     name = ""
@@ -110,12 +126,28 @@ print(females)
 writeKeysToFiles(males, females)
 '''
 
-def getNameFromUrl(url):
-    words = url.split('/')
-    name = words[-1]
-    if '(' in name:
-        name = name[0:name.rindex('(') - 1]
-    name = name.replace('_', ' ')
+def formatName(name):
+    words = name.split()
+    name = ""
+    for i in range(len(words)):
+        name += words[i]
+        if i != len(words) - 1:
+             name += "_"
     return name
 
-print(getNameFromUrl('http://dbpedia.org/resource/John_Kemeny_Jr._(film_producer)'))
+
+def getAttribs(person_name):
+    person_name = formatName(person_name)
+    person_json = requests.get('http://dbpedia.org/data/' + person_name + '.json').json()
+    person_data = person_json['http://dbpedia.org/resource/' + person_name]
+    for attrib in person_data:
+        #print(attrib)
+        print(attrib)
+        '''
+        if 'entity' in attrib:
+            print(attrib)
+        '''
+
+getAttribs('Barack Obama')
+print(getAttributeForPerson('Barack Obama', 'hypernym'))
+print(getAttributeForPerson('Barack Obama', 'isPrimaryTopicOf'))
