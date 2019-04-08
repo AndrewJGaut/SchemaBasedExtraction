@@ -121,7 +121,7 @@ def writeKeysToFiles(parent_dir, males, females):
     with open(os.path.join(parent_dir, 'male_names.txt'), 'w') as file:
         for name in males:
             file.write(name+'\n')
-    with open(os.path.join(parent_dir, 'male_names.txt'), 'w') as file:
+    with open(os.path.join(parent_dir, 'female_names.txt'), 'w') as file:
         for name in females:
             file.write(name+'\n')
 
