@@ -136,6 +136,7 @@ def createDatasetSortByHypernyms(person_file_path, hypernym, attribs, dataset_na
     row_counter = 1
 
     for line in person_file.readlines():
+        print("processing person: " + str(line))
         name = formatName(line.strip())
         curr_person_attribs = list()
         write = True
