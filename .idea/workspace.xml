@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e593a32-2978-4eb0-87f6-91302b2e26a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DBPedia/test_data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/AttributeDatasets/test.xls" afterPath="$PROJECT_DIR$/DBPedia/AttributeDatasets/test.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py" afterPath="$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/test_data.txt" afterPath="$PROJECT_DIR$/DBPedia/test_data.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +22,8 @@
       <file leaf-file-name="ParseDBPedia.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="63" />
+            <state relative-caret-position="-509">
+              <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
               <folding>
                 <element signature="e#190#205#0" expanded="true" />
               </folding>
@@ -61,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateDBPediaDataset.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateDBPediaDataset.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
-              <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="205">
+              <caret line="168" column="85" lean-forward="true" selection-start-line="168" selection-start-column="85" selection-end-line="168" selection-end-column="85" />
               <folding>
                 <element signature="e#61#87#0" expanded="true" />
               </folding>
@@ -76,8 +76,8 @@
       <file leaf-file-name="test_data.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPedia/test_data.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            <state relative-caret-position="45">
+              <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -95,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="male_names.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="male_names.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DBPedia/PersonData_ttl/male_names.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20131">
+            <state relative-caret-position="352275">
               <caret line="24411" column="11" lean-forward="false" selection-start-line="24411" selection-start-column="0" selection-end-line="24411" selection-end-column="11" />
               <folding />
             </state>
@@ -161,8 +161,8 @@
         <option value="$PROJECT_DIR$/Tests/tests2.py" />
         <option value="$PROJECT_DIR$/WIkipediaData/GetArticleText.py" />
         <option value="$PROJECT_DIR$/DBPedia/ParseDBPedia.py" />
-        <option value="$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py" />
         <option value="$PROJECT_DIR$/DBPedia/test_data.txt" />
+        <option value="$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py" />
       </list>
     </option>
   </component>
@@ -585,11 +585,6 @@
           <line>14</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py</url>
-          <line>34</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="8" />
     </breakpoint-manager>
@@ -913,24 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPedia/PersonData_ttl/male_names.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20131">
-          <caret line="24411" column="11" lean-forward="false" selection-start-line="24411" selection-start-column="0" selection-end-line="24411" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="63" />
-          <folding>
-            <element signature="e#190#205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WIkipediaData/GetArticleText.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -943,19 +920,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBPedia/test_data.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        <state relative-caret-position="45">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-509">
+          <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+          <folding>
+            <element signature="e#190#205#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        <state relative-caret-position="205">
+          <caret line="168" column="85" lean-forward="true" selection-start-line="168" selection-start-column="85" selection-end-line="168" selection-end-column="85" />
           <folding>
             <element signature="e#61#87#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/PersonData_ttl/male_names.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352275">
+          <caret line="24411" column="11" lean-forward="false" selection-start-line="24411" selection-start-column="0" selection-end-line="24411" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
