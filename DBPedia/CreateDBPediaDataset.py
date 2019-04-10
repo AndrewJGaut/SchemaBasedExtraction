@@ -119,8 +119,6 @@ Postcondition:
     Creates an Excel spreadsheet with columns:
     PersonName Attribute1 Attribute2 ... AttributeN
     and with all entries filled in
-'''
-'''
 def createDatasetSortByHypernyms(person_file_path, hypernym, attribs, dataset_name):
     # create excel spreadsheet
     dataset = xlwt.Workbook()
@@ -164,9 +162,10 @@ def createDatasetSortByHypernyms(person_file_path, hypernym, attribs, dataset_na
 
 
 if __name__ == '__main__':
-    createDataset("test_data.txt", ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'test')
-    createDatasetSortByHypernym("test_data.txt", 'Politican', ['party', 'religion', 'predecessor'], 'test_h')
-    createDatasetSortByHypernym("test_data.txt", 'Player', ['weight', 'team','position', 'number'], 'test_h2')
+    print('running')
+    createDataset("PersonData_ttl/male_names.txt", ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'test')
+    createDatasetSortByHypernym("PersonData_ttl/male_names.txt", 'Politican', ['party', 'religion', 'predecessor'], 'test_h')
+    createDatasetSortByHypernym("PersonData_ttl/male_names.txt", 'Player', ['weight', 'team','position', 'number'], 'test_h2')
 
 
 
