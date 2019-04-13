@@ -9,6 +9,12 @@ stemmer = LancasterStemmer()
 lemmatizer = WordNetLemmatizer()
 
 
+'''
+Preconditions:
+    sentence is a string
+Postcondition:
+    returns lemmatized and simplified sentence (removes all contractions, sends sentence to lowercase, lemmatizes words)
+'''
 def lemmatize(sentence):
     sentence = contractions.fix(sentence)
     pos_tags = pos_tag(nltk.word_tokenize(sentence))
@@ -38,10 +44,12 @@ def lemmatize(sentence):
 
     return new_sentence
 
-def get_positions(sentence):
-    pos_tags = pos_tag(nltk.word_tokenize(sentence))
-    return pos_tags # returns list [(word, pos_tag), (), ()]
-
+'''
+Preconditions:
+    treebank_tag is a valid POS tag from Penn Treebank: https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html)
+Postconditions:
+    maps tag to a wordnet POS type that nltk's lemmatizer accepts
+'''
 def get_wordnet_pos(treebank_tag):
 
     if treebank_tag.startswith('J'):
@@ -55,6 +63,13 @@ def get_wordnet_pos(treebank_tag):
     else:
         return ''
 
+'''
+Precondition:
+    str1 and str2 are valid strings
+Postcondition:
+    Returns the Jaccard Index of str1 and str2
+    Jaccard Index info: https://towardsdatascience.com/overview-of-text-similarity-metrics-3397c4601f50
+'''
 def get_jaccard_sim(str1, str2):
     str1 = lemmatize(str1)
     str2 = lemmatize(str2)
@@ -65,8 +80,13 @@ def get_jaccard_sim(str1, str2):
     return float(len(c)) / (len(a) + len(b) - len(c))
 
 
-print(lemmatize_nltk("I like apples; but I also like bananas"))
-print(lemmatize_nltk("I'm playing ball, but I sure ain't the GOAT"))
+if __name__ == '__main__':
+    pass
+
+'''
+print(lemmatize("I like apples; but I also like bananas"))
+print(lemmatize("I'm playing ball, but I sure ain't the GOAT"))
 print(lemmatize_nltk("AI is our friend and it has been friendly"))
 print(lemmatize_nltk("AI and humans have always been friendly"))
 print(get_jaccard_sim("AI is our friend and it has been friendly", "AI and humans have always been friendly"))
+'''
