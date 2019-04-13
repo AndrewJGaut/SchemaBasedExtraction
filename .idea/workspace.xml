@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e593a32-2978-4eb0-87f6-91302b2e26a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DBPedia/MappingSentencesToDBPediaData.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/testmetrics.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/AttributeDatasets/Politican_TESSTTTT_H.xls" afterPath="$PROJECT_DIR$/DBPedia/AttributeDatasets/Politican_TESSTTTT_H.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/AttributeDatasets/TESTTT.xls" afterPath="$PROJECT_DIR$/DBPedia/AttributeDatasets/TESTTT.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/MappingSentencesToDBPediaData.py" afterPath="$PROJECT_DIR$/DBPedia/MappingSentencesToDBPediaData.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/Tests/testmetrics.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -58,9 +54,11 @@
       <file leaf-file-name="MappingSentencesToDBPediaData.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DBPedia/MappingSentencesToDBPediaData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="39" lean-forward="false" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="-47">
+              <caret line="69" column="25" lean-forward="false" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,8 +172,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="50" />
-    <option name="y" value="23" />
+    <option name="x" value="86" />
+    <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="691" />
   </component>
@@ -519,7 +517,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="23" width="1280" height="691" extended-state="0" />
+    <frame x="86" y="24" width="1280" height="691" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20492454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -894,7 +892,7 @@
     <entry file="file://$PROJECT_DIR$/Tests/testmetrics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -903,9 +901,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBPedia/MappingSentencesToDBPediaData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="39" lean-forward="false" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="-47">
+          <caret line="69" column="25" lean-forward="false" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
