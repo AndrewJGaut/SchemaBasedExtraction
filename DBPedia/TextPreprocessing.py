@@ -67,7 +67,7 @@ def get_wordnet_pos(treebank_tag):
 Precondition:
     str1 and str2 are valid strings
 Postcondition:
-    Returns the Jaccard Index of str1 and str2
+    Returns the Jaccard ndex of str1 and str2
     Jaccard Index info: https://towardsdatascience.com/overview-of-text-similarity-metrics-3397c4601f50
 '''
 def get_jaccard_sim(str1, str2):

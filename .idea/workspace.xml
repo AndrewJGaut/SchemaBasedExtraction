@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e593a32-2978-4eb0-87f6-91302b2e26a5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/MappingSentencesToDBPediaData.py" afterPath="$PROJECT_DIR$/DBPedia/MappingSentencesToDBPediaData.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DBPedia/ObtainOpenNREData.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/DBPedia/MappingSentencesToDBPediaData.py" afterPath="$PROJECT_DIR$/DBPedia/TextPreprocessing.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/AttributeDatasets/test.xls" afterPath="$PROJECT_DIR$/DBPedia/AttributeDatasets/test.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +23,8 @@
       <file leaf-file-name="ParseDBPedia.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+            <state relative-caret-position="181">
+              <caret line="64" column="14" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="14" />
               <folding>
                 <element signature="e#190#205#0" expanded="true" />
               </folding>
@@ -43,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/Tests/testmetrics.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="43" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -51,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MappingSentencesToDBPediaData.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DBPedia/MappingSentencesToDBPediaData.py">
+      <file leaf-file-name="TextPreprocessing.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBPedia/TextPreprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-47">
-              <caret line="69" column="25" lean-forward="false" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+            <state relative-caret-position="1005">
+              <caret line="71" column="3" lean-forward="false" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -66,7 +69,7 @@
       <file leaf-file-name="data.py" pinned="false" current-in-tab="false">
         <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/nltk/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="21570">
               <caret line="1454" column="0" lean-forward="false" selection-start-line="1454" selection-start-column="0" selection-end-line="1454" selection-end-column="0" />
               <folding />
             </state>
@@ -86,8 +89,8 @@
       <file leaf-file-name="CreateDBPediaDataset.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="26" />
               <folding>
                 <element signature="e#61#87#0" expanded="true" />
               </folding>
@@ -95,21 +98,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_data.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBPedia/test_data.txt">
+      <file leaf-file-name="GetArticleText.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WIkipediaData/GetArticleText.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-              <folding />
+            <state relative-caret-position="720">
+              <caret line="48" column="46" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetArticleText.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WIkipediaData/GetArticleText.py">
+      <file leaf-file-name="ObtainOpenNREData.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBPedia/ObtainOpenNREData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="48" column="46" lean-forward="false" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+            <state relative-caret-position="1142">
+              <caret line="158" column="37" lean-forward="false" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -145,6 +150,7 @@
       <find>writeKeys</find>
       <find>Kobe Bryant</find>
       <find>Joe P. Mar</find>
+      <find>formatName</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,12 +174,12 @@
         <option value="$PROJECT_DIR$/Tests/tests2.py" />
         <option value="$PROJECT_DIR$/Tests/testmetrics.py" />
         <option value="$PROJECT_DIR$/DBPedia/MappingSentencesToDBPediaData.py" />
+        <option value="$PROJECT_DIR$/DBPedia/ObtainOpenNREData.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="86" />
-    <option name="y" value="24" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="691" />
   </component>
@@ -192,6 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,6 +209,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="SchemaBasedExtraction" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WIkipediaData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GetArticleText.py" />
+              <option name="myItemType" value="com.jetbrains.python.projectView.PyFileNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -250,10 +275,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DBPedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AttributeDatasets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,7 +308,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.testmetrics">
+  <component name="RunManager" selected="Python.ObtainOpenNREData">
     <configuration default="false" name="tests2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -301,23 +343,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="GetArticleText" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WIkipediaData" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SchemaBasedExtraction" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WIkipediaData/GetArticleText.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="CreateDBPediaDataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -348,6 +373,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SchemaBasedExtraction" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/testmetrics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ObtainOpenNREData" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DBPedia" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SchemaBasedExtraction" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DBPedia/ObtainOpenNREData.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -489,17 +531,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.tests2" />
       <item index="1" class="java.lang.String" itemvalue="Python.ParsePersondata" />
-      <item index="2" class="java.lang.String" itemvalue="Python.GetArticleText" />
-      <item index="3" class="java.lang.String" itemvalue="Python.CreateDBPediaDataset" />
-      <item index="4" class="java.lang.String" itemvalue="Python.testmetrics" />
+      <item index="2" class="java.lang.String" itemvalue="Python.CreateDBPediaDataset" />
+      <item index="3" class="java.lang.String" itemvalue="Python.testmetrics" />
+      <item index="4" class="java.lang.String" itemvalue="Python.ObtainOpenNREData" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.testmetrics" />
-        <item index="1" class="java.lang.String" itemvalue="Python.CreateDBPediaDataset" />
-        <item index="2" class="java.lang.String" itemvalue="Python.tests2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.ParsePersondata" />
-        <item index="4" class="java.lang.String" itemvalue="Python.GetArticleText" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ObtainOpenNREData" />
+        <item index="1" class="java.lang.String" itemvalue="Python.testmetrics" />
+        <item index="2" class="java.lang.String" itemvalue="Python.CreateDBPediaDataset" />
+        <item index="3" class="java.lang.String" itemvalue="Python.tests2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.ParsePersondata" />
       </list>
     </recent_temporary>
   </component>
@@ -517,15 +559,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="86" y="24" width="1280" height="691" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="691" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20492454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20413026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40567613" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40567613" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -555,19 +597,11 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DBPedia/PersonData_ttl/female_names.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3112215">
-          <caret line="207481" column="10" lean-forward="false" selection-start-line="207481" selection-start-column="10" selection-end-line="207481" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBPedia/dbpedia_query.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126480">
@@ -815,7 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3112215">
           <caret line="207481" column="10" lean-forward="false" selection-start-line="207481" selection-start-column="10" selection-end-line="207481" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -832,36 +865,6 @@
         <state relative-caret-position="34020">
           <caret line="2268" column="0" lean-forward="false" selection-start-line="2268" selection-start-column="0" selection-end-line="2268" selection-end-column="15" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-          <folding>
-            <element signature="e#190#205#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WIkipediaData/GetArticleText.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="48" column="46" lean-forward="false" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-          <folding>
-            <element signature="e#61#87#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,7 +886,7 @@
     </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/nltk/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
+        <state relative-caret-position="21570">
           <caret line="1454" column="0" lean-forward="false" selection-start-line="1454" selection-start-column="0" selection-end-line="1454" selection-end-column="0" />
           <folding />
         </state>
@@ -892,19 +895,59 @@
     <entry file="file://$PROJECT_DIR$/Tests/testmetrics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="39" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="43" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPedia/MappingSentencesToDBPediaData.py">
+    <entry file="file://$PROJECT_DIR$/WIkipediaData/GetArticleText.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="69" column="25" lean-forward="false" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+        <state relative-caret-position="720">
+          <caret line="48" column="46" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/TextPreprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="71" column="3" lean-forward="false" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="26" />
+          <folding>
+            <element signature="e#61#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="64" column="14" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="14" />
+          <folding>
+            <element signature="e#190#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/ObtainOpenNREData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1142">
+          <caret line="158" column="37" lean-forward="false" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
