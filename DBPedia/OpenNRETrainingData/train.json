@@ -1,0 +1,50 @@
+[
+	{
+		'sentence': '[ 59 ] barack obama have say that the couple have an `` opposite attract '' scenario in their initial interest in each other , since michelle have stability from hertwo-parent home while he be `` adventurous '' . ',
+		'head': {'word': ' barack', 'id': 'm.c0071'},
+		'tail': {'word': ' michelle', 'id': 'm.sbs7n'},
+		'relation': 'spouse'
+	},
+	{
+		'sentence': 'on may31,2008 , barack and michelle obama announce that they have withdraw their membership in trinity united church of christ say : `` our relation with trinity have be strain by the divisive statement of reverend wright , which sharply conflict with our own view. `` [ 73 ] the obama family attend several different protestant church after move to washingtond.c . ',
+		'head': {'word': ' barack', 'id': 'm.c0071'},
+		'tail': {'word': ' michelle', 'id': 'm.sbs7n'},
+		'relation': 'spouse'
+	},
+	{
+		'sentence': 'at the49th african methodist episcopal church 's general conference , michelle obama encourage the attendee to advocate for political awareness , say , `` to anyone who say that church be no place to talk about these issue , you tell them there be no place well– no place well , because ultimately , these be not just political issue– they be moral issue , they be issue that have to do with human dignity and human potential , and the future we want for our kid and our grandkids. `` [ 74 ] following law school , obama become an associate at the chicago office of the law firm sidley & austin , where she meet her future husband barack . ',
+		'head': {'word': ' barack', 'id': 'm.c0071'},
+		'tail': {'word': ' michelle', 'id': 'm.sbs7n'},
+		'relation': 'spouse'
+	},
+	{
+		'sentence': '[ 175 ] on may9,2012 , barack and michelle obama come out publicly in favor ofsame-sex marriage . ',
+		'head': {'word': ' barack', 'id': 'm.c0071'},
+		'tail': {'word': ' michelle', 'id': 'm.sbs7n'},
+		'relation': 'spouse'
+	},
+	{
+		'sentence': 'senior white house official say that michelle obama and senior adviser valerie jarrett have be the two most consistent advocate forsame-sex marriage in barack obama 's life . ',
+		'head': {'word': ' barack', 'id': 'm.c0071'},
+		'tail': {'word': ' michelle', 'id': 'm.sbs7n'},
+		'relation': 'spouse'
+	},
+	{
+		'sentence': '[ 176 ] michelle say '' this be an important issue for million of americans , and for barack and me , it really come down to the value of fairness and equality we want to pass down to our girl . ',
+		'head': {'word': ' barack', 'id': 'm.c0071'},
+		'tail': {'word': ' michelle', 'id': 'm.sbs7n'},
+		'relation': 'spouse'
+	},
+	{
+		'sentence': 'it be as simple as that. `` [ 177 ] at the2012 dnc michelle say , `` barack know the american dream because he be live it ... and he want everyone in this country to have that same opportunity , no matter who we be , or where we be from , or what we look like , or who we love. `` [ 178 ] in may2009 , obama deliver the commencement speech at a graduating ceremony at uc merced in merced county , california , the address be praise afterward by student who find her relatable . ',
+		'head': {'word': ' barack', 'id': 'm.c0071'},
+		'tail': {'word': ' michelle', 'id': 'm.sbs7n'},
+		'relation': 'spouse'
+	},
+	{
+		'sentence': '[ 285 ] [ 286 ] despite speculation that she would be run for president in2020 , barack obama state during a campaign rally in nevada that michelle would not be run for president in2020 . ',
+		'head': {'word': ' barack', 'id': 'm.c0071'},
+		'tail': {'word': ' michelle', 'id': 'm.sbs7n'},
+		'relation': 'spouse'
+	}
+]

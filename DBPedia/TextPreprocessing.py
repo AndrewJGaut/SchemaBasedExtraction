@@ -81,7 +81,7 @@ def get_jaccard_sim(str1, str2):
 
 
 if __name__ == '__main__':
-    pass
+    print(lemmatize("I'm playing ball because I like apples"))
 
 '''
 print(lemmatize("I like apples; but I also like bananas"))
