@@ -10,6 +10,7 @@ from ParseDBPedia import *
 from random import randint
 import string
 import xlrd
+from collections import defaultdict
 
 
 '''
@@ -27,50 +28,10 @@ def getArticleForPerson(name, browser):
     for p_tag in p_tags:
         curr_article_text += p_tag.text
 
-    return curr_article_text
+    return lemmatize(curr_article_text)
 
-'''
-Precondition:
-    names is a list of names of entities with Wikipedia articles
-Postcondition:
-    Returns a LEMMATIZED list of articles for those people
-'''
-def getArticlesForPeople(names):
-    options = Options()
-    options.add_argument("--headless")
-    browser = webdriver.Chrome(chrome_options=options)
-    articles = list()
 
-    for name in names:
-        try:
-            article = getArticleForPerson(name, browser)
-            articles.append(lemmatize(article))
-        except:
-            print("NO ARTICLE FOUND FOR " + str(name))
 
-    return articles
-
-'''
-Precondition:
-    article is e1's WIkipedia article that is ALREADY LEMMATIZED
-    relation is the relation between the two entities
-    e1 is the entity from whose Wikipedia article we are taking sentences
-    e2 is the entity that relates to e1 in the relation on DBPedia
-    (e.g. Barack marriedTo Michelle --> relation:marriedTo, e1:Barack, e2:Michelle)
-Postcondition:
-    returns a list of tuples representing relations
-'''
-def getRelationTuples(article, relation, e1, e2):
-    relations = list()
-    e1 = lemmatize(e1)
-    e2 = lemmatize(e2)
-    for sentence in nltk.sent_tokenize(article):
-        if e1 in sentence and e2 in sentence:
-            # then we know we want this relation tuple
-            sentence = opennreFormatSentence(sentence)
-            relations.append((relation, e1, e2, sentence))
-
-    return relations
 
 '''
 Precondition:
@@ -178,7 +139,12 @@ def createOpenNREFiles(relations):
     rel_to_id.write(relation_to_id_mapping_string)
     rel_to_id.close()
 
-
+'''
+Precondition:
+    vec_file is a word vector file of the form word num1 num2 ... numn \n word2 num1 ...etc
+Postcondition:
+    formats vector file so it works for OpenNRE
+'''
 def formatWordVectorFile(vec_file):
     formatted_word_vecs_string = "[\n"
 
@@ -214,37 +180,63 @@ def readDataFromDBPediaDataset(dataset_path):
     for i in range(1, dataset_sheet.ncols):
         relation_types.append(dataset_sheet.cell_value(0, i))
 
-    relations = list()
+    e1_2_relation = defaultdict(list) # map entity who the article is about to list of relation tuples
     for i in range(1, dataset_sheet.nrows):
         e1 = dataset_sheet.cell_value(i,0)
-        for j in range(0, dataset_sheet.ncols):
-            curr_relation_type = relation_types[j]
+        for j in range(1, dataset_sheet.ncols):
+            curr_relation_type = relation_types[j-1]
             e2 = dataset_sheet.cell_value(i, j)
-            relations.append((curr_relation_type, e1, e2))
+            relation = (curr_relation_type, e1, e2)
+            e1_2_relation[e1].append(relation)
+
+    return e1_2_relation
+
+
+'''
+Precondition:
+    e1_2_relation is a dict mapping entities to relations found from THEIR DBPedia page! e.g. if I find a relation on Barack Obama's DBPedia page, then e1_2_rel[Barack Obama] should give a list of relation tuples
+    browser is a selenium browser used for web scarping
+Postcondition:
+    returns a list of full relation tuples (i.e. relation tuples that contain the sentence that gives that relation)
+    Relation tuples are of the form: (relation, entity1, entity2, sentence)
+'''
+def getFullRelationTuples(e1_2_relation, browser):
+    relations = list()
+
+    for e1, relation_list in e1_2_relation.items():
+        article = getArticleForPerson(e1, browser)
+
+        for relation in relation_list:
+            try:
+                e1 = lemmatize(relation[1])
+                e2 = lemmatize(relation[2])
+                #e1 = relation[1]
+                #e2 = relation[2]
+
+                for sentence in nltk.sent_tokenize(article):
+                    if(e2 in sentence): #we ONLY check if e2 in sentence since this Obama's article!
+                        sentence = opennreFormatSentence(sentence)
+                        relations.append((relation[0], e1, e2, sentence))
+            except:
+                print("BAD RELATION")
 
     return relations
 
 
 
-
-
-
 if __name__ == '__main__':
-    '''
-    names = ['Michelle Obama', 'Kobe Bryant', 'Winston Churchill']
-    articles = getArticlesForPeople(names)
-    print(articles)
-    '''
-    relations_with_no_sentences = readDataFromDBPediaDataset('')
-    names = list()
-    for relation in relations_with_no_sentences:
-        names.append(relation[0])
-    articles = getArticlesForPeople(names)
-    relations = list()
-    for article in articles:
-        relations.append(getRelationTuples(articles, , 'Barack', 'Michelle'))
-    relations = getRelationTuples(articles[0], 'spouse', 'Barack', 'Michelle')
-    relations.append(getRelationTuples(articles[1], 'nationality', 'Kobe', 'American'))
+    # define selenium browser for scraping
+    options = Options()
+    options.add_argument("--headless")
+    browser = webdriver.Chrome(chrome_options=options)
+
+    # get entities and abridged relations from dataset
+    entity1_mapped_to_relation_tuple = readDataFromDBPediaDataset('AttributeDatasets/Politican_test_h.xls')
+
+    # get full relations from wiki articles
+    relations = getFullRelationTuples(entity1_mapped_to_relation_tuple, browser)
+
+    # create training files for OpenNRE
     createOpenNREFiles(relations)
 
 
