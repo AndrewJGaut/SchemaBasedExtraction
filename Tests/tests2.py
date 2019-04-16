@@ -148,6 +148,45 @@ def getAttribs(person_name):
             print(attrib)
         '''
 
-getAttribs('Barack Obama')
-print(getAttributeForPerson('Barack Obama', 'hypernym'))
-print(getAttributeForPerson('Barack Obama', 'isPrimaryTopicOf'))
+#getAttribs('Barack Obama')
+#print(getAttributeForPerson('Barack Obama', 'hypernym'))
+#print(getAttributeForPerson('Barack Obama', 'isPrimaryTopicOf'))
+
+import nltk
+
+def opennreFormatSentence(sentence):
+    new_sentence = ""
+    for word in nltk.word_tokenize(sentence):
+        new_sentence += word.lower() + " "
+
+    return new_sentence
+
+print(opennreFormatSentence("I like apples; but I also like you."))
+
+print(opennreFormatSentence("Dr. Johnson, reporting for duty; at your service, SIr."))
+print(opennreFormatSentence("Mr. Johnson, reporting for duty; at your service, SIr."))
+print(opennreFormatSentence("facebook.com is a cool website?"))
+
+
+'''CHANGE SO THIS DONE ONE PASS THROUGH EACH ARTICLE'''
+'''
+Precondition:
+    article is e1's WIkipedia article that is ALREADY LEMMATIZED
+    relation is the relation between the two entities
+    e1 is the entity from whose Wikipedia article we are taking sentences
+    e2 is the entity that relates to e1 in the relation on DBPedia
+    (e.g. Barack marriedTo Michelle --> relation:marriedTo, e1:Barack, e2:Michelle)
+Postcondition:
+    returns a list of tuples representing relations
+'''
+def getRelationTuples(article, relation, e1, e2):
+    relations = list()
+    e1 = lemmatize(e1)
+    e2 = lemmatize(e2)
+    for sentence in nltk.sent_tokenize(article):
+        if e1 in sentence and e2 in sentence:
+            # then we know we want this relation tuple
+            sentence = opennreFormatSentence(sentence)
+            relations.append((relation, e1, e2, sentence))
+
+    return relations

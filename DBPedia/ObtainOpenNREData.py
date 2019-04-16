@@ -9,6 +9,7 @@ from TextPreprocessing import *
 from ParseDBPedia import *
 from random import randint
 import string
+import xlrd
 
 
 '''
@@ -198,6 +199,35 @@ def formatWordVectorFile(vec_file):
     out_file.write(formatted_word_vecs_string)
 
 
+'''
+Precondition:
+    dataset_path is a path to an Excel dataset with sturctured data from a KB
+Postcondition:
+    returns a list of tuples (relation_type, entity1, entity2) from that dataset
+'''
+def readDataFromDBPediaDataset(dataset_path):
+    dataset = xlrd.open_workbook(dataset_path)
+    dataset_sheet = dataset.sheet_by_index(0)
+
+    # get the types of relations
+    relation_types = list()
+    for i in range(1, dataset_sheet.ncols):
+        relation_types.append(dataset_sheet.cell_value(0, i))
+
+    relations = list()
+    for i in range(1, dataset_sheet.nrows):
+        e1 = dataset_sheet.cell_value(i,0)
+        for j in range(0, dataset_sheet.ncols):
+            curr_relation_type = relation_types[j]
+            e2 = dataset_sheet.cell_value(i, j)
+            relations.append((curr_relation_type, e1, e2))
+
+    return relations
+
+
+
+
+
 
 if __name__ == '__main__':
     '''
@@ -205,7 +235,14 @@ if __name__ == '__main__':
     articles = getArticlesForPeople(names)
     print(articles)
     '''
-    articles = getArticlesForPeople(['Michelle Obama', 'Kobe Bryant'])
+    relations_with_no_sentences = readDataFromDBPediaDataset('')
+    names = list()
+    for relation in relations_with_no_sentences:
+        names.append(relation[0])
+    articles = getArticlesForPeople(names)
+    relations = list()
+    for article in articles:
+        relations.append(getRelationTuples(articles, , 'Barack', 'Michelle'))
     relations = getRelationTuples(articles[0], 'spouse', 'Barack', 'Michelle')
     relations.append(getRelationTuples(articles[1], 'nationality', 'Kobe', 'American'))
     createOpenNREFiles(relations)
