@@ -39,6 +39,8 @@ def getAttributeForPerson(person_name, attribute):
 
         if('/' in person_attr or '_' in person_attr):
             person_attr = getNameFromUrl(person_attr)
+        if(attribute == "birthDate"):
+            person_attr = formatDate(person_attr)
         return person_attr
     except:
         return 'ERROR: could not find attribute'
@@ -70,6 +72,20 @@ def formatName(name):
         if i != len(words) - 1:
              name += "_"
     return name
+
+'''
+Precondition:
+    date is a date from DBPedia in DBPedia format (year-month-day)
+Postcondition:
+    returns date in the format month day, year
+'''
+def formatDate(date):
+    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+                 'August', 'September', 'October', 'November', 'December']
+
+    year, month, day = date.split('-')
+
+    return str(months[int(month) - 1]) + " " + str(day) + ", " + str(year)
 
 '''
 Postcondition:
@@ -110,6 +126,23 @@ def getGenderedLists():
 
     return males, females
 
+'''
+Precondition:
+    name is the name of a person with a Wikipedia article
+    browser is a Chrome, Selenium webdriver
+Postcondition:
+    Returns the full text of that person's Wikipedia article
+'''
+def getArticleForPerson(name, browser):
+    browser.get('https://en.wikipedia.org/wiki/' + formatName(name))
+    p_tags = browser.find_elements_by_tag_name('p')
+
+    curr_article_text = ""
+    for p_tag in p_tags:
+        curr_article_text += p_tag.text
+
+    return curr_article_text
+
 
 '''
 Precondition:
@@ -143,6 +176,7 @@ if __name__ == '__main__':
 
     males, females = getGenderedLists()
     writeKeysToFiles('QueryPeople/', males, females)
+
 
 
 
