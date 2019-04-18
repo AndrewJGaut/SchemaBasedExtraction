@@ -28,7 +28,7 @@ def getArticleForPerson(name, browser):
     for p_tag in p_tags:
         curr_article_text += p_tag.text
 
-    return lemmatize(curr_article_text)
+    return curr_article_text
 
 
 
