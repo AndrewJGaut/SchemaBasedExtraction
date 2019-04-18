@@ -110,6 +110,23 @@ def getGenderedLists():
 
     return males, females
 
+'''
+Precondition:
+    name is the name of a person with a Wikipedia article
+    browser is a Chrome, Selenium webdriver
+Postcondition:
+    Returns the full text of that person's Wikipedia article
+'''
+def getArticleForPerson(name, browser):
+    browser.get('https://en.wikipedia.org/wiki/' + formatName(name))
+    p_tags = browser.find_elements_by_tag_name('p')
+
+    curr_article_text = ""
+    for p_tag in p_tags:
+        curr_article_text += p_tag.text
+
+    return curr_article_text
+
 
 '''
 Precondition:
