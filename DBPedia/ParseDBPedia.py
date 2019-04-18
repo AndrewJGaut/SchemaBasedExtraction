@@ -87,6 +87,22 @@ def formatDate(date):
 
     return str(months[int(month) - 1]) + " " + str(day) + ", " + str(year)
 
+
+'''
+Precondition:
+    date is a date formatted as month day, year
+Postcondition:
+    returns date in other wikipedia format of day month year
+'''
+def formatDate2(date):
+    #date = formatDate(date)
+
+    month, day, year = date.split(' ')
+    day = day[0:-1]
+
+    return str(day) + " " + str(month) + " " + str(year)
+
+
 '''
 Postcondition:
     returns a sorted list (which is noisy) of names gotten from DBPedia using a SPARQL query
