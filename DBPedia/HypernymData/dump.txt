@@ -1,5 +1,0 @@
-Actor, male: 2, female: 0, ratio: 1
-Businessman, male: 1, female: 0, ratio: 1
-ERROR: could not find attribute, male: 2, female: 0, ratio: 1
-Player, male: 2, female: 0, ratio: 1
-Politician, male: 1, female: 0, ratio: 1
