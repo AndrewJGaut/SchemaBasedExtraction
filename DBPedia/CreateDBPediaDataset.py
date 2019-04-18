@@ -9,6 +9,8 @@ from collections import defaultdict
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+import sys
+
 
 
 '''
@@ -63,24 +65,28 @@ def createDataset(person_file_path, attribs, dataset_name, browser):
             for i in range(0, len(attribs)):
                 # attribute_vals.append((dataset_sheet.cell(0, i), (dataset_sheet.cell(row_counter, i))))
                 attribute_vals.append((attribs[i], curr_person_attribs[i]))
-            attribs_2_sentences = getSentences(browser, name, attribute_vals)
-            max_row = 0
-            temp_row_counter = row_counter + 1
-            for attrib in attribs_2_sentences:
-                col = attribs.index(attrib) + 1
-                for sentence in attribs_2_sentences[attrib]:
-                    dataset_sheet.write(temp_row_counter, col, sentence)
-                    temp_row_counter += 1
-                if temp_row_counter > max_row:
-                    max_row = temp_row_counter
+            try:
+                attribs_2_sentences = getSentences(browser, name, attribute_vals)
+                max_row = 0
                 temp_row_counter = row_counter + 1
+                for attrib in attribs_2_sentences:
+                    col = attribs.index(attrib) + 1
+                    for sentence in attribs_2_sentences[attrib]:
+                        dataset_sheet.write(temp_row_counter, col, sentence)
+                        temp_row_counter += 1
+                    if temp_row_counter > max_row:
+                        max_row = temp_row_counter
+                    temp_row_counter = row_counter + 1
 
-            row_counter = max_row
+                row_counter = max_row
+            except:
+                print("ERROR getting sentences for: " + str(name))
+                continue
 
         # save intermittently
         if(row_counter % 200 == 0):
-            dataset.save('AttributeDatasets/' + dataset_name + ".xls")
-    dataset.save('AttributeDatasets/' + dataset_name + ".xls")
+            dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
+        dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
 
 
 '''
@@ -135,26 +141,30 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
             for i in range(0, len(attribs)):
                 #attribute_vals.append((dataset_sheet.cell(0, i), (dataset_sheet.cell(row_counter, i))))
                 attribute_vals.append((attribs[i], curr_person_attribs[i]))
-            attribs_2_sentences = getSentences(browser, name, attribute_vals)
-            max_row = 0
-            temp_row_counter = row_counter + 1
-            for attrib in attribs_2_sentences:
-                col = attribs.index(attrib) + 1
-                for sentence in attribs_2_sentences[attrib]:
-                    dataset_sheet.write(temp_row_counter, col, sentence)
-                    temp_row_counter += 1
-                if temp_row_counter > max_row:
-                    max_row = temp_row_counter
+            try:
+                attribs_2_sentences = getSentences(browser, name, attribute_vals)
+                max_row = 0
                 temp_row_counter = row_counter + 1
+                for attrib in attribs_2_sentences:
+                    col = attribs.index(attrib) + 1
+                    for sentence in attribs_2_sentences[attrib]:
+                        dataset_sheet.write(temp_row_counter, col, sentence)
+                        temp_row_counter += 1
+                    if temp_row_counter > max_row:
+                        max_row = temp_row_counter
+                    temp_row_counter = row_counter + 1
 
-            row_counter = max_row
+                row_counter = max_row
+            except:
+                print("ERROR getting sentences for: " + str(name))
+                continue
 
 
 
             # save intermittently
             if (row_counter % 200 == 0):
-                dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + ".xls")
-    dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + ".xls")
+                dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + "_" + person_file_path + ".xls")
+        dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + "_" + person_file_path + ".xls")
 
 
 
@@ -240,13 +250,11 @@ if __name__ == '__main__':
     options = Options()
     options.add_argument("--headless")
     browser = webdriver.Chrome(chrome_options=options)
-    #createDatasetSortByHypernym("test_data.txt", 'Politican', ['party', 'religion', 'predecessor'], 'sent_test_h', browser)
-    createDataset('test_data.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
+    createDataset(sys.argv[1], ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
     #createDataset("PersonData_ttl/male_names.txt", ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'test')
     #createDatasetSortByHypernym("PersonData_ttl/male_names.txt", 'Politican', ['party', 'religion', 'predecessor'], 'test_h')
     #createDatasetSortByHypernym("PersonData_ttl/male_names.txt", 'Player', ['weight', 'team','position', 'number'], 'test_h2')
-
-
+    print(sys.argv[1])
 
     '''test'''
 
