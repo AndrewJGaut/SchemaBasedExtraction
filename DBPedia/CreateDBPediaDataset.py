@@ -50,9 +50,9 @@ def createDataset(person_file_path, attribs, dataset_name):
                 dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
             row_counter += 1
 
-        # just testing it out for now
-        if(row_counter >= 200):
-            break
+        # save intermittently
+        if(row_counter % 200 == 0):
+            dataset.save('AttributeDatasets/' + dataset_name + ".xls")
     dataset.save('AttributeDatasets/' + dataset_name + ".xls")
 
 
@@ -102,9 +102,9 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
                 dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
             row_counter += 1
 
-        # just testing it out for now
-        if(row_counter >= 200):
-            break
+            # save intermittently
+            if (row_counter % 200 == 0):
+                dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + ".xls")
     dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + ".xls")
 
 
