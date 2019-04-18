@@ -112,10 +112,10 @@ def createOpenNREFiles(relations):
 
             # add to the training_json string
             training_json_string += "\t{" + "\n"
-            training_json_string += "\t\t\'sentence\': " + "\'" + str(relation[3]) + "\',\n"
-            training_json_string += "\t\t\'head\': {\'word\': " + "\'" + str(relation[1]) + "\', \'id\': \'" + id_e1 + "\'},\n"
-            training_json_string += "\t\t\'tail\': {\'word\': " + "\'" + str(relation[2]) + "\', \'id\': \'" + id_e2 + "\'},\n"
-            training_json_string += "\t\t\'relation\': \'" + relation[0] + "\'\n"
+            training_json_string += "\t\t\"sentence\": " + "\"" + str(relation[3]) + "\",\n"
+            training_json_string += "\t\t\"head\": {\"word\": " + "\"" + str(relation[1]) + "\", \"id\": \"" + id_e1 + "\"},\n"
+            training_json_string += "\t\t\"tail\": {\"word\": " + "\"" + str(relation[2]) + "\", \"id\": \"" + id_e2 + "\"},\n"
+            training_json_string += "\t\t\"relation\": \"" + relation[0] + "\"\n"
             training_json_string += "\t},\n"
         except:
             print("BAD RELATION")
@@ -124,10 +124,10 @@ def createOpenNREFiles(relations):
     training_json_string += "\n]"
 
     # get relation to id mapping data
-    relation_to_id_mapping_string = "{\n\t\'NA\': 0,\n"
+    relation_to_id_mapping_string = "{\n\t\"NA\": 0,\n"
     rel_counter = 1
     for rel in unique_relations:
-        relation_to_id_mapping_string += "\t\'" + str(rel) + "\': " + str(rel_counter) + ",\n"
+        relation_to_id_mapping_string += "\t\"" + str(rel) + "\": " + str(rel_counter) + ",\n"
         rel_counter += 1
     relation_to_id_mapping_string = relation_to_id_mapping_string[0:-2]
     relation_to_id_mapping_string += "\n}"
@@ -152,10 +152,10 @@ def formatWordVectorFile(vec_file):
     for line in file.readlines():
         items = line.split()
         print(items[0])
-        formatted_word_vecs_string += "\t{\'word\': \'" + str(items[0]) + "\',\'vec\': ["
+        formatted_word_vecs_string += "\t{\"word\": \"" + str(items[0]) + "\",\"vec\": ["
         for i in range(1, len(items)):
             formatted_word_vecs_string += str(items[i]) + ", "
-        formatted_word_vecs_string = formatted_word_vecs_string[0:-1]
+        formatted_word_vecs_string = formatted_word_vecs_string[0:-2]
         formatted_word_vecs_string += "]},\n"
 
     formatted_word_vecs_string = formatted_word_vecs_string[0:-2]
@@ -199,6 +199,7 @@ Precondition:
 Postcondition:
     returns a list of full relation tuples (i.e. relation tuples that contain the sentence that gives that relation)
     Relation tuples are of the form: (relation, entity1, entity2, sentence)
+NOTE!!!: make more efficient by only looping through article once for each e1 (i.e. look for all e2s in each sentence and map e2 to its relation)
 '''
 def getFullRelationTuples(e1_2_relation, browser):
     relations = list()
@@ -237,8 +238,8 @@ if __name__ == '__main__':
     relations = getFullRelationTuples(entity1_mapped_to_relation_tuple, browser)
 
     # create training files for OpenNRE
-    createOpenNREFiles(relations)
+    #createOpenNREFiles(relations)
 
 
     #createOpenNREFiles([('spouse', 'Barack', 'Michelle', 'Barack is Michelle\'s husband'), ('father', 'John', 'Smitty', 'John fathered Smitty in 1852.'), ('father', 'Barack', 'Jeff', 'Barack fathered Jeff in 1852.')])
-    #formatWordVectorFile('vectors.txt')
+   # formatWordVectorFile('vectors.txt')
