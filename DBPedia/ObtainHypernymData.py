@@ -44,7 +44,7 @@ if __name__ == "__main__":
     #female_sort = open('HypernymData/female_dominated.txt', 'w')
     dump = open('HypernymData/dump.txt','w')
 
-    '''
+
     with open('PersonData_ttl/female_names.txt') as file:
         for line in file.readlines():
             name = line.strip()
@@ -56,10 +56,10 @@ if __name__ == "__main__":
             else:
                 hypernym_counts[hypernym] = GenderCounts(hypernym)
                 hypernym_counts[hypernym].incr_female_count()
-    '''
 
-    #with open('PersonData_ttl/male_names.txt') as file:
-    with open('test_data.txt') as file:
+
+    with open('PersonData_ttl/male_names.txt') as file:
+    #with open('test_data.txt') as file:
         for line in file.readlines():
             name = line.strip()
             print(name)
