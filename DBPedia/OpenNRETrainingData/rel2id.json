@@ -1,6 +1,6 @@
 {
-	'NA': 0,
-	'religion': 1,
-	'predecessor': 2,
-	'party': 3
+	"NA": 0,
+	"party": 1,
+	"predecessor": 2,
+	"religion": 3
 }
