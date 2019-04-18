@@ -39,6 +39,8 @@ def getAttributeForPerson(person_name, attribute):
 
         if('/' in person_attr or '_' in person_attr):
             person_attr = getNameFromUrl(person_attr)
+        if(attribute == "birthDate"):
+            person_attr = formatDate(person_attr)
         return person_attr
     except:
         return 'ERROR: could not find attribute'
@@ -70,6 +72,20 @@ def formatName(name):
         if i != len(words) - 1:
              name += "_"
     return name
+
+'''
+Precondition:
+    date is a date from DBPedia in DBPedia format (year-month-day)
+Postcondition:
+    returns date in the format month day, year
+'''
+def formatDate(date):
+    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+                 'August', 'September', 'October', 'November', 'December']
+
+    year, month, day = date.split('-')
+
+    return str(months[int(month) - 1]) + " " + str(day) + ", " + str(year)
 
 '''
 Postcondition:
@@ -160,6 +176,7 @@ if __name__ == '__main__':
 
     males, females = getGenderedLists()
     writeKeysToFiles('QueryPeople/', males, females)
+
 
 
 

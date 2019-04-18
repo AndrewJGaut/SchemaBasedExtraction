@@ -161,11 +161,13 @@ def opennreFormatSentence(sentence):
 
     return new_sentence
 
+'''
 print(opennreFormatSentence("I like apples; but I also like you."))
 
 print(opennreFormatSentence("Dr. Johnson, reporting for duty; at your service, SIr."))
 print(opennreFormatSentence("Mr. Johnson, reporting for duty; at your service, SIr."))
 print(opennreFormatSentence("facebook.com is a cool website?"))
+'''
 
 
 '''CHANGE SO THIS DONE ONE PASS THROUGH EACH ARTICLE'''
@@ -190,3 +192,14 @@ def getRelationTuples(article, relation, e1, e2):
             relations.append((relation, e1, e2, sentence))
 
     return relations
+
+
+def formatDate(date):
+    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+                 'August', 'September', 'October', 'November', 'December']
+
+    year, month, day = date.split('-')
+
+    return str(months[int(month) - 1]) + " " + str(day) + ", " + str(year)
+
+print(formatDate('1981-6-15'))
