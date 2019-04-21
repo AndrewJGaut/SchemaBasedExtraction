@@ -90,7 +90,7 @@ def createDataset(person_file_path, attribs, dataset_name, browser):
         # save intermittently
         if(row_counter % 200 == 0):
             dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
-        dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
+    dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
 
 
 '''
@@ -117,11 +117,15 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
     # get file to read names from
     person_file = open(person_file_path, 'r')
 
+    # elinimate issues with saving file name later
+    person_file_path = person_file_path.replace('/', '_')
+
     #count rows in workbook so that we know where to write data
     row_counter = 1
 
     for line in person_file.readlines():
         name = formatName(line.strip())
+        print(name)
         curr_person_attribs = list()
         write = True
         for attrib in attribs:
@@ -143,7 +147,7 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
             # form list of attribute_vals tuples
             attribute_vals = list()
             for i in range(0, len(attribs)):
-                #attribute_vals.append((dataset_sheet.cell(0, i), (dataset_sheet.cell(row_counter, i))))
+                # attribute_vals.append((dataset_sheet.cell(0, i), (dataset_sheet.cell(row_counter, i))))
                 attribute_vals.append((attribs[i], curr_person_attribs[i]))
             try:
                 attribs_2_sentences = getSentences(browser, name, attribute_vals)
@@ -162,13 +166,10 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
             except:
                 print("ERROR getting sentences for: " + str(name))
                 continue
-
-
-
             # save intermittently
             if (row_counter % 200 == 0):
                 dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + "_" + person_file_path + ".xls")
-        dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + "_" + person_file_path + ".xls")
+    dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + "_" + person_file_path + ".xls")
 
 
 
@@ -211,7 +212,10 @@ if __name__ == '__main__':
     #print(getSentences(browser, 'Barack Obama', [('spouse', 'Michelle')]))
     '''seems to work'''
 
-
+'''
+Attributes to query: for politician, use earlier ones
+For Singer: ['recordLabel', 'genre', 'instrument', 'birthDate']
+'''
 
 
 

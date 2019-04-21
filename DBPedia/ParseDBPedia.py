@@ -170,12 +170,15 @@ def writeKeysToFiles(parent_dir, males, females):
 
 
 if __name__ == '__main__':
-    print(getAttributeForPerson('Barack_Obama', 'gender'))
-    print(getAttributeForPerson('Barack_Obama', 'spouse'))
-    print(getAttributeForPerson('Britney_Spears', 'gender'))
+    #print(getAttributeForPerson('Barack_Obama', 'gender'))
+    #print(getAttributeForPerson('Barack_Obama', 'spouse'))
+    #print(getAttributeForPerson('Britney_Spears', 'gender'))
+    print(getAttributeForPerson('Chris Brown', 'instrument'))
 
+    '''
     males, females = getGenderedLists()
     writeKeysToFiles('QueryPeople/', males, females)
+    '''
 
 
 
