@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a994a97-fc0e-43ee-b80e-7c0bb52b46f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CleanUpDatasets/cleanup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/test_multi_integr2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/test_name2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/AttributeDatasets/Politican_sent_test_h.xls" afterPath="$PROJECT_DIR$/DBPedia/AttributeDatasets/Politican_sent_test_h.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py" afterPath="$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/ParseDBPedia.py" afterPath="$PROJECT_DIR$/DBPedia/ParseDBPedia.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_multi3.py" afterPath="$PROJECT_DIR$/Tests/test_multi3.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,23 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_multi2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/test_multi2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="50" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="60" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test_multi3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/test_multi3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="37" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="462">
+              <caret line="82" column="47" lean-forward="false" selection-start-line="82" selection-start-column="47" selection-end-line="82" selection-end-column="47" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
               </folding>
@@ -54,32 +47,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_multi_integration.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/test_multi_integration.py">
+      <file leaf-file-name="ParseDBPedia.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="76" column="16" lean-forward="false" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-46">
+              <caret line="175" column="58" lean-forward="false" selection-start-line="175" selection-start-column="58" selection-end-line="175" selection-end-column="58" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cleanup.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CleanUpDatasets/cleanup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_out.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/test_out.txt">
+      <file leaf-file-name="dbpedia_query.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBPedia/dbpedia_query.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -88,12 +67,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testmetrics.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/testmetrics.py">
+      <file leaf-file-name="test_multi_integration.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/test_multi_integration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="-63">
+              <caret line="76" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="79" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,24 +89,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateDBPediaDataset.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
+      <file leaf-file-name="test_multi_integr2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/test_multi_integr2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
-              <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="191" selection-end-column="30" />
+            <state relative-caret-position="239">
+              <caret line="275" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
               <folding>
-                <element signature="e#61#87#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParseDBPedia.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
+      <file leaf-file-name="test_name2.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/test_name2.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="143" selection-end-column="28" />
+            <state relative-caret-position="45">
+              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_names.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/test_names.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateDBPediaDataset.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-586">
+              <caret line="155" column="50" lean-forward="true" selection-start-line="155" selection-start-column="50" selection-end-line="155" selection-end-column="50" />
+              <folding>
+                <element signature="e#61#87#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,7 +147,16 @@
       <find>getARticleFor</find>
       <find>getArticleForPerson</find>
       <find>formatName</find>
+      <find>getAttribute</find>
       <find>workbook</find>
+      <find>getAttributeFor</find>
+      <find>getNameFromU</find>
+      <find>formatDate</find>
+      <find>Pool(</find>
+      <find>getSentences</find>
+      <find>chrom</find>
+      <find>browser.get</find>
+      <find>hypernym</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,11 +168,16 @@
         <option value="$PROJECT_DIR$/Tests/test_multi.py" />
         <option value="$PROJECT_DIR$/Tests/test_multi2.py" />
         <option value="$PROJECT_DIR$/Tests/test_multi4.py" />
-        <option value="$PROJECT_DIR$/Tests/test_multi3.py" />
         <option value="$PROJECT_DIR$/Tests/test_multi_integration.poy.py" />
         <option value="$PROJECT_DIR$/Tests/test_out.txt" />
         <option value="$PROJECT_DIR$/Tests/test_multi_integration.py" />
         <option value="$PROJECT_DIR$/CleanUpDatasets/cleanup.py" />
+        <option value="$PROJECT_DIR$/Tests/test_multi3.py" />
+        <option value="$PROJECT_DIR$/Tests/test_names.txt" />
+        <option value="$PROJECT_DIR$/Tests/test_name2.txt" />
+        <option value="$PROJECT_DIR$/Tests/test_multi_integr2.py" />
+        <option value="$PROJECT_DIR$/DBPedia/ParseDBPedia.py" />
+        <option value="$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py" />
       </list>
     </option>
   </component>
@@ -208,6 +225,70 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DBPedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DBPedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonData_ttl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DBPedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AttributeDatasets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="CleanUpDatasets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -216,41 +297,7 @@
       </pane>
     </panes>
   </component>
-  <component name="RunManager" selected="Python.cleanup">
-    <configuration default="false" name="test_multi" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SchemaBasedExtraction" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/test_multi.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test_multi2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SchemaBasedExtraction" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/test_multi2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.ParseDBPedia">
     <configuration default="false" name="test_multi3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -298,6 +345,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SchemaBasedExtraction" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CleanUpDatasets/cleanup.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_multi_integr2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SchemaBasedExtraction" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/test_multi_integr2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ParseDBPedia" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DBPedia" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SchemaBasedExtraction" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DBPedia/ParseDBPedia.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -437,19 +518,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.test_multi" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test_multi2" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test_multi3" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test_multi_integration" />
-      <item index="4" class="java.lang.String" itemvalue="Python.cleanup" />
+      <item index="0" class="java.lang.String" itemvalue="Python.test_multi3" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test_multi_integration" />
+      <item index="2" class="java.lang.String" itemvalue="Python.cleanup" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test_multi_integr2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.ParseDBPedia" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.cleanup" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test_multi_integration" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test_multi3" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test_multi2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test_multi" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ParseDBPedia" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_multi_integr2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.cleanup" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test_multi_integration" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test_multi3" />
       </list>
     </recent_temporary>
   </component>
@@ -468,14 +549,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="687" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07731093" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -508,14 +590,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="143" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/testmetrics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -524,17 +598,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/tests2.py">
+    <entry file="file://$PROJECT_DIR$/Tests/test_multi4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="135" selection-end-column="15" />
+        <state relative-caret-position="281">
+          <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CleanUpDatasets/cleanup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/test_multi2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="327">
           <caret line="50" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="60" selection-end-column="8" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
@@ -552,35 +644,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_multi4.py">
+    <entry file="file://$PROJECT_DIR$/Tests/test_names.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="8" />
+        <state relative-caret-position="60">
+          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/test_multi3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="37" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="462">
+          <caret line="82" column="47" lean-forward="false" selection-start-line="82" selection-start-column="47" selection-end-line="82" selection-end-column="47" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
+    <entry file="file://$PROJECT_DIR$/Tests/test_multi_integration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="191" selection-end-column="30" />
+        <state relative-caret-position="-63">
+          <caret line="76" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="79" />
           <folding>
-            <element signature="e#61#87#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_out.txt">
+    <entry file="file://$PROJECT_DIR$/Tests/tests2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="135" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/PersonData_ttl/male_names.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -588,22 +688,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_multi_integration.py">
+    <entry file="file://$PROJECT_DIR$/Tests/test_name2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="76" column="16" lean-forward="false" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="16" />
+        <state relative-caret-position="45">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_multi_integr2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="275" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CleanUpDatasets/cleanup.py">
+    <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="-46">
+          <caret line="175" column="58" lean-forward="false" selection-start-line="175" selection-start-column="58" selection-end-line="175" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/dbpedia_query.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-586">
+          <caret line="155" column="50" lean-forward="true" selection-start-line="155" selection-start-column="50" selection-end-line="155" selection-end-column="50" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#61#87#0" expanded="true" />
           </folding>
         </state>
       </provider>
