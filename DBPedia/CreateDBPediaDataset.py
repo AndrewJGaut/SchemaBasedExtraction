@@ -223,10 +223,10 @@ if __name__ == '__main__':
     options.add_argument("--headless")
     browser = webdriver.Chrome(chrome_options=options)
 
-    createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_male')
-    #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_FEmale')
-    #createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_male')
-    #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_FEmale')
+    createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_male', browser)
+    #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_FEmale', browser)
+    #createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_male', browser)
+    #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_FEmale', browser)
 
 
     #createDataset('test_data.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
