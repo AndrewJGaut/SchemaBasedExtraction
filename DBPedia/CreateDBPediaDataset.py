@@ -92,13 +92,9 @@ def createDataset(person_file_path, attribs, dataset_name, browser):
             continue
 
         # save intermittently
-        '''
         if(row_counter % 200 == 0):
             dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
-        '''
-        if(row_counter >= 100):
-            break
-        dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
+    dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
 
 
 '''
@@ -125,11 +121,15 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
     # get file to read names from
     person_file = open(person_file_path, 'r')
 
+    # elinimate issues with saving file name later
+    person_file_path = person_file_path.replace('/', '_')
+
     #count rows in workbook so that we know where to write data
     row_counter = 1
 
     for line in person_file.readlines():
         name = formatName(line.strip())
+        print(name)
         curr_person_attribs = list()
         write = True
         for attrib in attribs:
@@ -141,20 +141,23 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
             curr_person_attribs.append(getAttributeForPerson(name, attrib))
 
         try:
-            attribute_vals = list()
-            for i in range(0, len(attribs)):
-                attribute_vals.append((attribs[i], curr_person_attribs[i]))
-            attribs_2_sentences = getSentences(browser, name, attribute_vals)
-            for attrib in attribs_2_sentences:
-                if not attribs_2_sentences[attrib]:
-                    write = False
-                    break
             if(write):
+                print(str(name) + "HAS ALL ATTRIBUTES")
+                attribute_vals = list()
+                for i in range(0, len(attribs)):
+                    attribute_vals.append((attribs[i], curr_person_attribs[i]))
+                attribs_2_sentences = getSentences(browser, name, attribute_vals)
+                for attrib in attribs:
+                    if not attribs_2_sentences[attrib]:
+                        write = False
+                        break
+            if(write):
+                print(str(name) + "HAS ALL SENTENCES")
                 #now, write person to excel sheet
                 dataset_sheet.write(row_counter, 0, line.strip())
                 for i in range(len(curr_person_attribs)):
                     dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
-                    row_counter = row_counter + 1
+                row_counter = row_counter + 1
 
                 max_row = 0
                 temp_row_counter = row_counter
@@ -165,19 +168,18 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
                         temp_row_counter += 1
                     if temp_row_counter > max_row:
                         max_row = temp_row_counter
-                    temp_row_counter = row_counter + 1
+                    temp_row_counter = row_counter
 
-                    row_counter = max_row
-        except:
-            print("ERROR getting sentences for: " + str(name))
+                row_counter = max_row
+        except Exception as e:
+            print("ERROR  for " + str(name) + ": " + str(e))
             continue
 
 
-
             # save intermittently
-            if (row_counter % 200 == 0):
+        if (row_counter % 200 == 0):
                 dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + "_" + person_file_path + ".xls")
-        dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + "_" + person_file_path + ".xls")
+    dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + "_" + person_file_path + ".xls")
 
 
 
@@ -220,8 +222,15 @@ if __name__ == '__main__':
     options = Options()
     options.add_argument("--headless")
     browser = webdriver.Chrome(chrome_options=options)
+
+    createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_male')
+    #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_FEmale')
+    #createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_male')
+    #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_FEmale')
+
+
     #createDataset('test_data.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
-    createDataset('PersonData_ttl/male_names.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
+    #createDataset('PersonData_ttl/male_names.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
     #createDataset('testdata2.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
     #createDataset(sys.argv[1], ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'nohypernym_full_train', browser)
     #createDatasetSortByHypernym("PersonData_ttl/male_names.txt", 'Politican', ['party', 'religion', 'predecessor'], 'test_h')
