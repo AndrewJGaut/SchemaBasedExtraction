@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a994a97-fc0e-43ee-b80e-7c0bb52b46f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CleanUpDatasets/test_fixed2.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/testmatrix.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CleanUpDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed.xls" afterPath="$PROJECT_DIR$/CleanUpDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CleanUpDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed_e1e2.xls" afterPath="$PROJECT_DIR$/CleanUpDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed_e1e2.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CleanUpDatasets/test._fixed.xls" afterPath="$PROJECT_DIR$/CleanUpDatasets/test._fixed.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CleanUpDatasets/test_fixed.xls" afterPath="$PROJECT_DIR$/CleanUpDatasets/test_fixed.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CleanUpDatasets/cleanup.py" afterPath="$PROJECT_DIR$/CleanUpDatasets/cleanup.py" />
@@ -21,18 +23,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_multi.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/test_multi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="62" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test_multi3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/test_multi3.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -60,11 +50,21 @@
       <file leaf-file-name="cleanup.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CleanUpDatasets/cleanup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="980">
-              <caret line="126" column="57" lean-forward="false" selection-start-line="126" selection-start-column="57" selection-end-line="126" selection-end-column="57" />
+            <state relative-caret-position="-430">
+              <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testmatrix.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/testmatrix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,8 +102,8 @@
       <file leaf-file-name="ObtainOpenNREData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPedia/ObtainOpenNREData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="179" column="13" lean-forward="false" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
+            <state relative-caret-position="81">
+              <caret line="187" column="8" lean-forward="false" selection-start-line="187" selection-start-column="8" selection-end-line="190" selection-end-column="34" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -148,9 +148,11 @@
       <find>getArticleForPerson</find>
       <find>formatName</find>
       <find>workbook</find>
-      <find>curr_write_row</find>
       <find>has_sentences</find>
       <find>print</find>
+      <find>entity_rows</find>
+      <find>len(matr</find>
+      <find>curr_write_row</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,6 +169,7 @@
         <option value="$PROJECT_DIR$/Tests/test_out.txt" />
         <option value="$PROJECT_DIR$/Tests/test_multi_integration.py" />
         <option value="$PROJECT_DIR$/DBPedia/ObtainOpenNREData.py" />
+        <option value="$PROJECT_DIR$/Tests/testmatrix.py" />
         <option value="$PROJECT_DIR$/CleanUpDatasets/cleanup.py" />
       </list>
     </option>
@@ -213,6 +216,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="DBPedia" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -243,23 +260,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.cleanup">
-    <configuration default="false" name="test_multi" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SchemaBasedExtraction" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/test_multi.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="test_multi2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -324,6 +324,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SchemaBasedExtraction" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CleanUpDatasets/cleanup.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="testmatrix" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SchemaBasedExtraction" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/testmatrix.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -463,19 +480,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.test_multi" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test_multi2" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test_multi3" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test_multi_integration" />
-      <item index="4" class="java.lang.String" itemvalue="Python.cleanup" />
+      <item index="0" class="java.lang.String" itemvalue="Python.test_multi2" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test_multi3" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test_multi_integration" />
+      <item index="3" class="java.lang.String" itemvalue="Python.cleanup" />
+      <item index="4" class="java.lang.String" itemvalue="Python.testmatrix" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.cleanup" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test_multi_integration" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test_multi3" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test_multi2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test_multi" />
+        <item index="1" class="java.lang.String" itemvalue="Python.testmatrix" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test_multi_integration" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test_multi3" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test_multi2" />
       </list>
     </recent_temporary>
   </component>
@@ -527,19 +544,39 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/CleanUpDatasets/cleanup.py</url>
-          <line>60</line>
-          <option name="timeStamp" value="2" />
+          <line>122</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/CleanUpDatasets/cleanup.py</url>
-          <line>141</line>
-          <option name="timeStamp" value="12" />
+          <line>108</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/CleanUpDatasets/cleanup.py</url>
+          <line>107</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/CleanUpDatasets/cleanup.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Tests/testmatrix.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Tests/testmatrix.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="14" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -812,16 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPedia/ObtainOpenNREData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="179" column="13" lean-forward="false" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -846,10 +873,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/ObtainOpenNREData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="187" column="8" lean-forward="false" selection-start-line="187" selection-start-column="8" selection-end-line="190" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/testmatrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CleanUpDatasets/cleanup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="980">
-          <caret line="126" column="57" lean-forward="false" selection-start-line="126" selection-start-column="57" selection-end-line="126" selection-end-column="57" />
+        <state relative-caret-position="-430">
+          <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
