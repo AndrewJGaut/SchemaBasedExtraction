@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a994a97-fc0e-43ee-b80e-7c0bb52b46f7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DBPedia/ParseDBPedia.py" afterPath="$PROJECT_DIR$/DBPedia/ParseDBPedia.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_multi3.py" afterPath="$PROJECT_DIR$/Tests/test_multi3.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/test_multi_integr2.py" afterPath="$PROJECT_DIR$/Tests/test_multi_integr2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/Bash_Scripting_tests/CreateArticleFile.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/Bash_Scripting_tests/CreateDBPediaDatsetsMP.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/Bash_Scripting_tests/largescale_test.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tests/Bash_Scripting_tests/largescale_test2.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/test_name2.txt" afterPath="$PROJECT_DIR$/Tests/Bash_Scripting_tests/test_name2.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Tests/test_names.txt" afterPath="$PROJECT_DIR$/Tests/Bash_Scripting_tests/test_names.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +26,7 @@
       <file leaf-file-name="test_multi3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/test_multi3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-958">
+            <state relative-caret-position="690">
               <caret line="46" column="74" lean-forward="false" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
               <folding>
                 <element signature="e#23#60#0" expanded="true" />
@@ -34,50 +38,18 @@
       <file leaf-file-name="ParseDBPedia.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="75" selection-end-column="74" />
+            <state relative-caret-position="180">
+              <caret line="123" column="23" lean-forward="false" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbpedia_query.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBPedia/dbpedia_query.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_multi_integration.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/test_multi_integration.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/tests2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1905">
-              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="135" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_multi_integr2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_multi_integr2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/test_multi_integr2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="269" column="25" lean-forward="true" selection-start-line="269" selection-start-column="25" selection-end-line="269" selection-end-column="25" />
+            <state relative-caret-position="165">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="34" selection-end-column="42" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -85,28 +57,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wiki_files.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/wiki_files.txt">
+      <file leaf-file-name="CreateArticleFile.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/CreateArticleFile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_name2.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/test_name2.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="-24">
+              <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="test_names.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/test_names.txt">
+        <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/test_names.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
@@ -115,14 +79,54 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="largescale_test.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/largescale_test.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="49" column="14" lean-forward="false" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="largescale_test2.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/largescale_test2.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="49" column="14" lean-forward="false" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="male_names.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBPedia/PersonData_ttl/male_names.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="865" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CreateDBPediaDataset.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="155" column="50" lean-forward="true" selection-start-line="155" selection-start-column="50" selection-end-line="155" selection-end-column="50" />
+            <state relative-caret-position="114">
+              <caret line="200" column="38" lean-forward="false" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
               <folding>
                 <element signature="e#61#87#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateDBPediaDatsetsMP.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/CreateDBPediaDatsetsMP.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="232" column="4" lean-forward="true" selection-start-line="232" selection-start-column="4" selection-end-line="232" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,14 +143,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>getARticleFor</find>
-      <find>getArticleForPerson</find>
       <find>formatName</find>
       <find>getAttribute</find>
       <find>workbook</find>
       <find>getAttributeFor</find>
       <find>getNameFromU</find>
       <find>Pool(</find>
-      <find>getSentences</find>
       <find>chrom</find>
       <find>browser.get</find>
       <find>hypernym</find>
@@ -157,6 +159,12 @@
       <find>pool</find>
       <find>pool = Pool(</find>
       <find>getNameFromUrl</find>
+      <find>createARticlesFile</find>
+      <find>wait_until</find>
+      <find>getArticleForPerson</find>
+      <find>createDataset</find>
+      <find>getSentences</find>
+      <find>browser</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,11 +182,15 @@
         <option value="$PROJECT_DIR$/CleanUpDatasets/cleanup.py" />
         <option value="$PROJECT_DIR$/Tests/test_names.txt" />
         <option value="$PROJECT_DIR$/Tests/test_name2.txt" />
-        <option value="$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py" />
         <option value="$PROJECT_DIR$/DBPedia/ParseDBPedia.py" />
         <option value="$PROJECT_DIR$/Tests/test_multi3.py" />
         <option value="$PROJECT_DIR$/Tests/wiki_files.txt" />
         <option value="$PROJECT_DIR$/Tests/test_multi_integr2.py" />
+        <option value="$PROJECT_DIR$/Tests/Bash_Scripting_tests/largescale_test.txt" />
+        <option value="$PROJECT_DIR$/Tests/Bash_Scripting_tests/largescale_test2.txt" />
+        <option value="$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py" />
+        <option value="$PROJECT_DIR$/Tests/Bash_Scripting_tests/CreateArticleFile.py" />
+        <option value="$PROJECT_DIR$/Tests/Bash_Scripting_tests/CreateDBPediaDatsetsMP.py" />
       </list>
     </option>
   </component>
@@ -202,6 +214,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -225,6 +239,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchemaBasedExtraction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bash_Scripting_tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,11 +326,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
-  <component name="RunManager" selected="Python.test_multi_integr2">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Tests/Bash_Scripting_tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.CreateArticleFile">
     <configuration default="false" name="test_multi3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -312,23 +347,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SchemaBasedExtraction" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/test_multi3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test_multi_integration" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SchemaBasedExtraction" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/test_multi_integration.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -380,6 +398,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SchemaBasedExtraction" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DBPedia/ParseDBPedia.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CreateArticleFile" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests/Bash_Scripting_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SchemaBasedExtraction" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/Bash_Scripting_tests/CreateArticleFile.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -520,18 +555,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.test_multi3" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test_multi_integration" />
-      <item index="2" class="java.lang.String" itemvalue="Python.cleanup" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test_multi_integr2" />
-      <item index="4" class="java.lang.String" itemvalue="Python.ParseDBPedia" />
+      <item index="1" class="java.lang.String" itemvalue="Python.cleanup" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test_multi_integr2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.ParseDBPedia" />
+      <item index="4" class="java.lang.String" itemvalue="Python.CreateArticleFile" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test_multi_integr2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test_multi3" />
-        <item index="2" class="java.lang.String" itemvalue="Python.ParseDBPedia" />
-        <item index="3" class="java.lang.String" itemvalue="Python.cleanup" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test_multi_integration" />
+        <item index="0" class="java.lang.String" itemvalue="Python.CreateArticleFile" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_multi_integr2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test_multi3" />
+        <item index="3" class="java.lang.String" itemvalue="Python.ParseDBPedia" />
+        <item index="4" class="java.lang.String" itemvalue="Python.cleanup" />
       </list>
     </recent_temporary>
   </component>
@@ -552,7 +587,7 @@
     <frame x="0" y="23" width="1280" height="689" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24781573" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -611,13 +646,98 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Tests/test_multi3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="74" lean-forward="false" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
+          <folding>
+            <element signature="e#23#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="75" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/dbpedia_query.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_multi_integration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/tests2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="135" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/test_multi_integr2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/wiki_files.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/test_name2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/test_names.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2325">
+          <caret line="155" column="50" lean-forward="true" selection-start-line="155" selection-start-column="50" selection-end-line="155" selection-end-column="50" />
+          <folding>
+            <element signature="e#61#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/test_multi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="62" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,7 +795,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_name2.txt">
+    <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/test_name2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
@@ -683,7 +803,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_names.txt">
+    <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/test_names.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
@@ -705,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -741,17 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="62" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_names.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,14 +871,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPedia/PersonData_ttl/male_names.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/test_name2.txt">
+    <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/test_name2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
@@ -786,31 +887,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="155" column="50" lean-forward="true" selection-start-line="155" selection-start-column="50" selection-end-line="155" selection-end-column="50" />
-          <folding>
-            <element signature="e#61#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/test_multi_integration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="1605">
           <caret line="107" column="9" lean-forward="false" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="75" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,7 +907,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/test_multi3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-958">
+        <state relative-caret-position="690">
           <caret line="46" column="74" lean-forward="false" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
           <folding>
             <element signature="e#23#60#0" expanded="true" />
@@ -832,12 +915,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/test_names.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/PersonData_ttl/male_names.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="865" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/largescale_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="49" column="14" lean-forward="false" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/largescale_test2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="49" column="14" lean-forward="false" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/test_multi_integr2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="269" column="25" lean-forward="true" selection-start-line="269" selection-start-column="25" selection-end-line="269" selection-end-column="25" />
+        <state relative-caret-position="165">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="34" selection-end-column="42" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/ParseDBPedia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="123" column="23" lean-forward="false" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPedia/CreateDBPediaDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="200" column="38" lean-forward="false" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
+          <folding>
+            <element signature="e#61#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/CreateDBPediaDatsetsMP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="232" column="4" lean-forward="true" selection-start-line="232" selection-start-column="4" selection-end-line="232" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/Bash_Scripting_tests/CreateArticleFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
