@@ -44,19 +44,7 @@ def getAttributeForPerson(person_name, attribute):
         return person_attr
     except:
         return 'ERROR: could not find attribute'
-'''
-Preconditions:
-    url is a DBPedia url with a name at the end
-Postcondition:
-    Returns the name in plain English (i.e. without the preceding url and the underscore)
-'''
-def getNameFromUrl(url):
-    words = url.split('/')
-    name = words[-1]
-    if '(' in name:
-        name = name[0:name.rindex('(') - 1]
-    name = name.replace('_', ' ')
-    return name
+
 
 '''
 Precondition:

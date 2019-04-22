@@ -6,6 +6,7 @@ import multiprocessing as mp
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from itertools import product
+import requests
 
 
 def formatName(name):
@@ -16,6 +17,34 @@ def formatName(name):
         if i != len(words) - 1:
              name += "_"
     return name
+
+'''
+Preconditions:
+    url is a DBPedia url with a name at the end
+Postcondition:
+    Returns the name in plain English (i.e. without the preceding url and the underscore)
+'''
+def getNameFromUrl(url):
+    words = url.split('/')
+    name = words[-1]
+    if '(' in name:
+        name = name[0:name.rindex('(') - 1]
+    name = name.replace('_', ' ')
+    return name
+
+'''
+Precondition:
+    date is a date from DBPedia in DBPedia format (year-month-day)
+Postcondition:
+    returns date in the format month day, year
+'''
+def formatDate(date):
+    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+                 'August', 'September', 'October', 'November', 'December']
+
+    year, month, day = date.split('-')
+
+    return str(months[int(month) - 1]) + " " + str(day) + ", " + str(year)
 
 def getArticleForPerson(name):
     options = Options()
@@ -72,7 +101,7 @@ def getAttributeForPerson(person_name, attribute):
 
 
 
-names = ["Barack Obama", "Kobe Bryant", "Winston Churchill", "Dirk Nowitzki", "Elgin Baylor"]
+
 def createArticlesFile(names):
     file = open('test_out.txt', 'w')
 
@@ -80,4 +109,20 @@ def createArticlesFile(names):
     for result in p.map(getArticleForPerson, names):
         file.write(result)
 
-    for attrib in p.map(getAttributeForPerson, )
+
+
+if __name__ == "__main__":
+    names = ["Barack Obama", "Kobe Bryant", "Winston Churchill", "Dirk Nowitzki", "Elgin Baylor"]
+    pool_inputs = list()
+    attribs = ['birthPlace', 'birthDate', 'hypernym']
+    pool = Pool(3)
+    for name in names:
+        for attrib in attribs:
+            pool_inputs.append((name, attrib))
+        for curr_person_attrib in pool.starmap(getAttributeForPerson, pool_inputs):
+            if (curr_person_attrib == "ERROR: could not find attribute"):
+                # if this is true, then this person doesn't have all the attributes we want; thus, we discard this data point
+                write = False
+                break
+            else:
+                print(curr_person_attrib)
