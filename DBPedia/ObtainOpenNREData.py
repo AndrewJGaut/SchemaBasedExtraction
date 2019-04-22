@@ -251,7 +251,8 @@ def getFullRelationTuples(e1_2_relation, browser):
 if __name__ == '__main__':
     # get entities and abridged relations from dataset
     #relations = readDataFromDBPediaDataset('AttributeDatasets/Politican_test_h.xls')
-    relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed.xls')
+    #relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed.xls')
+    relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed_e1e2.xls')
 
     # create training files for OpenNRE
     createOpenNREFiles(relations)
