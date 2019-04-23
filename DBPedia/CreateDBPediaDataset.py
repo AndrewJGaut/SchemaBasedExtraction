@@ -56,23 +56,27 @@ def createDataset(person_file_path, attribs, dataset_name, browser):
                 break
             curr_person_attribs.append(getAttributeForPerson(name, attrib))
 
-        if(write):
-            #now, write person to excel sheet
-            dataset_sheet.write(row_counter, 0, line.strip())
-            for i in range(len(curr_person_attribs)):
-                dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
-            #row_counter += 1
-
-            '''here, we need to write all the sentences'''
-            # form list of attribute_vals tuples
-            attribute_vals = list()
-            for i in range(0, len(attribs)):
-                # attribute_vals.append((dataset_sheet.cell(0, i), (dataset_sheet.cell(row_counter, i))))
-                attribute_vals.append((attribs[i], curr_person_attribs[i]))
-            try:
+        try:
+            if(write):
+                print(str(name) + "HAS ALL ATTRIBUTES")
+                attribute_vals = list()
+                for i in range(0, len(attribs)):
+                    attribute_vals.append((attribs[i], curr_person_attribs[i]))
                 attribs_2_sentences = getSentences(browser, name, attribute_vals)
+                for attrib in attribs:
+                    if not attribs_2_sentences[attrib]:
+                        write = False
+                        break
+            if(write):
+                print(str(name) + "HAS ALL SENTENCES")
+                #now, write person to excel sheet
+                dataset_sheet.write(row_counter, 0, line.strip())
+                for i in range(len(curr_person_attribs)):
+                    dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
+                row_counter = row_counter + 1
+
                 max_row = 0
-                temp_row_counter = row_counter + 1
+                temp_row_counter = row_counter
                 for attrib in attribs_2_sentences:
                     col = attribs.index(attrib) + 1
                     for sentence in attribs_2_sentences[attrib]:
@@ -80,12 +84,12 @@ def createDataset(person_file_path, attribs, dataset_name, browser):
                         temp_row_counter += 1
                     if temp_row_counter > max_row:
                         max_row = temp_row_counter
-                    temp_row_counter = row_counter + 1
+                    temp_row_counter = row_counter
 
                 row_counter = max_row
-            except:
-                print("ERROR getting sentences for: " + str(name))
-                continue
+        except Exception as e:
+            print("ERROR  for " + str(name) + ": " + str(e))
+            continue
 
         # save intermittently
         if(row_counter % 200 == 0):
@@ -136,23 +140,27 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
                 break
             curr_person_attribs.append(getAttributeForPerson(name, attrib))
 
-        if(write):
-            #now, write person to excel sheet
-            dataset_sheet.write(row_counter, 0, line.strip())
-            for i in range(len(curr_person_attribs)):
-                dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
-            #row_counter += 1
-
-            '''here, we need to write all the sentences'''
-            # form list of attribute_vals tuples
-            attribute_vals = list()
-            for i in range(0, len(attribs)):
-                # attribute_vals.append((dataset_sheet.cell(0, i), (dataset_sheet.cell(row_counter, i))))
-                attribute_vals.append((attribs[i], curr_person_attribs[i]))
-            try:
+        try:
+            if(write):
+                print(str(name) + "HAS ALL ATTRIBUTES")
+                attribute_vals = list()
+                for i in range(0, len(attribs)):
+                    attribute_vals.append((attribs[i], curr_person_attribs[i]))
                 attribs_2_sentences = getSentences(browser, name, attribute_vals)
+                for attrib in attribs:
+                    if not attribs_2_sentences[attrib]:
+                        write = False
+                        break
+            if(write):
+                print(str(name) + "HAS ALL SENTENCES")
+                #now, write person to excel sheet
+                dataset_sheet.write(row_counter, 0, line.strip())
+                for i in range(len(curr_person_attribs)):
+                    dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
+                row_counter = row_counter + 1
+
                 max_row = 0
-                temp_row_counter = row_counter + 1
+                temp_row_counter = row_counter
                 for attrib in attribs_2_sentences:
                     col = attribs.index(attrib) + 1
                     for sentence in attribs_2_sentences[attrib]:
@@ -160,14 +168,16 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
                         temp_row_counter += 1
                     if temp_row_counter > max_row:
                         max_row = temp_row_counter
-                    temp_row_counter = row_counter + 1
+                    temp_row_counter = row_counter
 
                 row_counter = max_row
-            except:
-                print("ERROR getting sentences for: " + str(name))
-                continue
+        except Exception as e:
+            print("ERROR  for " + str(name) + ": " + str(e))
+            continue
+
+
             # save intermittently
-            if (row_counter % 200 == 0):
+        if (row_counter % 200 == 0):
                 dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + "_" + person_file_path + ".xls")
     dataset.save('AttributeDatasets/' + hypernym + "_" + dataset_name + "_" + person_file_path + ".xls")
 
@@ -190,6 +200,18 @@ def getSentences(browser, person_name, attrib_vals):
             if attrib_val[1] in sentence:
               attribs_2_sentences[attrib_val[0]].append(sentence)
 
+            #special rules (because often Infobox relations are more formal than Wikipedia article writing
+            if attrib_val[0] == 'birthDate':
+                if formatDate2(attrib_val[1]) in sentence:
+                    attribs_2_sentences[attrib_val[0]].append(sentence)
+            if attrib_val[0] == 'spouse':
+                if attrib_val[1].split()[0] in sentence:
+                    attribs_2_sentences[attrib_val[0]].append(sentence)
+            if attrib_val[0] == 'birthPlace':
+                if attrib_val[1].split(',')[0] in sentence:
+                    attribs_2_sentences[attrib_val[0]].append(sentence)
+
+
     return attribs_2_sentences
 
 
@@ -200,11 +222,20 @@ if __name__ == '__main__':
     options = Options()
     options.add_argument("--headless")
     browser = webdriver.Chrome(chrome_options=options)
-    #createDataset(sys.argv[1], ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
-    createDataset(sys.argv[1], ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'nohypernym_full_train', browser)
+
+    createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_male', browser)
+    #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_FEmale', browser)
+    #createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_male', browser)
+    #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_FEmale', browser)
+
+
+    #createDataset('test_data.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
+    #createDataset('PersonData_ttl/male_names.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
+    #createDataset('testdata2.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
+    #createDataset(sys.argv[1], ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'nohypernym_full_train', browser)
     #createDatasetSortByHypernym("PersonData_ttl/male_names.txt", 'Politican', ['party', 'religion', 'predecessor'], 'test_h')
     #createDatasetSortByHypernym("PersonData_ttl/male_names.txt", 'Player', ['weight', 'team','position', 'number'], 'test_h2')
-    print(sys.argv[1])
+    #print(sys.argv[1])
 
     '''test'''
 
@@ -212,10 +243,7 @@ if __name__ == '__main__':
     #print(getSentences(browser, 'Barack Obama', [('spouse', 'Michelle')]))
     '''seems to work'''
 
-'''
-Attributes to query: for politician, use earlier ones
-For Singer: ['recordLabel', 'genre', 'instrument', 'birthDate']
-'''
+
 
 
 
