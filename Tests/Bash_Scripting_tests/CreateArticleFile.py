@@ -1,5 +1,5 @@
 import os
-from multiprocessing import Pool
+from multiprocessing import Pool, cpu_count
 import sys
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -19,10 +19,12 @@ def getArticleForPerson(name):
     browser.get('https://en.wikipedia.org/wiki/' + formatName(name))
     p_tags = browser.find_elements_by_tag_name('p')
 
+
     curr_article_text = ""
     for p_tag in p_tags:
         curr_article_text += p_tag.text
 
+    browser.quit()
     return name + "\n" + curr_article_text
 
 def createArticlesFile(names_file1, names_file2):
@@ -37,7 +39,7 @@ def createArticlesFile(names_file1, names_file2):
     file = open('wiki_files.txt', 'w', os.O_NONBLOCK)
 
     # multiple processes
-    p = Pool(5)
+    p = Pool(cpu_count() - 1)
     for result in p.map(getArticleForPerson, names):
         file.write(result)
         file.flush()
