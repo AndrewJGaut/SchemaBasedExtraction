@@ -44,19 +44,7 @@ def getAttributeForPerson(person_name, attribute):
         return person_attr
     except:
         return 'ERROR: could not find attribute'
-'''
-Preconditions:
-    url is a DBPedia url with a name at the end
-Postcondition:
-    Returns the name in plain English (i.e. without the preceding url and the underscore)
-'''
-def getNameFromUrl(url):
-    words = url.split('/')
-    name = words[-1]
-    if '(' in name:
-        name = name[0:name.rindex('(') - 1]
-    name = name.replace('_', ' ')
-    return name
+
 
 '''
 Precondition:
@@ -71,6 +59,20 @@ def formatName(name):
         name += words[i]
         if i != len(words) - 1:
              name += "_"
+    return name
+
+'''
+Preconditions:
+    url is a DBPedia url with a name at the end
+Postcondition:
+    Returns the name in plain English (i.e. without the preceding url and the underscore)
+'''
+def getNameFromUrl(url):
+    words = url.split('/')
+    name = words[-1]
+    if '(' in name:
+        name = name[0:name.rindex('(') - 1]
+    name = name.replace('_', ' ')
     return name
 
 '''
@@ -186,12 +188,17 @@ def writeKeysToFiles(parent_dir, males, females):
 
 
 if __name__ == '__main__':
-    print(getAttributeForPerson('Barack_Obama', 'gender'))
-    print(getAttributeForPerson('Barack_Obama', 'spouse'))
-    print(getAttributeForPerson('Britney_Spears', 'gender'))
+    #print(getAttributeForPerson('Barack_Obama', 'gender'))
+    #print(getAttributeForPerson('Barack_Obama', 'spouse'))
+    #print(getAttributeForPerson('Britney_Spears', 'gender'))
+    print(getAttributeForPerson('Barack Obama', 'spouse'))
+    print(getAttributeForPerson('Chris Brown', 'instrument'))
+    print(getAttributeForPerson('Jane Elizabeth Hodgson', 'birthPlace'))
 
+    '''
     males, females = getGenderedLists()
     writeKeysToFiles('QueryPeople/', males, females)
+    '''
 
 
 
