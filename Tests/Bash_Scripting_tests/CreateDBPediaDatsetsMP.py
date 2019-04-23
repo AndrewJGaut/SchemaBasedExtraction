@@ -9,6 +9,7 @@ import xlwt
 import nltk
 from collections import defaultdict
 import time
+import os
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -59,23 +60,27 @@ def createDataset(person_file_path, attribs, dataset_name, article_file):
                 break
             curr_person_attribs.append(getAttributeForPerson(name, attrib))
 
-        if(write):
-            #now, write person to excel sheet
-            dataset_sheet.write(row_counter, 0, line.strip())
-            for i in range(len(curr_person_attribs)):
-                dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
-            #row_counter += 1
-
-            '''here, we need to write all the sentences'''
-            # form list of attribute_vals tuples
-            attribute_vals = list()
-            for i in range(0, len(attribs)):
-                # attribute_vals.append((dataset_sheet.cell(0, i), (dataset_sheet.cell(row_counter, i))))
-                attribute_vals.append((attribs[i], curr_person_attribs[i]))
-            try:
+        try:
+            if(write):
+                print(str(name) + "HAS ALL ATTRIBUTES")
+                attribute_vals = list()
+                for i in range(0, len(attribs)):
+                    attribute_vals.append((attribs[i], curr_person_attribs[i]))
                 attribs_2_sentences = getSentences(article_file, name, attribute_vals)
+                for attrib in attribs:
+                    if not attribs_2_sentences[attrib]:
+                        write = False
+                        break
+            if(write):
+                print(str(name) + "HAS ALL SENTENCES")
+                #now, write person to excel sheet
+                dataset_sheet.write(row_counter, 0, line.strip())
+                for i in range(len(curr_person_attribs)):
+                    dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
+                row_counter = row_counter + 1
+
                 max_row = 0
-                temp_row_counter = row_counter + 1
+                temp_row_counter = row_counter
                 for attrib in attribs_2_sentences:
                     col = attribs.index(attrib) + 1
                     for sentence in attribs_2_sentences[attrib]:
@@ -83,12 +88,12 @@ def createDataset(person_file_path, attribs, dataset_name, article_file):
                         temp_row_counter += 1
                     if temp_row_counter > max_row:
                         max_row = temp_row_counter
-                    temp_row_counter = row_counter + 1
+                    temp_row_counter = row_counter
 
                 row_counter = max_row
-            except:
-                print("ERROR getting sentences for: " + str(name))
-                continue
+        except Exception as e:
+            print("ERROR  for " + str(name) + ": " + str(e))
+            continue
 
         # save intermittently
         if(row_counter % 200 == 0):
@@ -140,6 +145,7 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
             curr_person_attribs.append(getAttributeForPerson(name, attrib))
 
         if(write):
+            print("HAS ALL ATTRIBUTES")
             #now, write person to excel sheet
             dataset_sheet.write(row_counter, 0, line.strip())
             for i in range(len(curr_person_attribs)):
@@ -183,6 +189,7 @@ Precondition:
     period is amount of time to sleep between queries
 '''
 def wait_until_sentences_ready(article_file, person_name, timeout, period):
+    print("waiting...")
     mustend = time.time() + timeout
     while time.time() < mustend:
         # article = getArticleForPerson(person_name, browser)
@@ -194,6 +201,7 @@ def wait_until_sentences_ready(article_file, person_name, timeout, period):
         if article != "":
             return article
         time.sleep(period)
+    print("NO ARTICLE FOUND")
     return "NO ARTICLE"
 
 
@@ -210,14 +218,16 @@ def getSentences(article_file, person_name, attrib_vals):
     attribs_2_sentences = defaultdict(list)
 
     try:
-        article = wait_until_sentences_ready(article_file, person_name, 10000, 2)
+        article = wait_until_sentences_ready(article_file, person_name, 90, 0.5)
         if (article != "NO ARTICLE"):
+            #print("ARTICLE EXISTS: " + str(article))
             for sentence in nltk.sent_tokenize(article):
                 for attrib_val in attrib_vals:
                     if attrib_val[1] in sentence:
                         attribs_2_sentences[attrib_val[0]].append(sentence)
         else:
             print("ARTICLES NOT FOUND FOR " + str(person_name))
+        return attribs_2_sentences
     except Exception as e:
         print("ERROR GETTING SENTENCES FOR " + str(person_name) + "; error: " + str(e))
 
@@ -233,7 +243,7 @@ if __name__ == '__main__':
     options.add_argument("--no-sandbox")
     browser = webdriver.Chrome(chrome_options=options)
     '''
-    createDataset('largescale_test.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'test_multi_proc', 'wiki_files.txt')
+    createDataset('largescale_test.txt', ['hypernym', 'spouse','birthDate', 'birthPlace'], 'test_multi_proc', 'wiki_files.txt')
     #createDataset(sys.argv[1], ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
     #createDataset(sys.argv[1], ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'nohypernym_full_train', browser)
     #createDatasetSortByHypernym("PersonData_ttl/male_names.txt", 'Politican', ['party', 'religion', 'predecessor'], 'test_h')

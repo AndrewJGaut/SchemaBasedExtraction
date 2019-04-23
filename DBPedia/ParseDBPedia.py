@@ -62,6 +62,20 @@ def formatName(name):
     return name
 
 '''
+Preconditions:
+    url is a DBPedia url with a name at the end
+Postcondition:
+    Returns the name in plain English (i.e. without the preceding url and the underscore)
+'''
+def getNameFromUrl(url):
+    words = url.split('/')
+    name = words[-1]
+    if '(' in name:
+        name = name[0:name.rindex('(') - 1]
+    name = name.replace('_', ' ')
+    return name
+
+'''
 Precondition:
     date is a date from DBPedia in DBPedia format (year-month-day)
 Postcondition:
@@ -74,6 +88,22 @@ def formatDate(date):
     year, month, day = date.split('-')
 
     return str(months[int(month) - 1]) + " " + str(day) + ", " + str(year)
+
+
+'''
+Precondition:
+    date is a date formatted as month day, year
+Postcondition:
+    returns date in other wikipedia format of day month year
+'''
+def formatDate2(date):
+    #date = formatDate(date)
+
+    month, day, year = date.split(' ')
+    day = day[0:-1]
+
+    return str(day) + " " + str(month) + " " + str(year)
+
 
 '''
 Postcondition:
@@ -161,7 +191,9 @@ if __name__ == '__main__':
     #print(getAttributeForPerson('Barack_Obama', 'gender'))
     #print(getAttributeForPerson('Barack_Obama', 'spouse'))
     #print(getAttributeForPerson('Britney_Spears', 'gender'))
+    print(getAttributeForPerson('Barack Obama', 'spouse'))
     print(getAttributeForPerson('Chris Brown', 'instrument'))
+    print(getAttributeForPerson('Jane Elizabeth Hodgson', 'birthPlace'))
 
     '''
     males, females = getGenderedLists()

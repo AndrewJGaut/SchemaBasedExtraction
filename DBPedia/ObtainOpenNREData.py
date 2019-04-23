@@ -169,7 +169,7 @@ def formatWordVectorFile(vec_file):
 Precondition:
     dataset_path is a path to an Excel dataset with sturctured data from a KB
 Postcondition:
-    returns a list of tuples (relation_type, entity1, entity2) from that dataset
+    returns a list of tuples (relation_type, entity1, entity2, sentence) from that dataset
 '''
 def readDataFromDBPediaDataset(dataset_path):
     dataset = xlrd.open_workbook(dataset_path)
@@ -180,16 +180,39 @@ def readDataFromDBPediaDataset(dataset_path):
     for i in range(1, dataset_sheet.ncols):
         relation_types.append(dataset_sheet.cell_value(0, i))
 
-    e1_2_relation = defaultdict(list) # map entity who the article is about to list of relation tuples
-    for i in range(1, dataset_sheet.nrows):
-        e1 = dataset_sheet.cell_value(i,0)
-        for j in range(1, dataset_sheet.ncols):
-            curr_relation_type = relation_types[j-1]
-            e2 = dataset_sheet.cell_value(i, j)
-            relation = (curr_relation_type, e1, e2)
-            e1_2_relation[e1].append(relation)
+    relations = list() # list of relations
+    i = 1
+    while i < dataset_sheet.nrows:
 
-    return e1_2_relation
+        #first, get the number of rows until next entity
+        curr_row = i + 1
+        while(curr_row < dataset_sheet.nrows and dataset_sheet.cell_value(curr_row, 0) == ""):
+            curr_row += 1
+        entity_rows = curr_row - i
+
+        #now, get entity name
+        e1 = dataset_sheet.cell_value(i,0)
+        print("CURR NAME: " + e1)
+
+        #get list of e2s by column
+        e2_vals = list()
+        for j in range(1, dataset_sheet.ncols):
+            e2_vals.append(dataset_sheet.cell_value(i,j))
+
+        #now, get the tuples
+        prev_i = i
+        i += 1
+        while(i < prev_i + entity_rows and i < dataset_sheet.nrows):
+            for j in range(1, dataset_sheet.ncols):
+                if dataset_sheet.cell_value(i, j) != "":
+                    print("getting sentence...")
+                    relation = (relation_types[j-1], e1, e2_vals[j-1], opennreFormatSentence(dataset_sheet.cell_value(i,j)))
+                    relations.append(relation)
+            i += 1
+
+    print("done getting relations")
+
+    return relations
 
 
 '''
@@ -226,19 +249,13 @@ def getFullRelationTuples(e1_2_relation, browser):
 
 
 if __name__ == '__main__':
-    # define selenium browser for scraping
-    options = Options()
-    options.add_argument("--headless")
-    browser = webdriver.Chrome(chrome_options=options)
-
     # get entities and abridged relations from dataset
-    entity1_mapped_to_relation_tuple = readDataFromDBPediaDataset('AttributeDatasets/Politican_test_h.xls')
-
-    # get full relations from wiki articles
-    relations = getFullRelationTuples(entity1_mapped_to_relation_tuple, browser)
+    #relations = readDataFromDBPediaDataset('AttributeDatasets/Politican_test_h.xls')
+    #relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed.xls')
+    relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed_e1e2.xls')
 
     # create training files for OpenNRE
-    #createOpenNREFiles(relations)
+    createOpenNREFiles(relations)
 
 
     #createOpenNREFiles([('spouse', 'Barack', 'Michelle', 'Barack is Michelle\'s husband'), ('father', 'John', 'Smitty', 'John fathered Smitty in 1852.'), ('father', 'Barack', 'Jeff', 'Barack fathered Jeff in 1852.')])
