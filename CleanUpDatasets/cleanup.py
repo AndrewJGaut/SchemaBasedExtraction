@@ -105,7 +105,7 @@ def onlyKeepDoubleEntitySentences(dataset_path):
                             matrix_to_write[curr_row][j] = ""
                             curr_row -= 1
 
-            printMatrix(matrix_to_write)
+            #printMatrix(matrix_to_write)
             num_empty_rows = 0
             for k in range(len(matrix_to_write)-1, 1, -1):
                 no_data = True
@@ -173,4 +173,5 @@ def printMatrix(matrix):
 if __name__ == '__main__':
     #eliminateRepeatedSentences('nohypernym_full_train_PersonData_ttl_female_names.txt_.xls')
     #onlyKeepDoubleEntitySentences2('test_fixed.xls')
-    onlyKeepDoubleEntitySentences('nohypernym_full_train_PersonData_ttl_female_names.txt_fixed.xls')
+    #onlyKeepDoubleEntitySentences('nohypernym_full_train_PersonData_ttl_female_names.txt_fixed.xls')
+    cleanDataset('nohyperym_full_train_PersonData_ttl_male_names.txt_.xls')
