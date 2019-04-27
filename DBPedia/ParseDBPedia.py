@@ -191,7 +191,7 @@ if __name__ == '__main__':
     #print(getAttributeForPerson('Barack_Obama', 'gender'))
     #print(getAttributeForPerson('Barack_Obama', 'spouse'))
     #print(getAttributeForPerson('Britney_Spears', 'gender'))
-    print(getAttributeForPerson('Barack Obama', 'spouse'))
+    print(getAttributeForPerson('Barack Obama', 'almaMater'))
     print(getAttributeForPerson('Chris Brown', 'instrument'))
     print(getAttributeForPerson('Jane Elizabeth Hodgson', 'birthPlace'))
 
