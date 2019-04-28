@@ -139,43 +139,44 @@ def createLargeDataset(person_file_path, attribs, dataset_name, browser):
                 pass
             curr_person_attribs.append(getAttributeForPerson(name, attrib))
 
-        #try:
-        if(write):
-            attribute_vals = list()
-            for i in range(0, len(attribs)):
-                attribute_vals.append((attribs[i], curr_person_attribs[i]))
-            attribs_2_sentences = getSentences(browser, name, attribute_vals)
-            '''
-            for attrib in attribs:
-                if not attribs_2_sentences[attrib]:
-                    write = False
-                    break
-            '''
-        if(write):
-            #now, write person to excel sheet
-            dataset_sheet.write(row_counter, 0, line.strip())
-            for i in range(len(curr_person_attribs)):
-                dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
-            row_counter = row_counter + 1
+        try:
+            if(write):
+                attribute_vals = list()
+                for i in range(0, len(attribs)):
+                    attribute_vals.append((attribs[i], curr_person_attribs[i]))
+                attribs_2_sentences = getSentences(browser, name, attribute_vals)
+                '''
+                for attrib in attribs:
+                    if not attribs_2_sentences[attrib]:
+                        write = False
+                        break
+                '''
+            if(write):
+                print('writing...')
+                #now, write person to excel sheet
+                dataset_sheet.write(row_counter, 0, line.strip())
+                for i in range(len(curr_person_attribs)):
+                    dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
+                row_counter = row_counter + 1
 
-            max_row = 0
-            temp_row_counter = row_counter
-            for attrib in attribs_2_sentences:
-                col = attribs.index(attrib) + 1
-                for sentence in attribs_2_sentences[attrib]:
-                    dataset_sheet.write(temp_row_counter, col, sentence)
-                    temp_row_counter += 1
-                if temp_row_counter > max_row:
-                    max_row = temp_row_counter
+                max_row = 0
                 temp_row_counter = row_counter
+                for attrib in attribs_2_sentences:
+                    col = attribs.index(attrib) + 1
+                    for sentence in attribs_2_sentences[attrib]:
+                        dataset_sheet.write(temp_row_counter, col, sentence)
+                        temp_row_counter += 1
+                    if temp_row_counter > max_row:
+                        max_row = temp_row_counter
+                    temp_row_counter = row_counter
 
-            row_counter = max_row
-        '''except Exception as e:
+                if(max_row > row_counter): row_counter = max_row
+        except Exception as e:
             print("ERROR  for " + str(name) + ": " + str(e))
-            continue'''
+            continue
 
         # save intermittently
-        if(row_counter % 200 == 0):
+        if(row_counter % 2 == 0):
             dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
     dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
 
@@ -280,7 +281,6 @@ def getSentences(browser, person_name, attrib_vals):
     article = getArticleForPerson(person_name, browser)
     for sentence in nltk.sent_tokenize(article):
         for attrib_val in attrib_vals:
-            print(attrib_val[1])
             if attrib_val[1] in sentence:
                 attribs_2_sentences[attrib_val[0]].append(sentence)
 
