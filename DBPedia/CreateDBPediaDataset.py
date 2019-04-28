@@ -139,40 +139,40 @@ def createLargeDataset(person_file_path, attribs, dataset_name, browser):
                 pass
             curr_person_attribs.append(getAttributeForPerson(name, attrib))
 
-        try:
-            if(write):
-                attribute_vals = list()
-                for i in range(0, len(attribs)):
-                    attribute_vals.append((attribs[i], curr_person_attribs[i]))
-                attribs_2_sentences = getSentences(browser, name, attribute_vals)
-                '''
-                for attrib in attribs:
-                    if not attribs_2_sentences[attrib]:
-                        write = False
-                        break
-                '''
-            if(write):
-                #now, write person to excel sheet
-                dataset_sheet.write(row_counter, 0, line.strip())
-                for i in range(len(curr_person_attribs)):
-                    dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
-                row_counter = row_counter + 1
+        #try:
+        if(write):
+            attribute_vals = list()
+            for i in range(0, len(attribs)):
+                attribute_vals.append((attribs[i], curr_person_attribs[i]))
+            attribs_2_sentences = getSentences(browser, name, attribute_vals)
+            '''
+            for attrib in attribs:
+                if not attribs_2_sentences[attrib]:
+                    write = False
+                    break
+            '''
+        if(write):
+            #now, write person to excel sheet
+            dataset_sheet.write(row_counter, 0, line.strip())
+            for i in range(len(curr_person_attribs)):
+                dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
+            row_counter = row_counter + 1
 
-                max_row = 0
+            max_row = 0
+            temp_row_counter = row_counter
+            for attrib in attribs_2_sentences:
+                col = attribs.index(attrib) + 1
+                for sentence in attribs_2_sentences[attrib]:
+                    dataset_sheet.write(temp_row_counter, col, sentence)
+                    temp_row_counter += 1
+                if temp_row_counter > max_row:
+                    max_row = temp_row_counter
                 temp_row_counter = row_counter
-                for attrib in attribs_2_sentences:
-                    col = attribs.index(attrib) + 1
-                    for sentence in attribs_2_sentences[attrib]:
-                        dataset_sheet.write(temp_row_counter, col, sentence)
-                        temp_row_counter += 1
-                    if temp_row_counter > max_row:
-                        max_row = temp_row_counter
-                    temp_row_counter = row_counter
 
-                row_counter = max_row
-        except Exception as e:
+            row_counter = max_row
+        '''except Exception as e:
             print("ERROR  for " + str(name) + ": " + str(e))
-            continue
+            continue'''
 
         # save intermittently
         if(row_counter % 200 == 0):
@@ -280,18 +280,19 @@ def getSentences(browser, person_name, attrib_vals):
     article = getArticleForPerson(person_name, browser)
     for sentence in nltk.sent_tokenize(article):
         for attrib_val in attrib_vals:
+            print(attrib_val[1])
             if attrib_val[1] in sentence:
-              attribs_2_sentences[attrib_val[0]].append(sentence)
+                attribs_2_sentences[attrib_val[0]].append(sentence)
 
             #special rules (because often Infobox relations are more formal than Wikipedia article writing
-            if attrib_val[0] == 'birthDate':
-                if formatDate2(attrib_val[1]) in sentence:
+            if attrib_val[0] == 'birthDate' and attrib_val[1] != "ERROR: could not find attribute":
+                if formatDate2(attrib_val[1]) in sentence and attrib_val[1] != "ERROR: could not find attribute":
                     attribs_2_sentences[attrib_val[0]].append(sentence)
             if attrib_val[0] == 'spouse':
-                if attrib_val[1].split()[0] in sentence:
+                if attrib_val[1].split()[0] in sentence and attrib_val[1] != "ERROR: could not find attribute":
                     attribs_2_sentences[attrib_val[0]].append(sentence)
             if attrib_val[0] == 'birthPlace':
-                if attrib_val[1].split(',')[0] in sentence:
+                if attrib_val[1].split(',')[0] in sentence and attrib_val[1] != "ERROR: could not find attribute":
                     attribs_2_sentences[attrib_val[0]].append(sentence)
 
 
@@ -312,7 +313,7 @@ if __name__ == '__main__':
     #createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_male', browser)
     #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_FEmale', browser)
     #createLargeDataset('test_data.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace', 'instrument'], 'large_test', browser)
-    createLargeDataset('test_data.txt', ['occupation', 'spouse', 'gender', 'hypernym', 'birthPlace', 'birthDate', 'almaMater'], 'large_test', browser)
+    createLargeDataset('PersonData_ttl/male_names.txt', ['occupation', 'spouse', 'gender', 'hypernym', 'birthPlace', 'birthDate', 'almaMater', 'education'], 'large_test', browser)
     #createDataset('test_data.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
     #createDataset('PersonData_ttl/male_names.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
     #createDataset('testdata2.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
