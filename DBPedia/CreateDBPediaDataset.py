@@ -97,6 +97,89 @@ def createDataset(person_file_path, attribs, dataset_name, browser):
     dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
 
 
+
+'''
+Precondition:
+    person_file_path is the name of a file with person names for one gender
+    attribs is a list of strings that represent the attributes we want to put in the database
+    dataset_name is the name of your dataset wihtout file extension
+    browser is a selenium web browser
+Postcondition:
+    Creates an Excel spreadsheet with columns:
+    PersonName Attribute1 Attribute2 ... AttributeN
+    and with all entries filled in
+'''
+def createLargeDataset(person_file_path, attribs, dataset_name, browser):
+    # create excel spreadsheet
+    dataset = xlwt.Workbook()
+    dataset_sheet = dataset.add_sheet('data')
+    dataset_sheet.write(0, 0, "Full Name")
+    for i in range(len(attribs)):
+        dataset_sheet.write(0, (i+1), attribs[i])
+
+
+
+    # get file to read names from
+    person_file = open(person_file_path, 'r')
+
+    # elinimate issues with saving file name later
+    person_file_path = person_file_path.replace('/', '_')
+
+    #count rows in workbook so that we know where to write data
+    row_counter = 1
+
+    for line in person_file.readlines():
+        name = formatName(line.strip())
+        print(name)
+        curr_person_attribs = list()
+        write = True
+        for attrib in attribs:
+            curr_person_attrib = getAttributeForPerson(name, attrib)
+            if(curr_person_attrib == "ERROR: could not find attribute"):
+                pass
+            curr_person_attribs.append(getAttributeForPerson(name, attrib))
+
+        try:
+            if(write):
+                attribute_vals = list()
+                for i in range(0, len(attribs)):
+                    attribute_vals.append((attribs[i], curr_person_attribs[i]))
+                attribs_2_sentences = getSentences(browser, name, attribute_vals)
+                '''
+                for attrib in attribs:
+                    if not attribs_2_sentences[attrib]:
+                        write = False
+                        break
+                '''
+            if(write):
+                #now, write person to excel sheet
+                dataset_sheet.write(row_counter, 0, line.strip())
+                for i in range(len(curr_person_attribs)):
+                    dataset_sheet.write(row_counter, (i+1), curr_person_attribs[i])
+                row_counter = row_counter + 1
+
+                max_row = 0
+                temp_row_counter = row_counter
+                for attrib in attribs_2_sentences:
+                    col = attribs.index(attrib) + 1
+                    for sentence in attribs_2_sentences[attrib]:
+                        dataset_sheet.write(temp_row_counter, col, sentence)
+                        temp_row_counter += 1
+                    if temp_row_counter > max_row:
+                        max_row = temp_row_counter
+                    temp_row_counter = row_counter
+
+                row_counter = max_row
+        except Exception as e:
+            print("ERROR  for " + str(name) + ": " + str(e))
+            continue
+
+        # save intermittently
+        if(row_counter % 200 == 0):
+            dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
+    dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + ".xls")
+
+
 '''
 Precondition:
     person_file_path is the name of a file with person names for one gender
@@ -223,12 +306,13 @@ if __name__ == '__main__':
     options.add_argument("--headless")
     browser = webdriver.Chrome(chrome_options=options)
 
-    createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_male', browser)
+    #createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_male', browser)
+
     #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_FEmale', browser)
     #createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_male', browser)
     #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_FEmale', browser)
-
-
+    #createLargeDataset('test_data.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace', 'instrument'], 'large_test', browser)
+    createLargeDataset('test_data.txt', ['occupation', 'spouse', 'gender', 'hypernym', 'birthPlace', 'birthDate', 'almaMater'], 'large_test', browser)
     #createDataset('test_data.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
     #createDataset('PersonData_ttl/male_names.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
     #createDataset('testdata2.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
