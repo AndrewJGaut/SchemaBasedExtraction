@@ -64,4 +64,5 @@ def getStats(dataset_path):
     sys.stdout.flush()
 
 if __name__ == '__main__':
-    getStats('AttributeDatasets/nohyperym_full_train_PersonData_ttl_male_names.txt_fixed_e1e2.xls')
+    #getStats('AttributeDatasets/nohyperym_full_train_PersonData_ttl_male_names.txt_fixed_e1e2.xls')
+    getStats('AttributeDatasets/female_negative_examples.xls')
