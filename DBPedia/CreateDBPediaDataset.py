@@ -313,7 +313,7 @@ if __name__ == '__main__':
     #createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_male', browser)
     #createDatasetSortByHypernym("PersonData_ttl/female_names.txt",'Singer', ['instrument', 'recordLabel', 'genre'], 'train_FEmale', browser)
     #createLargeDataset('test_data.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace', 'instrument'], 'large_test', browser)
-    createLargeDataset('PersonData_ttl/male_names.txt', ['occupation', 'spouse', 'gender', 'hypernym', 'birthPlace', 'birthDate', 'almaMater', 'education'], 'large_test', browser)
+    createLargeDataset('PersonData_ttl/male_names.txt', ['occupation', 'spouse', 'gender', 'hypernym', 'birthPlace', 'birthDate', 'almaMater', 'education'], 'male_large_dataset', browser)
     #createDataset('test_data.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
     #createDataset('PersonData_ttl/male_names.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
     #createDataset('testdata2.txt', ['hypernym', 'spouse', 'birthDate', 'birthPlace'], 'sent_test', browser)
