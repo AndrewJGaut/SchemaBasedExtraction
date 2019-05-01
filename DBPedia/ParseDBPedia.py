@@ -75,6 +75,9 @@ def getNameFromUrl(url):
     name = name.replace('_', ' ')
     return name
 
+def getName(word):
+    return word.replace('_', ' ')
+
 '''
 Precondition:
     date is a date from DBPedia in DBPedia format (year-month-day)
