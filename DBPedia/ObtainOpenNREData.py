@@ -127,6 +127,7 @@ def createOpenNREFiles(relations):
     relation_to_id_mapping_string = "{\n\t\"NA\": 0,\n"
     rel_counter = 1
     for rel in unique_relations:
+        if rel == 'NA': continue
         relation_to_id_mapping_string += "\t\"" + str(rel) + "\": " + str(rel_counter) + ",\n"
         rel_counter += 1
     relation_to_id_mapping_string = relation_to_id_mapping_string[0:-2]
@@ -252,8 +253,8 @@ if __name__ == '__main__':
     # get entities and abridged relations from dataset
     #relations = readDataFromDBPediaDataset('AttributeDatasets/Politican_test_h.xls')
     #relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed.xls')
-    relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed_e1e2.xls')
-
+    #relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed_e1e2.xls')
+    relations = readDataFromDBPediaDataset('AttributeDatasets/split.xls')
     # create training files for OpenNRE
     createOpenNREFiles(relations)
 

@@ -1,4 +1,7 @@
 {
 	"NA": 0,
-	"": 1
+	"birthPlace": 1,
+	"spouse": 2,
+	"hypernym": 3,
+	"birthDate": 4
 }
