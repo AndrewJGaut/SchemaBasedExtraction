@@ -174,4 +174,4 @@ if __name__ == '__main__':
     #eliminateRepeatedSentences('nohypernym_full_train_PersonData_ttl_female_names.txt_.xls')
     #onlyKeepDoubleEntitySentences2('test_fixed.xls')
     #onlyKeepDoubleEntitySentences('nohypernym_full_train_PersonData_ttl_female_names.txt_fixed.xls')
-    cleanDataset('FULL_DATASET_FEMALE.xls.xls')
+    cleanDataset('split.xls')
