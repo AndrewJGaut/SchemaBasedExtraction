@@ -8,298 +8,147 @@ import random as rand
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-def containsComma(str):
-    for c in str:
-        if c == ',':
-            return True
-
-def csvConvert(x):
-    if containsComma(x):
-        x = "\"" + x + "\""
-    return str(x)
-
 '''
-NOTE: if field contains comma, enclose in quotes!!!
+Precondition:
+    sheet is an Excel dataset sheet
+Postcondition:
+    returns mapping from entity to what we want to write in the new sheet for that entity
+    mat[entity] --> [[full name, spouse, birthDate], [Jeff Smith, Sally Smith, June 4 1993]] etc.
 '''
-'''
-def createCSV(dataset_path, csv_path):
-    dataset = xlrd.open_workbook(dataset_path)
-    sheet = dataset.sheet_by_index(0)
+def getEntityMatrices(sheet):
+    e1_2_writematrix = dict()
 
-    out_file = open('amt_data/' + csv_path + ".csv", 'w')
-    out_str = ""
-
-    #out_file.write('sentence,relation\n')
-    out_str += 'sentence,relation\n'
-
-    relation_types = list()
-    for j in range(1, sheet.ncols):
-        relation_types.append(sheet.cell_value(0,j))
-
-    #now, get the values
     i = 1
+    already_wrote = False
+    row_incr = 1
+    num_sents = 0
     while i < sheet.nrows:
-        # get current entity
-        e1 = sheet.cell_value(i, 0)
-
-        # get number of rows this entity takes up
+        has_sentences_for_attributes = [0] * (sheet.ncols - 1)
         curr_row = i + 1
         while (curr_row < sheet.nrows and sheet.cell_value(curr_row, 0) == ""):
             curr_row += 1
         entity_rows = curr_row - i
 
-        #get list of e2s by column
-        e2_vals = list()
-        for j in range(1, sheet.ncols):
-            e2_vals.append(sheet.cell_value(i,j))
+        # the matrix of values we'll write if this entity still has sentences
+        matrix_to_write = [["" for x in range(sheet.ncols)] for y in range(entity_rows + 1)]
 
-        # now, get the tuples
+        # first, add the header column to matrix
+        for j in range(0, sheet.ncols):
+            matrix_to_write[0][j] = sheet.cell_value(i, j)
+
+        # next, get e1
+        e1 = sheet.cell_value(i, 0)
         prev_i = i
-        i += 1
+
+        curr_row = 0
         while (i < prev_i + entity_rows and i < sheet.nrows):
-            for j in range(1, sheet.ncols):
-                if sheet.cell_value(i, j) != "":
-                    relation = "({0}; {1}; {2})".format(str(e1), str(relation_types[j - 1]), str(e2_vals[j - 1]))
-                    relation = csvConvert(relation)
-                    sentence = csvConvert(sheet.cell_value(i,j))
-                    #out_file.write(relation + "," + sentence + "\n")
-                    out_str += relation + "," + sentence + "\n"
+            for j in range(sheet.ncols):
+                matrix_to_write[curr_row][j] = sheet.cell_value(i,j)
+                num_sents += 1
             i += 1
-    out_str = out_str[0:-1]
-    out_file.write(out_str)
-    out_file.flush()
-    out_file.close()
+            curr_row += 1
+
+        e1_2_writematrix[e1] = matrix_to_write
+
+    return e1_2_writematrix, int((int(num_sents)/10 + 1))
+
+'''randomize the matrix so samples aren't all the same for annotators'''
+def randomizeMat(matrix):
+    return matrix
+    '''
+    while (write_vals[index1][index2] != 0 and num_tries < 200):
+        index1 = rand.randint(0, 9)
+        index2 = rand.randint(0, 9)
+        num_tries += 1
+    write_vals[index1][index2] = (relation, sentence)
+    # new_sheet.write(curr_write_row, curr_write_cols * 2, relation)
+    # new_sheet.write(curr_write_row, curr_write_cols * 2 + 1, sentence)
+    # curr_write_row += 1
+    curr_write_cols += 1
+    if curr_write_cols == 10:
+        curr_write_cols = 0
+        curr_write_row += 1
+    '''
+
+'''
+Preconditions:
+    e1_2_matrix is a mapping from e1 to all of e1s entries in some excel sheet
+    attribs is the attributes in the Excel sheet for which we have values for all the e1s. These should be in the same order as they are assumed in matrices in e1_2_matrix
+Postcondition:
+    Returns a matrix of relation,sentence tuples that is not randomized
+'''
+'''
+def createAMTMatrix(e1_2_matrix, attribs, mat_size):
+    #amt_mat = [["" for x in range(sheet.ncols)] for y in range(entity_rows + 1)]
+    amt_mat = [list() for x in range(mat_size)]
+    amt_row_counter = 0
+
+    for e1 in e1_2_matrix:
+        matrix = e1_2_matrix[e1]
+        # get all entity2s for each column
+        e2_vals = list()
+        for i in range(1, len(matrix[0])):
+            e2_vals.append(matrix[0][i])
+
+        for i in range(1, len(matrix)):
+            for j in range(len(matrix[i])):
+                if matrix[i][j] != "":
+                    relation = "(" + e1 + "; " + attribs[j-1] + "; " + e2_vals[j-1] + ")"
+                    sentence = matrix[i][j]
+                    amt_mat[amt_row_counter].append((relation, sentence))
+                #amt_mat[amt_row_counter][j] = (relation, sentence)
+
+        amt_row_counter += 1
+
+    amt_mat = randomizeMat(amt_mat)
+
+    return amt_mat
 '''
 
 '''
-It should be an Excel file!!!
+Preconditions:
+    e1_2_matrix is a mapping from e1 to all of e1s entries in some excel sheet
+    attribs is the attributes in the Excel sheet for which we have values for all the e1s. These should be in the same order as they are assumed in matrices in e1_2_matrix
+Postcondition:
+    Returns a list of relation,sentence tuples that is not randomized
 '''
+def createAMTList(e1_2_matrix, attribs, mat_size):
+    #amt_mat = [["" for x in range(sheet.ncols)] for y in range(entity_rows + 1)]
+    tuples = list()
 
+    for e1 in e1_2_matrix:
+        matrix = e1_2_matrix[e1]
+        # get all entity2s for each column
+        e2_vals = list()
+        for i in range(1, len(matrix[0])):
+            e2_vals.append(matrix[0][i])
+
+        for i in range(1, len(matrix)):
+            for j in range(len(matrix[i])):
+                if matrix[i][j] != "":
+                    relation = "(" + e1 + "; " + attribs[j-1] + "; " + e2_vals[j-1] + ")"
+                    sentence = matrix[i][j]
+                    tuples.append((relation, sentence))
+                #amt_mat[amt_row_counter][j] = (relation, sentence)
+
+    #amt_mat = randomizeMat(amt_mat)
+
+    return tuples
+
+'''
+Precondition:
+    dataset_path is path to releveant Excel dataset from which we are creating AMT tuples
+    csv_path is path of output csv Excel with AMT data
+Postcondition:
+    csv_path Excel sheet has AMT data ready to be uploaded to MTurk!
+'''
 def createCSV(dataset_path, csv_path):
     dataset = xlrd.open_workbook(dataset_path)
     sheet = dataset.sheet_by_index(0)
 
     new_dataset = xlwt.Workbook()
-    new_sheet = new_dataset.add_sheet('Data')
+    out_sheet = new_dataset.add_sheet('Data')
 
-
-    #out_file.write('sentence,relation\n')
-    new_sheet.write(0, 0, 'sentence')
-    new_sheet.write(0, 1, 'relation')
-
-
-    relation_types = list()
-    for j in range(1, sheet.ncols):
-        relation_types.append(sheet.cell_value(0,j))
-
-    #now, get the values
-    curr_write_row = 1
-    i = 1
-    while i < sheet.nrows:
-        # get current entity
-        e1 = sheet.cell_value(i, 0)
-
-        # get number of rows this entity takes up
-        curr_row = i + 1
-        while (curr_row < sheet.nrows and sheet.cell_value(curr_row, 0) == ""):
-            curr_row += 1
-        entity_rows = curr_row - i
-
-        #get list of e2s by column
-        e2_vals = list()
-        for j in range(1, sheet.ncols):
-            e2_vals.append(sheet.cell_value(i,j))
-
-        # now, get the tuples
-        prev_i = i
-        i += 1
-        while (i < prev_i + entity_rows and i < sheet.nrows):
-            for j in range(1, sheet.ncols):
-                if sheet.cell_value(i, j) != "":
-                    relation = "({0}; {1}; {2})".format(str(e1), str(relation_types[j - 1]), str(e2_vals[j - 1]))
-                    relation = csvConvert(relation)
-                    sentence = csvConvert(sheet.cell_value(i,j))
-                    #out_file.write(relation + "," + sentence + "\n")
-                    new_sheet.write(curr_write_row, 0, relation)
-                    new_sheet.write(curr_write_row, 1, sentence)
-                    curr_write_row += 1
-            i += 1
-    new_dataset.save('amt_data/' + csv_path + '.xls')
-
-
-
-
-
-def createCSV_fromtonyfile3(dataset_path, csv_path):
-    # get set of names
-    tsun_dataset = xlrd.open_workbook(dataset_path)
-    males = tsun_dataset.sheet_by_index(0)
-    females = tsun_dataset.sheet_by_index(1)
-
-    male_names = dict()
-    for i in range(males.nrows):
-        curr_name = males.cell_value(i, 0)
-        if curr_name not in male_names:
-            male_names[curr_name] = curr_name
-
-    female_names = dict()
-    for i in range(females.nrows):
-        curr_name = females.cell_value(i, 0)
-        if curr_name not in female_names:
-            female_names[curr_name] = curr_name
-
-
-    # now open up male data
-    male_dataset = xlrd.open_workbook('AttributeDatasets/nohyperym_full_train_PersonData_ttl_male_names.txt_fixed_e1e2.xls')
-    male_sheet = male_dataset.sheet_by_index(0)
-
-    new_dataset = xlwt.Workbook()
-    new_sheet = new_dataset.add_sheet('Data')
-
-
-    for j in range(20):
-        if j % 2 == 0:
-            new_sheet.write(0, j, "r" + str(int(j/2) + 1))
-        else:
-            new_sheet.write(0, j, "s" + str(int(j / 2) + 1))
-
-
-    relation_types = list()
-    for j in range(1, male_sheet.ncols):
-        relation_types.append(male_sheet.cell_value(0,j))
-
-
-    write_vals = [[0 for i in range(10)] for i in range(10)]
-
-    #now, get the values
-    curr_write_row = 1
-    curr_write_cols = 0
-    i = 1
-    while i < male_sheet.nrows:
-        # get current entity
-        e1 = male_sheet.cell_value(i, 0)
-
-        # get number of rows this entity takes up
-        curr_row = i + 1
-        while (curr_row < male_sheet.nrows and male_sheet.cell_value(curr_row, 0) == ""):
-            curr_row += 1
-        entity_rows = curr_row - i
-        if e1 not in male_names:
-            #skip this entity
-            i += entity_rows
-            continue
-
-        #get list of e2s by column
-        e2_vals = list()
-        for j in range(1, male_sheet.ncols):
-            e2_vals.append(male_sheet.cell_value(i,j))
-
-        # now, get the tuples
-        prev_i = i
-        i += 1
-        while (i < prev_i + entity_rows and i < male_sheet.nrows):
-            for j in range(1, male_sheet.ncols):
-                if male_sheet.cell_value(i, j) != "":
-                    relation = "({0}; {1}; {2})".format(str(e1), str(relation_types[j - 1]), str(e2_vals[j - 1]))
-                    #relation = csvConvert(relation)
-                    #sentence = csvConvert(male_sheet.cell_value(i,j))
-                    sentence = male_sheet.cell_value(i,j)
-                    #out_file.write(relation + "," + sentence + "\n")
-                    index1 = 0
-                    index2 = 0
-                    while(write_vals[index1][index2] != 0):
-                        index1 = rand.randint(0,9)
-                        index2 = rand.randint(0,9)
-                    write_vals[index1][index2] = (relation, sentence)
-                    #new_sheet.write(curr_write_row, curr_write_cols * 2, relation)
-                    #new_sheet.write(curr_write_row, curr_write_cols * 2 + 1, sentence)
-                    #curr_write_row += 1
-                    curr_write_cols += 1
-                    if curr_write_cols == 10:
-                        curr_write_cols = 0
-                        curr_write_row += 1
-            i += 1
-
-
-    # now open up female data
-    female_dataset = xlrd.open_workbook('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed_e1e2.xls')
-    female_sheet = female_dataset.sheet_by_index(0)
-
-    '''
-    relation_types = list()
-    for j in range(1, male_sheet.ncols):
-        relation_types.append(male_sheet.cell_value(0, j))
-    '''
-
-    i = 1
-    curr_write_cols = 0
-    while i < female_sheet.nrows:
-        # get current entity
-        e1 = female_sheet.cell_value(i, 0)
-
-        # get number of rows this entity takes up
-        curr_row = i + 1
-        while (curr_row < female_sheet.nrows and female_sheet.cell_value(curr_row, 0) == ""):
-            curr_row += 1
-        entity_rows = curr_row - i
-        if e1 not in female_names:
-            # skip this entity
-            i += entity_rows
-            continue
-
-        # get list of e2s by column
-        e2_vals = list()
-        for j in range(1, female_sheet.ncols):
-            e2_vals.append(female_sheet.cell_value(i, j))
-
-        # now, get the tuples
-        prev_i = i
-        i += 1
-        while (i < prev_i + entity_rows and i < female_sheet.nrows):
-            for j in range(1, female_sheet.ncols):
-                if female_sheet.cell_value(i, j) != "":
-                    relation = "({0}; {1}; {2})".format(str(e1), str(relation_types[j - 1]), str(e2_vals[j - 1]))
-                    #relation = csvConvert(relation)
-                    #sentence = csvConvert(female_sheet.cell_value(i, j))
-                    sentence = female_sheet.cell_value(i, j)
-                    index1 = 0
-                    index2 = 0
-                    num_tries = 0
-                    while (write_vals[index1][index2] != 0 and num_tries < 200):
-                        index1 = rand.randint(0, 9)
-                        index2 = rand.randint(0, 9)
-                        num_tries += 1
-                    write_vals[index1][index2] = (relation, sentence)
-                    # new_sheet.write(curr_write_row, curr_write_cols * 2, relation)
-                    # new_sheet.write(curr_write_row, curr_write_cols * 2 + 1, sentence)
-                    # curr_write_row += 1
-                    curr_write_cols += 1
-                    if curr_write_cols == 10:
-                        curr_write_cols = 0
-                        curr_write_row += 1
-            i += 1
-
-    for i in range(len(write_vals)):
-        for j in range(len(write_vals[0])):
-            new_sheet.write(i+1, j*2, write_vals[i][j][0])
-            new_sheet.write(i + 1, j*2+1, write_vals[i][j][1])
-
-    new_dataset.save('amt_data/' + csv_path + '.xls')
-
-
-
-def convertToBatches(amt_data_path, amt_splits_path, out_path):
-    batch_size = 10
-
-    splits = xlrd.open_workbook(amt_splits_path)
-    splits_sheet = splits.sheet_by_index(0)
-    sheet_index = 0
-
-    amt_rels = xlrd.open_workbook(amt_data_path)
-    amt_sheet = amt_rels.sheet_by_index(0)
-
-    out_dataset = xlwt.Workbook()
-    out_sheet = out_dataset.add_sheet('Data')
 
     for j in range(20):
         if j % 2 == 0:
@@ -307,55 +156,60 @@ def convertToBatches(amt_data_path, amt_splits_path, out_path):
         else:
             out_sheet.write(0, j, "s" + str(int(j / 2) + 1))
 
-    i = 0
+    attribs = list()
+    for j in range(1, sheet.ncols):
+        attribs.append(sheet.cell_value(0,j))
+
+    e1_2_matrix, mat_size = getEntityMatrices(sheet)
+
+    tuples = createAMTList(e1_2_matrix, attribs, mat_size)
+
     curr_write_row = 1
-    curr_write_cols = 0
-    while True:
-        '''
-        if splits_sheet.cell_value(i, 0) == "":
-            curr_write_cols = 0
+    curr_write_col = 0
+    while tuples:
+        curr_tuple = tuples.pop(rand.randint(0, len(tuples)-1))
+        out_sheet.write(curr_write_row, curr_write_col * 2, curr_tuple[0])
+        out_sheet.write(curr_write_row, curr_write_col * 2 + 1, curr_tuple[1])
+        curr_write_col += 1
+        if curr_write_col >= 10:
+            curr_write_col = 0
             curr_write_row += 1
-            i += 1
-            continue
-        '''
-        if i >= splits_sheet.nrows:
-            if sheet_index == 9:
-                break
-            curr_write_cols = 0
-            curr_write_row += 1
-            i = 0
-            splits_sheet = splits.sheet_by_index(sheet_index)
-            sheet_index += 1
-            continue
 
+    new_dataset.save('amt_data/' + csv_path + ".xls")
+
+'''
+def createCSV(dataset_path, csv_path):
+    dataset = xlrd.open_workbook(dataset_path)
+    sheet = dataset.sheet_by_index(0)
+
+    new_dataset = xlwt.Workbook()
+    out_sheet = new_dataset.add_sheet('Data')
+
+
+    for j in range(20):
+        if j % 2 == 0:
+            out_sheet.write(0, j, "r" + str(int(j/2) + 1))
         else:
-            e1 = splits_sheet.cell_value(i, 0)
-            e2 = splits_sheet.cell_value(i, 1)
-            sentence = splits_sheet.cell_value(i,2)
+            out_sheet.write(0, j, "s" + str(int(j / 2) + 1))
 
-            for k in range(amt_sheet.nrows):
-                relation = amt_sheet.cell_value(k, 0)
-                entities = relation.split(';')
-                if len(entities) >= 3:
-                    e1_2 = entities[0][1:].strip()
-                    e2_2 = entities[2][:-1].strip()
-                    sentence_2 = amt_sheet.cell_value(k, 1)
+    attribs = list()
+    for j in range(1, sheet.ncols):
+        attribs.append(sheet.cell_value(0,j))
 
+    e1_2_matrix, mat_size = getEntityMatrices(sheet)
 
-                    if e1 == e1_2 and e2 == e2_2 and sentence_2.strip() == sentence.strip():
-                        out_sheet.write(curr_write_row, curr_write_cols * 2, relation)
-                        out_sheet.write(curr_write_row, curr_write_cols * 2 + 1, amt_sheet.cell_value(k, 1))
-                        curr_write_cols += 1
-                        break
-                        '''
-                        if curr_write_cols >= 10:
-                            curr_write_row += 1
-                            curr_write_cols = 0
-                        '''
-            i += 1
+    matrix = createAMTMatrix(e1_2_matrix, attribs, mat_size)
 
-    out_dataset.save("amt_data/FINAL PILOT SPLITS2.xls")
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            test = matrix[i][j]
+            test2 = matrix[i][j][0]
+            test3 = matrix[i][j][1]
+            out_sheet.write(i+1, j*2, matrix[i][j][0])
+            out_sheet.write(i + 1, j * 2 + 1, matrix[i][j][1])
 
+    new_dataset.save('amt_data/' + csv_path + ".xls")
+'''
 
 
 
@@ -363,7 +217,23 @@ def convertToBatches(amt_data_path, amt_splits_path, out_path):
 
 if __name__ == '__main__':
     #createCSV_fromtonyfile3('amt_data/AMT_pilot.xlsx', 'pilot_study2')
-    createCSV('AttributeDatasets/pilot_study2.xlsx', 'NEW PILOT STUDY')
-    convertToBatches('amt_data/pilot_study2.xls', 'amt_data/AMT_split.xls', '')
+    createCSV('AttributeDatasets/pilot_study2.xlsx', 'yes')
 
     #convertToBatches('amt_data/pilot_study2.xls', 'amt_data/AMT_split.xls', '')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
