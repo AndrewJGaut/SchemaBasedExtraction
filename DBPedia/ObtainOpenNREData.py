@@ -72,6 +72,7 @@ Postcondition:
 def createOpenNREFiles(relations):
     # files to write to later
     training_json = open('OpenNRETrainingData/train.json', 'w')
+    #training_json = open('OpenNRETrainingData/dev.json', 'w')
     rel_to_id = open('OpenNRETrainingData/rel2id.json', 'w')
 
 
