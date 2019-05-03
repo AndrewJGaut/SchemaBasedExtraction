@@ -257,6 +257,11 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
                 row_counter = max_row
         except Exception as e:
             print("ERROR  for " + str(name) + ": " + str(e))
+            browser.close()
+
+            options = Options()
+            options.add_argument("--headless")
+            browser = webdriver.Chrome(chrome_options=options)
             continue
 
 
