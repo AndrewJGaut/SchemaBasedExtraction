@@ -261,6 +261,7 @@ def createDatasetSortByHypernym(person_file_path, hypernym, attribs, dataset_nam
 
             options = Options()
             options.add_argument("--headless")
+            options.add_argume('--no-sandbox')
             browser = webdriver.Chrome(chrome_options=options)
             continue
 
@@ -310,6 +311,7 @@ if __name__ == '__main__':
     # define selenium browser for scraping
     options = Options()
     options.add_argument("--headless")
+    options.add_argume('--no-sandbox')
     browser = webdriver.Chrome(chrome_options=options)
 
     #createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_male', browser)
