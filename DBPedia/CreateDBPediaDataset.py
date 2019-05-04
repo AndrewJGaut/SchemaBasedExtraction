@@ -311,7 +311,7 @@ if __name__ == '__main__':
     # define selenium browser for scraping
     options = Options()
     options.add_argument("--headless")
-    options.add_argume('--no-sandbox')
+    options.add_argument('--no-sandbox')
     browser = webdriver.Chrome(chrome_options=options)
 
     #createDatasetSortByHypernym("PersonData_ttl/male_names.txt",'Politican', ['party', 'religion', 'predecessor'], 'train_male', browser)
