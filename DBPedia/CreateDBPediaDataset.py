@@ -176,7 +176,7 @@ def createLargeDataset(person_file_path, attribs, dataset_name, browser):
                 if(max_row > row_counter): row_counter = max_row
         except Exception as e:
             if ('row index was 65536') in str(e):
-                dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + dataset_counter + ".xls")
+                dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + str(dataset_counter) + ".xls")
 
                 # create new excel spreadsheet
                 dataset = xlwt.Workbook()
@@ -193,8 +193,8 @@ def createLargeDataset(person_file_path, attribs, dataset_name, browser):
 
         # save intermittently
         if(row_counter % 400 == 0):
-            dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + dataset_counter + ".xls")
-        dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + dataset_counter + ".xls")
+            dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + str(dataset_counter) + ".xls")
+        dataset.save('AttributeDatasets/' + dataset_name + "_" + person_file_path + "_" + str(dataset_counter) + ".xls")
 
 
 '''
