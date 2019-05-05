@@ -188,6 +188,8 @@ def createLargeDataset(person_file_path, attribs, dataset_name, browser):
                 dataset_counter += 1
                 print('making new dataset')
             else:
+                browser.quit()
+
                 options = Options()
                 options.add_argument("--headless")
                 options.add_argument('--no-sandbox')
