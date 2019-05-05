@@ -62,19 +62,13 @@ def genId():
 
     return id
 
-'''
-Precondition:
-    relations is a list of ALL the relations we've obtained
-    each relation in relations is a tuple (relation, entity1, entity2, sentence)
-Postcondition:
-    creates train.json and rel2id.json files
-'''
-def createOpenNREFiles(relations):
-    # files to write to later
-    training_json = open('OpenNRETrainingData/train.json', 'w')
-    #training_json = open('OpenNRETrainingData/dev.json', 'w')
-    rel_to_id = open('OpenNRETrainingData/rel2id.json', 'w')
 
+'''
+Create the actual train or test or dev file from list of relations tuples
+'''
+def createOpenNRESplitFile(relations, split_type):
+    # files to write to later
+    training_json = open('OpenNRETrainingData/' + split_type + '.json', 'w')
 
     names2ids = dict()
     ids_in_use = set()
@@ -124,6 +118,29 @@ def createOpenNREFiles(relations):
     training_json_string = training_json_string[0:-2]
     training_json_string += "\n]"
 
+    # write to files
+    training_json.write(training_json_string)
+    training_json.close()
+
+    return unique_relations
+
+'''
+Precondition:
+    relations is a list of ALL the relations we've obtained
+    each relation in relations is a tuple (relation, entity1, entity2, sentence)
+Postcondition:
+    creates train.json and rel2id.json files
+'''
+def createOpenNREFiles(relations):
+    #create splits files
+    unique_relations = createOpenNRESplitFile(relations[0], 'train')
+    createOpenNRESplitFile(relations[1], 'dev')
+    createOpenNRESplitFile(relations[2], 'test')
+
+    #training_json = open('OpenNRETrainingData/dev.json', 'w')
+    rel_to_id = open('OpenNRETrainingData/rel2id.json', 'w')
+
+
     # get relation to id mapping data
     relation_to_id_mapping_string = "{\n\t\"NA\": 0,\n"
     rel_counter = 1
@@ -134,9 +151,7 @@ def createOpenNREFiles(relations):
     relation_to_id_mapping_string = relation_to_id_mapping_string[0:-2]
     relation_to_id_mapping_string += "\n}"
 
-    #write to files
-    training_json.write(training_json_string)
-    training_json.close()
+
 
     rel_to_id.write(relation_to_id_mapping_string)
     rel_to_id.close()
@@ -168,47 +183,37 @@ def formatWordVectorFile(vec_file):
 
 
 '''
-Precondition:
-    dataset_path is a path to an Excel dataset with sturctured data from a KB
-Postcondition:
-    returns a list of tuples (relation_type, entity1, entity2, sentence) from that dataset
+Returns the list of tuples of the relations found in the sheet passed in as a parameter
 '''
-def readDataFromDBPediaDataset(dataset_path):
-    dataset = xlrd.open_workbook(dataset_path)
-    dataset_sheet = dataset.sheet_by_index(0)
-
-    # get the types of relations
-    relation_types = list()
-    for i in range(1, dataset_sheet.ncols):
-        relation_types.append(dataset_sheet.cell_value(0, i))
-
-    relations = list() # list of relations
+def getRelationsFromSheet(dataset_sheet, relation_types):
+    relations = list()  # list of relations
     i = 1
     while i < dataset_sheet.nrows:
 
-        #first, get the number of rows until next entity
+        # first, get the number of rows until next entity
         curr_row = i + 1
-        while(curr_row < dataset_sheet.nrows and dataset_sheet.cell_value(curr_row, 0) == ""):
+        while (curr_row < dataset_sheet.nrows and dataset_sheet.cell_value(curr_row, 0) == ""):
             curr_row += 1
         entity_rows = curr_row - i
 
-        #now, get entity name
-        e1 = dataset_sheet.cell_value(i,0)
+        # now, get entity name
+        e1 = dataset_sheet.cell_value(i, 0)
         print("CURR NAME: " + e1)
 
-        #get list of e2s by column
+        # get list of e2s by column
         e2_vals = list()
         for j in range(1, dataset_sheet.ncols):
-            e2_vals.append(dataset_sheet.cell_value(i,j))
+            e2_vals.append(dataset_sheet.cell_value(i, j))
 
-        #now, get the tuples
+        # now, get the tuples
         prev_i = i
         i += 1
-        while(i < prev_i + entity_rows and i < dataset_sheet.nrows):
+        while (i < prev_i + entity_rows and i < dataset_sheet.nrows):
             for j in range(1, dataset_sheet.ncols):
                 if dataset_sheet.cell_value(i, j) != "":
                     print("getting sentence...")
-                    relation = (relation_types[j-1], e1, e2_vals[j-1], opennreFormatSentence(dataset_sheet.cell_value(i,j)))
+                    relation = (
+                    relation_types[j - 1], e1, e2_vals[j - 1], opennreFormatSentence(dataset_sheet.cell_value(i, j)))
                     relations.append(relation)
             i += 1
 
@@ -216,37 +221,29 @@ def readDataFromDBPediaDataset(dataset_path):
 
     return relations
 
-
 '''
 Precondition:
-    e1_2_relation is a dict mapping entities to relations found from THEIR DBPedia page! e.g. if I find a relation on Barack Obama's DBPedia page, then e1_2_rel[Barack Obama] should give a list of relation tuples
-    browser is a selenium browser used for web scarping
+    dataset_path is a path to an Excel dataset with sturctured data from a KB
+    that dataset must also have 3 sheets, the first being the training set, second being dev, and 3rd being test
 Postcondition:
-    returns a list of full relation tuples (i.e. relation tuples that contain the sentence that gives that relation)
-    Relation tuples are of the form: (relation, entity1, entity2, sentence)
-NOTE!!!: make more efficient by only looping through article once for each e1 (i.e. look for all e2s in each sentence and map e2 to its relation)
+    returns a 3 lists of tuples (relation_type, entity1, entity2, sentence) from that dataset, one for training, one for dev,and one for testing
 '''
-def getFullRelationTuples(e1_2_relation, browser):
-    relations = list()
+def readDataFromDBPediaDataset(dataset_path):
+    dataset = xlrd.open_workbook(dataset_path)
+    train_sheet = dataset.sheet_by_index(0)
+    dev_sheet = dataset.sheet_by_index(1)
+    test_sheet = dataset.sheet_by_index(2)
 
-    for e1, relation_list in e1_2_relation.items():
-        article = getArticleForPerson(e1, browser)
+    # get the types of relations
+    relation_types = list()
+    for i in range(1, train_sheet.ncols):
+        relation_types.append(train_sheet.cell_value(0, i))
 
-        for relation in relation_list:
-            try:
-                e1 = lemmatize(relation[1])
-                e2 = lemmatize(relation[2])
-                #e1 = relation[1]
-                #e2 = relation[2]
+    train_rels = getRelationsFromSheet(train_sheet, relation_types)
+    dev_rels = getRelationsFromSheet(dev_sheet, relation_types)
+    test_rels = getRelationsFromSheet(test_sheet, relation_types)
+    return [train_rels, dev_rels, test_rels]
 
-                for sentence in nltk.sent_tokenize(article):
-                    if(e2 in sentence): #we ONLY check if e2 in sentence since this Obama's article!
-                        sentence = opennreFormatSentence(sentence)
-                        relations.append((relation[0], e1, e2, sentence))
-            except:
-                print("BAD RELATION")
-
-    return relations
 
 
 

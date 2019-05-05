@@ -1,0 +1,1076 @@
+[
+	{
+		"sentence": "anna a. georges eshoo /ˈɛʃuː/ ( born december 13 , 1942 ) is the u.s. representative from california 's 18th congressional district , serving since 1993 . ",
+		"head": {"word": "Anna Eshoo", "id": "m.525t2"},
+		"tail": {"word": "Representative", "id": "m.to0df"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "anna a. georges eshoo /ˈɛʃuː/ ( born december 13 , 1942 ) is the u.s. representative from california 's 18th congressional district , serving since 1993 . ",
+		"head": {"word": "Anna Eshoo", "id": "m.525t2"},
+		"tail": {"word": "George Eshoo", "id": "m.x0twl"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "anna a. georges eshoo /ˈɛʃuː/ ( born december 13 , 1942 ) is the u.s. representative from california 's 18th congressional district , serving since 1993 . ",
+		"head": {"word": "Anna Eshoo", "id": "m.525t2"},
+		"tail": {"word": "December 13, 1942", "id": "m.g211p"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "she is assyrian paternally and armenian maternally.anna eshoo was born in new britain , connecticut , of assyrian and armenian heritage . ",
+		"head": {"word": "Anna Eshoo", "id": "m.525t2"},
+		"tail": {"word": "New Britain, Connecticut", "id": "m.bqgxy"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "she received an associate of arts degree from cañada college in 1975.eshoo was chair of the san mateo democratic party from 1978 to 1982 . ",
+		"head": {"word": "Anna Eshoo", "id": "m.525t2"},
+		"tail": {"word": "Cañada College", "id": "m.5u7sr"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "`` [ 35 ] eshoo was married to attorney george eshoo , with whom she has two children , karen and paul . ",
+		"head": {"word": "Anna Eshoo", "id": "m.525t2"},
+		"tail": {"word": "George Eshoo", "id": "m.x0twl"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "[ 4 ] eshoo graduated from new britain high school in 1960 , and later moved to california . ",
+		"head": {"word": "Anna Eshoo", "id": "m.525t2"},
+		"tail": {"word": "New Britain, Connecticut", "id": "m.bqgxy"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "phineas densmore gurley ( november 12 , 1816 – september 30 , 1868 ) [ 1 ] was chaplain of the united states senate and pastor of new york avenue presbyterian church in washington , d.c.gurley was born in hamilton , new york , on november 12 , 1816 , [ 2 ] the son of phineas and elizabeth ( née fox ) gurley . ",
+		"head": {"word": "Phineas Densmore Gurley", "id": "m.gqhcf"},
+		"tail": {"word": "Chaplain", "id": "m.66ezl"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "he spent the last two years as moderator of the presbyterian church.gurley married emma brooks on october 9 , 1840 . ",
+		"head": {"word": "Phineas Densmore Gurley", "id": "m.gqhcf"},
+		"tail": {"word": "Emma Brooks", "id": "m.py1sa"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "phineas densmore gurley ( november 12 , 1816 – september 30 , 1868 ) [ 1 ] was chaplain of the united states senate and pastor of new york avenue presbyterian church in washington , d.c.gurley was born in hamilton , new york , on november 12 , 1816 , [ 2 ] the son of phineas and elizabeth ( née fox ) gurley . ",
+		"head": {"word": "Phineas Densmore Gurley", "id": "m.gqhcf"},
+		"tail": {"word": "November 12, 1816", "id": "m.0lol3"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "phineas densmore gurley ( november 12 , 1816 – september 30 , 1868 ) [ 1 ] was chaplain of the united states senate and pastor of new york avenue presbyterian church in washington , d.c.gurley was born in hamilton , new york , on november 12 , 1816 , [ 2 ] the son of phineas and elizabeth ( née fox ) gurley . ",
+		"head": {"word": "Phineas Densmore Gurley", "id": "m.gqhcf"},
+		"tail": {"word": "Hamilton", "id": "m.rl046"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 3 ] gurley graduated from union college , schenectady , new york , in 1837 , with the highest honors of his class , and from princeton theological seminary in 1840 . ",
+		"head": {"word": "Phineas Densmore Gurley", "id": "m.gqhcf"},
+		"tail": {"word": "Union College", "id": "m.r04yc"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "gurley continued to be the pastor of the merged congregation until his death.in 1859 he was chosen chaplain of the united states senate ; one of fourteen presbyterians to hold that office , to date . ",
+		"head": {"word": "Phineas Densmore Gurley", "id": "m.gqhcf"},
+		"tail": {"word": "Chaplain", "id": "m.66ezl"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "their children were : frances mary gurley , william brooks gurley , hosea mellville gurley , charles lawrence gurley and emma harrison gurley . ",
+		"head": {"word": "Phineas Densmore Gurley", "id": "m.gqhcf"},
+		"tail": {"word": "Emma Brooks", "id": "m.py1sa"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "[ 6 ] this made the africa finance corporation the second highest-rated lending financial institution in africa.in july 2014 , adesola was appointed an executive director/group chief financial officer of firstbank , [ 7 ] [ 8 ] [ 9 ] [ 10 ] where he was responsible for the bank ’ s financial control , internal control and enhancement , business performance management , treasury and procurement functions.on monday , january 4 , 2016 , adesola resumed work as managing director of first bank of nigeria limited , and its commercial banking subsidiaries ( fbn uk , fbn ghana , fbn drc , fbn guinea , fbn gambia , fbn mortgages , and first pension custodian limited ) . ",
+		"head": {"word": "Adesola Kazeem Adeduntan", "id": "m.wg5fn"},
+		"tail": {"word": "Director", "id": "m.84bmo"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 12 ] adesola is married to mrs adenike adeduntan and together they have three children . ",
+		"head": {"word": "Adesola Kazeem Adeduntan", "id": "m.wg5fn"},
+		"tail": {"word": "Mrs Adenike Adeduntan", "id": "m.7ofwt"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "adesola kazeem adeduntan ( born may 7 , 1969 ) is a nigerian business executive . ",
+		"head": {"word": "Adesola Kazeem Adeduntan", "id": "m.wg5fn"},
+		"tail": {"word": "May 7, 1969", "id": "m.838y6"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "in 1994 , after which he worked with kpmg professional services , citibank nigeria , and the africa finance corporation ( afc ) before joining firstbank in july 2014.adesola currently sits as a non-executive director on the boards of the nigeria interbank settlement system ( nibss ) , africa finance corporation ( afc ) , fbn bank u.k. ltd. , universal payments plc. , and fmdq otc securities exchange.adesola is also a fellow of the institute of chartered accountants of nigeria.adesola was born in ibadan , oyo state . ",
+		"head": {"word": "Adesola Kazeem Adeduntan", "id": "m.wg5fn"},
+		"tail": {"word": "Ibadan", "id": "m.f5bvq"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "a knowledge manager , he was also a kpmg-accredited trainer and facilitated several internal training programmes.adesola left kpmg in 2004 to study for a master 's degree in business administration at the cranfield school of management , where he was a british chevening scholar . ",
+		"head": {"word": "Adesola Kazeem Adeduntan", "id": "m.wg5fn"},
+		"tail": {"word": "Cranfield School of Management", "id": "m.swiyd"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "at the urban day grammar school , old ife road , ibadan , where he had his secondary schooling , adesola was the deputy senior prefect in his final year ( 1985/86 ) .he was admitted to the university of ibadan in 1986 to study veterinary medicine , qualifying in 1992 as a veterinary surgeon.in 1994 adesola joined afribank ( nig ) plc . ",
+		"head": {"word": "Adesola Kazeem Adeduntan", "id": "m.wg5fn"},
+		"tail": {"word": "Ibadan", "id": "m.f5bvq"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "olds has been the recipient of many awards including the 2013 pulitzer prize in poetry , [ 1 ] the 1984 national book critics circle award , and the first san francisco poetry center award in 1980 [ 2 ] [ 3 ] she currently teaches creative writing at new york university . ",
+		"head": {"word": "Sharon Olds", "id": "m.8vqqw"},
+		"tail": {"word": "Poet", "id": "m.5gnst"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "i take them up like the male and female paper dolls and bang them together at the hips , like chips of flint , as if to strike sparks from them , i say do what you are going to do , and i will tell about it.from `` i go back to may 1937 '' strike sparks : selected poems 1980–2002 ( 2004 ) [ 13 ] on march 23 , 1968 , she married dr. david douglas olds in new york city and , in 1969 , gave birth to the first of their two children . ",
+		"head": {"word": "Sharon Olds", "id": "m.8vqqw"},
+		"tail": {"word": "David Douglas Olds", "id": "m.37npy"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "sharon olds ( born november 19 , 1942 ) is an american poet . ",
+		"head": {"word": "Sharon Olds", "id": "m.8vqqw"},
+		"tail": {"word": "November 19, 1942", "id": "m.mf48v"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "olds has been the recipient of many awards including the 2013 pulitzer prize in poetry , [ 1 ] the 1984 national book critics circle award , and the first san francisco poetry center award in 1980 [ 2 ] [ 3 ] she currently teaches creative writing at new york university . ",
+		"head": {"word": "Sharon Olds", "id": "m.8vqqw"},
+		"tail": {"word": "San Francisco", "id": "m.pnsjq"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "following this olds once again moved cross country to new york , where she earned her ph.d. in english in 1972 from columbia university . ",
+		"head": {"word": "Sharon Olds", "id": "m.8vqqw"},
+		"tail": {"word": "Columbia University", "id": "m.g82kq"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "[ 4 ] sharon olds was born on november 19 , 1942 in san francisco , california , [ 5 ] but was brought up in berkeley , california [ 3 ] along with her siblings . ",
+		"head": {"word": "Sharon Olds", "id": "m.8vqqw"},
+		"tail": {"word": "November 19, 1942", "id": "m.mf48v"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "[ 4 ] sharon olds was born on november 19 , 1942 in san francisco , california , [ 5 ] but was brought up in berkeley , california [ 3 ] along with her siblings . ",
+		"head": {"word": "Sharon Olds", "id": "m.8vqqw"},
+		"tail": {"word": "San Francisco", "id": "m.pnsjq"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "writer and printer samuel richardson , enjoying the essays greatly , questioned the publisher as to who wrote the works ; only he and a few of johnson 's friends were told of johnson 's authorship . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Writer", "id": "m.n1bp9"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "the family remained in poverty until his mother 's cousin , elizabeth harriotts , died in february 1728 and left enough money to send johnson to university . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Elizabeth Johnson", "id": "m.v6n5e"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "samuel johnson ( 18 september 1709 [ os 7 september ] – 13 december 1784 ) , often referred to as dr. johnson , was an english writer who made lasting contributions to english literature as a poet , playwright , essayist , moralist , literary critic , biographer , editor and lexicographer . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "September 18, 1709", "id": "m.rjezs"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "[ 3 ] born in lichfield , staffordshire , johnson attended pembroke college , oxford , for just over a year , but a lack of funds forced him to leave . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Lichfield", "id": "m.0zy9f"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 3 ] born in lichfield , staffordshire , johnson attended pembroke college , oxford , for just over a year , but a lack of funds forced him to leave . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Pembroke College, Oxford", "id": "m.dows7"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "[ 55 ] the porter family did not approve of the match , partly because of the difference in their ages , johnson was 25 and elizabeth was 46 . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Elizabeth Johnson", "id": "m.v6n5e"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "[ 7 ] samuel johnson was born on 18 september 1709 , to sarah ( née ford ) and michael johnson , a bookseller . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "September 18, 1709", "id": "m.rjezs"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "[ 11 ] two godfathers were chosen , samuel swynfen , a physician and graduate of pembroke college , oxford , and richard wakefield , a lawyer , coroner , and lichfield town clerk . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Lichfield", "id": "m.0zy9f"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 11 ] two godfathers were chosen , samuel swynfen , a physician and graduate of pembroke college , oxford , and richard wakefield , a lawyer , coroner , and lichfield town clerk . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Pembroke College, Oxford", "id": "m.dows7"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "elizabeth 's marriage to johnson so disgusted her son jervis that he severed all relations with her . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Elizabeth Johnson", "id": "m.v6n5e"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "[ 20 ] a year later johnson went to lichfield grammar school , where he excelled in latin . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Lichfield", "id": "m.0zy9f"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 30 ] on 31 october 1728 , a few weeks after he turned 19 , johnson entered pembroke college , oxford . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Pembroke College, Oxford", "id": "m.dows7"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "[ 26 ] after spending six months with his cousins , johnson returned to lichfield , but mr hunter , the headmaster , `` angered by the impertinence of this long absence '' , refused to allow johnson to continue at the school . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Lichfield", "id": "m.0zy9f"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 27 ] unable to return to lichfield grammar school , johnson enrolled at the king edward vi grammar school at stourbridge . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Lichfield", "id": "m.0zy9f"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 36 ] after thirteen months , a lack of funds forced johnson to leave oxford without a degree , and he returned to lichfield . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Lichfield", "id": "m.0zy9f"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 42 ] by 1731 johnson 's father was deeply in debt and had lost much of his standing in lichfield . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Lichfield", "id": "m.0zy9f"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 46 ] johnson continued to look for a position at a lichfield school . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Lichfield", "id": "m.0zy9f"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 60 ] in the autumn of 1735 , johnson opened edial hall school as a private academy at edial , near lichfield . ",
+		"head": {"word": "Samuel Johnson", "id": "m.22d66"},
+		"tail": {"word": "Lichfield", "id": "m.0zy9f"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "jo ann davis ( née sides ; june 29 , 1950 – october 6 , 2007 ) was a representative in the u.s. congress . ",
+		"head": {"word": "Jo Ann Davis", "id": "m.08pme"},
+		"tail": {"word": "Representative", "id": "m.to0df"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 8 ] in 1974 she married chuck davis ; the couple had two sons and were married for 33 years.davis was diagnosed in september 2005 with breast cancer and underwent a partial mastectomy on july 5 , 2006 , at the george washington university medical center in washington , d.c . ",
+		"head": {"word": "Jo Ann Davis", "id": "m.08pme"},
+		"tail": {"word": "Chuck Davis", "id": "m.e22xq"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "jo ann davis ( née sides ; june 29 , 1950 – october 6 , 2007 ) was a representative in the u.s. congress . ",
+		"head": {"word": "Jo Ann Davis", "id": "m.08pme"},
+		"tail": {"word": "June 29, 1950", "id": "m.d49ak"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "other ratings included a 0 % from the national education association , a 23 % from the league of conservation voters , a 0 % from the children 's defense fund , and a 4 % from the american civil liberties union [ 1 ] .davis was born in rowan county , north carolina , but lived in virginia starting when she was nine years old . ",
+		"head": {"word": "Jo Ann Davis", "id": "m.08pme"},
+		"tail": {"word": "Rowan County, North Carolina", "id": "m.nmm6p"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "she was the second woman—after leslie l. byrne—and first republican woman elected to congress from virginia.davis attended hampton roads business college and worked in real estate before she was elected to the virginia house of delegates in 1997 . ",
+		"head": {"word": "Jo Ann Davis", "id": "m.08pme"},
+		"tail": {"word": "Hampton Roads Business College", "id": "m.mkoyg"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "davis is survived by her husband , chuck davis , two sons , and a granddaughter . ",
+		"head": {"word": "Jo Ann Davis", "id": "m.08pme"},
+		"tail": {"word": "Chuck Davis", "id": "m.e22xq"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "chaka fattah ( born arthur davenport ; [ 2 ] november 21 , 1956 ) is an american politician from pennsylvania who served as a democratic member of the united states representative for pennsylvania 's 2nd congressional district from 1995 to 2016 . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Representative", "id": "m.to0df"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 67 ] fattah was challenged by republican nominee rick hellberg , the ceo of a small financial firm.see also : united states house of representatives elections in pennsylvania , 2010 # district 2fattah is married to his third wife , renee chenault-fattah , a former philadelphia television news broadcaster on wcau-tv ( nbc 10 ) . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Renee Chenault-Fattah", "id": "m.f5lg8"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "chaka fattah ( born arthur davenport ; [ 2 ] november 21 , 1956 ) is an american politician from pennsylvania who served as a democratic member of the united states representative for pennsylvania 's 2nd congressional district from 1995 to 2016 . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "November 21, 1956", "id": "m.pc16c"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "he previously served in the pennsylvania senate and the pennsylvania house of representatives.the district included portions of north philadelphia , south philadelphia , and west philadelphia along with lower merion township in montgomery county.on july 29 , 2015 , fattah and a group of associates were indicted on federal charges related to their alleged roles in a racketeering and influence peddling conspiracy . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Philadelphia", "id": "m.q4omz"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 8 ] fattah grew up in philadelphia , attending overbrook high school and the community college of philadelphia . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Community College of Philadelphia", "id": "m.6rae2"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "he previously served in the pennsylvania senate and the pennsylvania house of representatives.the district included portions of north philadelphia , south philadelphia , and west philadelphia along with lower merion township in montgomery county.on july 29 , 2015 , fattah and a group of associates were indicted on federal charges related to their alleged roles in a racketeering and influence peddling conspiracy . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Representative", "id": "m.to0df"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 6 ] [ 7 ] on august 9 , 2018 , the u.s. court of appeals for the third circuit in philadelphia overturned fattah 's bribery convictions . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Philadelphia", "id": "m.q4omz"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 15 ] fattah served as a member of the pennsylvania house of representatives for the 192nd district from 1983 to 1988 , and as a state senator for the 7th district from 1988 to 1994 . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Representative", "id": "m.to0df"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 8 ] fattah grew up in philadelphia , attending overbrook high school and the community college of philadelphia . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Philadelphia", "id": "m.q4omz"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 20 ] fattah represented the 2nd district in pennsylvania , an overwhelmingly democratic district , in the united states house of representatives from 1995 to 2016 . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Representative", "id": "m.to0df"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 12 ] his adoptive father , david fattah , and mother , falaka fattah ( born frances brown , also known as `` queen mother '' falaka fattah ) , are community activists in west philadelphia , where they are building an `` urban boys ' town '' through their organization , the house of umoja . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Philadelphia", "id": "m.q4omz"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 21 ] he is the architect of the gaining early awareness and readiness for undergraduate programs.in his first years in the u.s. house of representatives , fattah introduced and passed into law gaining early awareness and readiness for undergraduate programs ( gear up ) , a college awareness and preparedness program . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Representative", "id": "m.to0df"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ citation needed ] outside of legislative work fattah has created a few local education initiatives for philadelphia and pennsylvania families as a state legislator and in cooperation with state and municipal governments , including the core scholars program and the annual grad conference . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Philadelphia", "id": "m.q4omz"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 65 ] this was a significant decrease from the 2012 election , when fattah received 302,746 votes , more votes than any other member of the house of representatives for that election . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Representative", "id": "m.to0df"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "fattah received an f rating from the national rifle association and an a+ rating from the coalition on gun violence and the brady campaign to prevent gun violence for his positions on gun control.since 2006 , fattah has “ pioneered gun-buyback programs ” in philadelphia with the philadelphia police . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Philadelphia", "id": "m.q4omz"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 67 ] fattah was challenged by republican nominee rick hellberg , the ceo of a small financial firm.see also : united states house of representatives elections in pennsylvania , 2010 # district 2fattah is married to his third wife , renee chenault-fattah , a former philadelphia television news broadcaster on wcau-tv ( nbc 10 ) . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Representative", "id": "m.to0df"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "his candidacy announcement took place next to the recently completed microsoft school of the future in the city 's parkside neighborhood to emphasize his campaign platform of better educational opportunities for city youth.after emerging as a mayoral candidate , fattah came under fire from the philadelphia fraternal order of police for his repeated calls to grant a new trial to mumia abu-jamal , who was convicted of murdering police officer daniel faulkner in 1981 ; [ 51 ] he also was criticized for possibly unethical campaign spending , based on new campaign finance rules adopted by the city of philadelphia . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Philadelphia", "id": "m.q4omz"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 53 ] a subsequent philadelphia daily news investigation revealed that nonprofits receiving federal funding and connected to fattah paid out over $ 5.8 million to fattah allies and alleged that many of these payments were ethically dubious . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Philadelphia", "id": "m.q4omz"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 61 ] on august 9 , 2018 , the u.s. court of appeals for the third circuit in philadelphia overturned fattah 's bribery convictions . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Philadelphia", "id": "m.q4omz"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 67 ] fattah was challenged by republican nominee rick hellberg , the ceo of a small financial firm.see also : united states house of representatives elections in pennsylvania , 2010 # district 2fattah is married to his third wife , renee chenault-fattah , a former philadelphia television news broadcaster on wcau-tv ( nbc 10 ) . ",
+		"head": {"word": "Chaka Fattah", "id": "m.7f99j"},
+		"tail": {"word": "Philadelphia", "id": "m.q4omz"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 9 ] scranton ultimately lost the nomination to senator barry goldwater , who would go on to be defeated in the general election by lyndon johnson.hillman worked to elect senator hugh scott , who had led the republican national committee and would rise to the position of senate minority leader . ",
+		"head": {"word": "Elsie Hillman", "id": "m.uc5t7"},
+		"tail": {"word": "Leader", "id": "m.r6i7v"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "she was the wife of billionaire industrialist henry hillman . ",
+		"head": {"word": "Elsie Hillman", "id": "m.uc5t7"},
+		"tail": {"word": "Henry Hillman", "id": "m.wnq1m"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "elsie hilliard hillman ( december 9 , 1925 – august 4 , 2015 ) was a pittsburgh based philanthropist and a former republican national committeewoman . ",
+		"head": {"word": "Elsie Hillman", "id": "m.uc5t7"},
+		"tail": {"word": "December 9, 1925", "id": "m.mpynu"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "[ 3 ] hillman was born in fox chapel , pennsylvania , [ 4 ] a suburb of pittsburgh , to thomas jones hilliard and marianna talbott hilliard . ",
+		"head": {"word": "Elsie Hillman", "id": "m.uc5t7"},
+		"tail": {"word": "Fox Chapel, Pennsylvania", "id": "m.4mg29"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "elsie hillman began her own volunteering by cleaning instruments for surgeries at eye and ear hospital in pittsburgh , selling war bonds , and knitting socks for soldiers.during her elementary and upper school years , hillman attended the ellis school in pittsburgh and the ethel walker school in connecticut . ",
+		"head": {"word": "Elsie Hillman", "id": "m.uc5t7"},
+		"tail": {"word": "Ethel Walker School", "id": "m.oyj5j"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "by then , she had fallen in love with henry hillman , a u.s. navy pilot whom she had met years earlier in pittsburgh . ",
+		"head": {"word": "Elsie Hillman", "id": "m.uc5t7"},
+		"tail": {"word": "Henry Hillman", "id": "m.wnq1m"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "[ 1 ] she was born joan marie mcinroy in topeka , kansas , the daughter of leonard and mary sands mcinroy . ",
+		"head": {"word": "Joan Finney", "id": "m.dt68f"},
+		"tail": {"word": "McInroy", "id": "m.ita32"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "in 1957 , she married spencer finney , jr. and had three children , sarah `` sally '' finney timm , richard finney , and mary finney holladay . ",
+		"head": {"word": "Joan Finney", "id": "m.dt68f"},
+		"tail": {"word": "Spencer Finney", "id": "m.2g0qn"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "joan finney ( february 12 , 1925 – july 28 , 2001 ) was an american politician who served as the 42nd governor of kansas from 1991 to 1995 , the first woman to hold that office . ",
+		"head": {"word": "Joan Finney", "id": "m.dt68f"},
+		"tail": {"word": "February 12, 1925", "id": "m.fxwdi"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "joan finney ( february 12 , 1925 – july 28 , 2001 ) was an american politician who served as the 42nd governor of kansas from 1991 to 1995 , the first woman to hold that office . ",
+		"head": {"word": "Joan Finney", "id": "m.dt68f"},
+		"tail": {"word": "Kansas", "id": "m.1poo0"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "in 1978 , she graduated from washburn university with a degree in economic history.from 1953 to 1969 , finney served on the staff of republican u.s . ",
+		"head": {"word": "Joan Finney", "id": "m.dt68f"},
+		"tail": {"word": "Washburn University", "id": "m.3lb86"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "[ 1 ] she was born joan marie mcinroy in topeka , kansas , the daughter of leonard and mary sands mcinroy . ",
+		"head": {"word": "Joan Finney", "id": "m.dt68f"},
+		"tail": {"word": "Kansas", "id": "m.1poo0"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "her staff her first term as treasurer included nancy claggett and kathleen boston cole mccune as deputies.after upsetting former governor john w. carlin in the 1990 democratic primary for governor , finney defeated incumbent republican mike hayden in the general election becoming the first woman to defeat an incumbent governor in a general election in the united states.in addition to being the state of kansas 's first female governor , finney was kansas ' first roman catholic governor , and also one of the few pro-life democratic governors of her time . ",
+		"head": {"word": "Joan Finney", "id": "m.dt68f"},
+		"tail": {"word": "Kansas", "id": "m.1poo0"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 4 ] taking office at age 65 , she was also kansas ' oldest governor until laura kelly was inaugurated at age 68 in 2019.following her term as governor , in 1996 , finney ran for the u.s. senate seat vacated by bob dole , but was defeated in the democratic primary by jill docking , who gained 74 % of the primary vote , and subsequently lost the general election to sam brownback.finney died in 2001 from complications of liver cancer at st. francis hospital in topeka , and is buried in mount calvary cemetery in topeka . ",
+		"head": {"word": "Joan Finney", "id": "m.dt68f"},
+		"tail": {"word": "Kansas", "id": "m.1poo0"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "ida saxton mckinley ( june 8 , 1847 – may 26 , 1907 ) was the first lady of the united states from 1897 until 1901.ida was born in canton , ohio , the elder daughter of james saxton , prominent canton banker , and katherine dewalt . ",
+		"head": {"word": "Ida Saxton McKinley", "id": "m.8xno7"},
+		"tail": {"word": "Lady", "id": "m.lk4by"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "a graduate of brook hall seminary , a finishing school in media , pennsylvania , ida was refined , charming , and strikingly attractive when she met william `` bill '' mckinley at a picnic in 1867 . ",
+		"head": {"word": "Ida Saxton McKinley", "id": "m.8xno7"},
+		"tail": {"word": "William McKinley", "id": "m.ze9tm"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "ida saxton mckinley ( june 8 , 1847 – may 26 , 1907 ) was the first lady of the united states from 1897 until 1901.ida was born in canton , ohio , the elder daughter of james saxton , prominent canton banker , and katherine dewalt . ",
+		"head": {"word": "Ida Saxton McKinley", "id": "m.8xno7"},
+		"tail": {"word": "June 8, 1847", "id": "m.ojxy5"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "ida saxton mckinley ( june 8 , 1847 – may 26 , 1907 ) was the first lady of the united states from 1897 until 1901.ida was born in canton , ohio , the elder daughter of james saxton , prominent canton banker , and katherine dewalt . ",
+		"head": {"word": "Ida Saxton McKinley", "id": "m.8xno7"},
+		"tail": {"word": "Ohio", "id": "m.9uowq"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "a graduate of brook hall seminary , a finishing school in media , pennsylvania , ida was refined , charming , and strikingly attractive when she met william `` bill '' mckinley at a picnic in 1867 . ",
+		"head": {"word": "Ida Saxton McKinley", "id": "m.8xno7"},
+		"tail": {"word": "Brook Hall Seminary", "id": "m.pph8f"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "`` president mckinley has made it pretty hard for the rest of us husbands here in washington , '' remarked senator mark hanna.the first lady often traveled with the president . ",
+		"head": {"word": "Ida Saxton McKinley", "id": "m.8xno7"},
+		"tail": {"word": "Lady", "id": "m.lk4by"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 1 ] while single , she worked for a time as a cashier in her father 's bank , a position then usually reserved for men.william mckinley , aged 27 , married ida saxton , aged 23 , on january 25 , 1871 , at the first presbyterian church in canton , then still under construction . ",
+		"head": {"word": "Ida Saxton McKinley", "id": "m.8xno7"},
+		"tail": {"word": "William McKinley", "id": "m.ze9tm"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "her seizures at times occurred in public ; she had one at mckinley 's inaugural ball as governor of ohio . ",
+		"head": {"word": "Ida Saxton McKinley", "id": "m.8xno7"},
+		"tail": {"word": "Ohio", "id": "m.9uowq"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "on the same day , the bodies of ida and william were re-interred in the same place . ",
+		"head": {"word": "Ida Saxton McKinley", "id": "m.8xno7"},
+		"tail": {"word": "William McKinley", "id": "m.ze9tm"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "they were katherine `` katie '' mckinley ( 1871–1875 ) and ida mckinley ( april 1873–august 1873 ) .katie was born on christmas day 1871 , while her father was still a canton , ohio lawyer . ",
+		"head": {"word": "Ida Saxton McKinley", "id": "m.8xno7"},
+		"tail": {"word": "Ohio", "id": "m.9uowq"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "in addition to growing up in the house , she and her husband also lived there from 1878–1891 , the period during which the future president mckinley served as one of ohio 's congressional representatives . ",
+		"head": {"word": "Ida Saxton McKinley", "id": "m.8xno7"},
+		"tail": {"word": "Ohio", "id": "m.9uowq"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "elaine low jack ( born march 22 , 1928 ) was the twelfth relief society general president of the church of jesus christ of latter-day saints ( lds church ) from 1990 to 1997 . ",
+		"head": {"word": "Elaine L. Jack", "id": "m.fuavz"},
+		"tail": {"word": "President", "id": "m.uflts"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "she attended the university of utah where she met joseph e. jack . ",
+		"head": {"word": "Elaine L. Jack", "id": "m.fuavz"},
+		"tail": {"word": "Joseph E. Jack", "id": "m.c3v4a"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "elaine low jack ( born march 22 , 1928 ) was the twelfth relief society general president of the church of jesus christ of latter-day saints ( lds church ) from 1990 to 1997 . ",
+		"head": {"word": "Elaine L. Jack", "id": "m.fuavz"},
+		"tail": {"word": "March 22, 1928", "id": "m.glyvr"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "jack was the first relief society general president to be born outside of the united states.elaine low was born and raised in cardston , alberta , canada . ",
+		"head": {"word": "Elaine L. Jack", "id": "m.fuavz"},
+		"tail": {"word": "Alberta", "id": "m.i6axl"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "she attended the university of utah where she met joseph e. jack . ",
+		"head": {"word": "Elaine L. Jack", "id": "m.fuavz"},
+		"tail": {"word": "University of Utah", "id": "m.ajac6"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "jack was the first relief society general president to be born outside of the united states.elaine low was born and raised in cardston , alberta , canada . ",
+		"head": {"word": "Elaine L. Jack", "id": "m.fuavz"},
+		"tail": {"word": "President", "id": "m.uflts"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "during her administration policies shifted to include the relief society general presidency more fully in general church council meetings.jack served as relief society general president until april 1997 , when she was released and succeeded by mary ellen w. smoot.from 1997 to 2000 , jack returned to cardston as the temple matron of the cardston alberta temple , while her husband served as temple president . ",
+		"head": {"word": "Elaine L. Jack", "id": "m.fuavz"},
+		"tail": {"word": "Alberta", "id": "m.i6axl"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "during her administration policies shifted to include the relief society general presidency more fully in general church council meetings.jack served as relief society general president until april 1997 , when she was released and succeeded by mary ellen w. smoot.from 1997 to 2000 , jack returned to cardston as the temple matron of the cardston alberta temple , while her husband served as temple president . ",
+		"head": {"word": "Elaine L. Jack", "id": "m.fuavz"},
+		"tail": {"word": "President", "id": "m.uflts"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "mohammad hamid ansari ( pronunciation ( help·info ) ; born 1 april 1937 ) is an indian politician and retired indian foreign service officer who served as the 12th vice president of india from 2007 to 2017 . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "President", "id": "m.uflts"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 6 ] he is married to salma ansari , fathering two sons and one daughter . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "Salma Ansari", "id": "m.2oljm"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "mohammad hamid ansari ( pronunciation ( help·info ) ; born 1 april 1937 ) is an indian politician and retired indian foreign service officer who served as the 12th vice president of india from 2007 to 2017 . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "April 1, 1937", "id": "m.mokee"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "he is the longest serving chairman of rajya sabha.ansari was born on 1 april 1937 at calcutta , bengal presidency ( present day kolkata in the state of west bengal ) to mohammad abdul aziz ansari and aasiya begum . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "Bengal Presidency", "id": "m.sybp4"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 1 ] he served as president of the indian institute of public administration , chancellor of panjab university , delhi university , pondicherry university and the president of the indian council of world affairs in his capacity as vice president.ansari worked as an ambassador and served as the vice-chancellor of the aligarh muslim university from 2000 to 2002 . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "Aligarh Muslim University", "id": "m.dhfd6"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "[ 1 ] he served as president of the indian institute of public administration , chancellor of panjab university , delhi university , pondicherry university and the president of the indian council of world affairs in his capacity as vice president.ansari worked as an ambassador and served as the vice-chancellor of the aligarh muslim university from 2000 to 2002 . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "President", "id": "m.uflts"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "he is the longest serving chairman of rajya sabha.ansari was born on 1 april 1937 at calcutta , bengal presidency ( present day kolkata in the state of west bengal ) to mohammad abdul aziz ansari and aasiya begum . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "April 1, 1937", "id": "m.mokee"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "[ 11 ] after serving as a visiting professor of the west asian and african studies department of jawaharlal nehru university from 1999 to 2000 , [ 7 ] ansari was appointed as the vice-chancellor of the aligarh muslim university on 23 may 2000 . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "Aligarh Muslim University", "id": "m.dhfd6"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "upon the inauguration of ram nath kovind as president of india in 2017 , ansari became the first indian vice-president to serve during the terms of three presidents . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "President", "id": "m.uflts"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 14 ] he resigned as ncm chairman soon after his nomination for the post of india 's vice-president.on 20 july 2007 , ansari was named by the upa-left , the ruling coalition in india , as its candidate for the post of vice-president for the upcoming election . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "President", "id": "m.uflts"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "ansari refused to say more when asked about his prospects in the august 2007 vice-presidential election . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "President", "id": "m.uflts"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 18 ] according to the constitution of india , ansari , as vice-president of the republic , also serves ex officio as chairman of the rajya sabha.ansari is a west asia scholar and has written on the palestinian issue and taken positions inconvenient to the indian official line on iraq and iran . ",
+		"head": {"word": "Mohammad Hamid Ansari", "id": "m.zou45"},
+		"tail": {"word": "President", "id": "m.uflts"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "she was partnered with professional dancer pasha kovalev.kirkwood won the tric award for best tv weather presenter in 2003 , 2008 , 2009 and 2012-2017 . ",
+		"head": {"word": "Carol Kirkwood", "id": "m.bf38t"},
+		"tail": {"word": "Presenter", "id": "m.da9oi"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 4 ] following her marriage to jimmy kirkwood , she left the bbc and subsequently worked in recruitment and then as a training consultant for a management consultancy in cheshire . ",
+		"head": {"word": "Carol Kirkwood", "id": "m.bf38t"},
+		"tail": {"word": "Jimmy Kirkwood", "id": "m.3mbav"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "carol kirkwood ( born 29 may 1962 ) is a scottish weather presenter , trained by the met office , and employed by the bbc , [ 1 ] in particular on bbc breakfast and victoria derbyshire . ",
+		"head": {"word": "Carol Kirkwood", "id": "m.bf38t"},
+		"tail": {"word": "May 29, 1962", "id": "m.pdhx6"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "in 2015 , she participated in the 13th series of bbc one 's strictly come dancing , finishing in 10th place.born carol mackellaig in morar , inverness-shire , she was one of eight children to parents who ran a hotel in morar . ",
+		"head": {"word": "Carol Kirkwood", "id": "m.bf38t"},
+		"tail": {"word": "Morar", "id": "m.0lvui"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 2 ] after attending lochaber high school in fort william , kirkwood gained a ba in commerce from napier college of commerce and technology ( now edinburgh napier university ) in edinburgh . ",
+		"head": {"word": "Carol Kirkwood", "id": "m.bf38t"},
+		"tail": {"word": "Napier University", "id": "m.jbzln"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "he married marianne ehrlich , the daughter of the nobel prize-winning biologist paul ehrlich , in 1905.at the 1912 international congress of mathematicians landau listed four problems in number theory about primes that he said were particularly hard using current mathematical methods . ",
+		"head": {"word": "Edmund Landau", "id": "m.5946p"},
+		"tail": {"word": "Mathematician", "id": "m.84psg"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "he married marianne ehrlich , the daughter of the nobel prize-winning biologist paul ehrlich , in 1905.at the 1912 international congress of mathematicians landau listed four problems in number theory about primes that he said were particularly hard using current mathematical methods . ",
+		"head": {"word": "Edmund Landau", "id": "m.5946p"},
+		"tail": {"word": "Marianne Ehrlich", "id": "m.btb5m"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "edmund georg hermann landau ( 14 february 1877 – 19 february 1938 ) was a german mathematician who worked in the fields of number theory and complex analysis.edmund landau was born to a jewish family in berlin . ",
+		"head": {"word": "Edmund Landau", "id": "m.5946p"},
+		"tail": {"word": "February 14, 1877", "id": "m.05zzb"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "edmund georg hermann landau ( 14 february 1877 – 19 february 1938 ) was a german mathematician who worked in the fields of number theory and complex analysis.edmund landau was born to a jewish family in berlin . ",
+		"head": {"word": "Edmund Landau", "id": "m.5946p"},
+		"tail": {"word": "Berlin", "id": "m.h98ai"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "landau studied mathematics at the university of berlin , receiving his doctorate in 1899 and his habilitation ( the post-doctoral qualification required in german universities ) in 1901 . ",
+		"head": {"word": "Edmund Landau", "id": "m.5946p"},
+		"tail": {"word": "University of Berlin", "id": "m.5i4xo"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "landau studied mathematics at the university of berlin , receiving his doctorate in 1899 and his habilitation ( the post-doctoral qualification required in german universities ) in 1901 . ",
+		"head": {"word": "Edmund Landau", "id": "m.5946p"},
+		"tail": {"word": "Berlin", "id": "m.h98ai"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 1 ] [ 2 ] landau taught at the university of berlin from 1899 to 1909 , after which he held a chair at the university of göttingen . ",
+		"head": {"word": "Edmund Landau", "id": "m.5946p"},
+		"tail": {"word": "University of Berlin", "id": "m.5i4xo"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "[ 1 ] [ 2 ] landau taught at the university of berlin from 1899 to 1909 , after which he held a chair at the university of göttingen . ",
+		"head": {"word": "Edmund Landau", "id": "m.5946p"},
+		"tail": {"word": "Berlin", "id": "m.h98ai"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "he moved to berlin in 1934 , where he died in early 1938 of natural causes.in 1903 , landau gave a much simpler proof than was then known of the prime number theorem and later presented the first systematic treatment of analytic number theory in the handbuch der lehre von der verteilung der primzahlen ( the `` handbuch '' ) . ",
+		"head": {"word": "Edmund Landau", "id": "m.5946p"},
+		"tail": {"word": "Berlin", "id": "m.h98ai"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "virginia yapp trotter ( november 29 , 1921 – october 11 , 1998 ) was assistant secretary of education from 1974 to 1977 , under presidents richard nixon and gerald ford . ",
+		"head": {"word": "Virginia Trotter", "id": "m.dm3f9"},
+		"tail": {"word": "Secretary", "id": "m.plow5"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 2 ] she married robert trotter and had one child , robert trotter , jr . ",
+		"head": {"word": "Virginia Trotter", "id": "m.dm3f9"},
+		"tail": {"word": "Robert Trotter", "id": "m.weom6"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "virginia yapp trotter ( november 29 , 1921 – october 11 , 1998 ) was assistant secretary of education from 1974 to 1977 , under presidents richard nixon and gerald ford . ",
+		"head": {"word": "Virginia Trotter", "id": "m.dm3f9"},
+		"tail": {"word": "November 29, 1921", "id": "m.qrzrx"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "[ 3 ] [ 4 ] she was born virginia yapp on november 29 , 1921 , in boise , idaho , and was raised in manhattan , kansas , where her father rockford glenn yapp worked as the state entomologist for kansas and a professor of entomology at kansas state university . ",
+		"head": {"word": "Virginia Trotter", "id": "m.dm3f9"},
+		"tail": {"word": "Boise, Idaho", "id": "m.ys2aj"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 3 ] [ 4 ] she was born virginia yapp on november 29 , 1921 , in boise , idaho , and was raised in manhattan , kansas , where her father rockford glenn yapp worked as the state entomologist for kansas and a professor of entomology at kansas state university . ",
+		"head": {"word": "Virginia Trotter", "id": "m.dm3f9"},
+		"tail": {"word": "Kansas State University", "id": "m.4zxnr"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "[ 1 ] [ 2 ] trotter worked as a university administrator before and after serving as assistant secretary . ",
+		"head": {"word": "Virginia Trotter", "id": "m.dm3f9"},
+		"tail": {"word": "Secretary", "id": "m.plow5"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 3 ] [ 4 ] she was born virginia yapp on november 29 , 1921 , in boise , idaho , and was raised in manhattan , kansas , where her father rockford glenn yapp worked as the state entomologist for kansas and a professor of entomology at kansas state university . ",
+		"head": {"word": "Virginia Trotter", "id": "m.dm3f9"},
+		"tail": {"word": "November 29, 1921", "id": "m.qrzrx"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "after serving as assistant secretary of education from 1974 to 1977 , she returned to academia as the first president for academic affairs at the university of georgia.while serving as president of academic affairs at georgia , trotter was implicated in intervening in 1981 to alter grades for nine football players so that they would pass a remedial english course . ",
+		"head": {"word": "Virginia Trotter", "id": "m.dm3f9"},
+		"tail": {"word": "Secretary", "id": "m.plow5"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 14 ] she appeared in the 1962 film version of the play and won the 1962 academy award for best actress , with patty duke repeating her own success as keller alongside bancroft . ",
+		"head": {"word": "Anne Bancroft", "id": "m.fvjdy"},
+		"tail": {"word": "Actress", "id": "m.vbwc6"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 21 ] bancroft is one of very few entertainers to win an oscar , an emmy and a tony award.she followed that success with a second television special , annie and the hoods ( 1974 ) , which was telecast on abc and featured her husband mel brooks as a guest star . ",
+		"head": {"word": "Anne Bancroft", "id": "m.fvjdy"},
+		"tail": {"word": "Mel Brooks", "id": "m.60udl"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "anna maria louisa italiano [ 1 ] ( september 17 , 1931 – june 6 , 2005 ) , known professionally as anne bancroft , was an american actress , director , screenwriter and singer associated with the method acting school , having studied under lee strasberg . ",
+		"head": {"word": "Anne Bancroft", "id": "m.fvjdy"},
+		"tail": {"word": "September 17, 1931", "id": "m.l9ot7"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "she died two years later , in 2005 , after battling cancer.bancroft was born anna maria louisa italiano in the bronx , new york , the middle of three daughters of mildred ( née dinapoli ; 1908–2010 ) , a telephone operator , and michael g. italiano ( 1905–2001 ) , a dress pattern maker . ",
+		"head": {"word": "Anne Bancroft", "id": "m.fvjdy"},
+		"tail": {"word": "New York", "id": "m.yuxd8"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "she died two years later , in 2005 , after battling cancer.bancroft was born anna maria louisa italiano in the bronx , new york , the middle of three daughters of mildred ( née dinapoli ; 1908–2010 ) , a telephone operator , and michael g. italiano ( 1905–2001 ) , a dress pattern maker . ",
+		"head": {"word": "Anne Bancroft", "id": "m.fvjdy"},
+		"tail": {"word": "Michael G. Italiano", "id": "m.azu3i"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "[ 1 ] [ 39 ] in 1961 , bancroft met mel brooks at a rehearsal for the perry como variety show ( kraft music hall ) . ",
+		"head": {"word": "Anne Bancroft", "id": "m.fvjdy"},
+		"tail": {"word": "Mel Brooks", "id": "m.60udl"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "[ 15 ] she had returned to broadway to star in mother courage and her children , so joan crawford accepted bancroft 's oscar on her behalf , and later presented the award to her in new york . ",
+		"head": {"word": "Anne Bancroft", "id": "m.fvjdy"},
+		"tail": {"word": "New York", "id": "m.yuxd8"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 40 ] [ 41 ] bancroft and mel brooks worked together three times on the screen : once dancing a tango in brooks 's silent movie ( 1976 ) ; in his remake of to be or not to be ( 1983 ) ; [ 11 ] and in the episode entitled `` opening night '' ( 2004 ) of the hbo show , curb your enthusiasm . ",
+		"head": {"word": "Anne Bancroft", "id": "m.fvjdy"},
+		"tail": {"word": "Mel Brooks", "id": "m.60udl"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "bancroft and brooks married on august 5 , 1964 , at the manhattan marriage bureau near new york city hall , and remained married until her death . ",
+		"head": {"word": "Anne Bancroft", "id": "m.fvjdy"},
+		"tail": {"word": "New York", "id": "m.yuxd8"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 45 ] her body was interred at kensico cemetery in valhalla , new york , near her parents , mildred ( who died in april 2010 , five years after anne ) and michael italiano . ",
+		"head": {"word": "Anne Bancroft", "id": "m.fvjdy"},
+		"tail": {"word": "New York", "id": "m.yuxd8"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "al marhum pengiran pemancha sahibul rae ' wal mashuarah pengiran anak haji mohammad alam ibni al marhum pengiran bendahara pengiran anak abdul rahman ( 18 october 1918 - 14 december 1982 ) was the fourth speaker of the brunei legislative council , serving from 14 july 1971 until 30 november 1974 . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Speaker", "id": "m.s47lp"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "al marhum pengiran pemancha sahibul rae ' wal mashuarah pengiran anak haji mohammad alam ibni al marhum pengiran bendahara pengiran anak abdul rahman ( 18 october 1918 - 14 december 1982 ) was the fourth speaker of the brunei legislative council , serving from 14 july 1971 until 30 november 1974 . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Pengiran Anak Hajah Besar", "id": "m.umir1"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "al marhum pengiran pemancha sahibul rae ' wal mashuarah pengiran anak haji mohammad alam ibni al marhum pengiran bendahara pengiran anak abdul rahman ( 18 october 1918 - 14 december 1982 ) was the fourth speaker of the brunei legislative council , serving from 14 july 1971 until 30 november 1974 . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "October 18, 1918", "id": "m.6mwto"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "al marhum pengiran pemancha sahibul rae ' wal mashuarah pengiran anak haji mohammad alam ibni al marhum pengiran bendahara pengiran anak abdul rahman ( 18 october 1918 - 14 december 1982 ) was the fourth speaker of the brunei legislative council , serving from 14 july 1971 until 30 november 1974 . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Brunei", "id": "m.2xg7r"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "when he came to age , he went to malaya to study at the malay college kuala kangsar , perak , along with other members of the royal family.pengiran anak mohammad alam married pengiran anak hajah besar ( who became later known as `` pengiran babu raja '' , the queen 's mother ) . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Malay College Kuala Kangsar", "id": "m.cl5s7"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "he was the father of pengiran anak saleha , the current queen consort of hassanal bolkiah , the current sultan of brunei . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Pengiran Anak Hajah Besar", "id": "m.umir1"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "he was also a maternal grandfather of al-muhtadee billah , the crown prince.pengiran anak mohammad alam was born on 18 october 1918 . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "October 18, 1918", "id": "m.6mwto"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "he was the father of pengiran anak saleha , the current queen consort of hassanal bolkiah , the current sultan of brunei . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Brunei", "id": "m.2xg7r"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "he was also a maternal grandfather of al-muhtadee billah , the crown prince.pengiran anak mohammad alam was born on 18 october 1918 . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Pengiran Anak Hajah Besar", "id": "m.umir1"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "his father , pengiran bendahara pengiran anak abdul rahman , one of the wazir in brunei , was a younger brother of sultan muhammad jamalul alam ii , which made him first cousin of sultan omar ali saifuddien iii . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Brunei", "id": "m.2xg7r"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "his father , pengiran bendahara pengiran anak abdul rahman , one of the wazir in brunei , was a younger brother of sultan muhammad jamalul alam ii , which made him first cousin of sultan omar ali saifuddien iii . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Pengiran Anak Hajah Besar", "id": "m.umir1"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "they had 9 children ; among them were pengiran anak saleha , his eldest daughter , who later married hassanal bolkiah , the 29th sultan of brunei , who is also his nephew . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Brunei", "id": "m.2xg7r"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "his sister , pengiran anak damit married sultan omar ali saifuddien iii.as the member of the royal family , pengiran anak mohammad alam began his informal education at the palace . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Pengiran Anak Hajah Besar", "id": "m.umir1"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "when he came to age , he went to malaya to study at the malay college kuala kangsar , perak , along with other members of the royal family.pengiran anak mohammad alam married pengiran anak hajah besar ( who became later known as `` pengiran babu raja '' , the queen 's mother ) . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Pengiran Anak Hajah Besar", "id": "m.umir1"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "they had 9 children ; among them were pengiran anak saleha , his eldest daughter , who later married hassanal bolkiah , the 29th sultan of brunei , who is also his nephew . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Pengiran Anak Hajah Besar", "id": "m.umir1"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "his second daughter , pengiran anak zariah married pengiran muda mohamed bolkiah , hassanal bolkiah 's younger brother . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Pengiran Anak Hajah Besar", "id": "m.umir1"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "his son , pengiran anak mohammad yusof , who became later known as pengiran maharaja lela sahibul kahar , married pengiran anak puteri norain , hassanal bolkiah 's younger sister.his son , pengiran anak mohammad yusof , died on 13 december 2004 . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Pengiran Anak Hajah Besar", "id": "m.umir1"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "his daughter , pengiran anak hajah damit , died from cancer , aged 51 , on 19 august 2007.pengiran anak mohammad alam served as a clerk at land department and judiciary department . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Pengiran Anak Hajah Besar", "id": "m.umir1"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "on 27 july 1950 , he was appointed wazir , which he held the title `` yang teramat mulia seri paduka duli pengiran pemancha sahibul rae ' wal mashuarah '' .he died on friday , 14 december 1982 , at the age of 69 . ",
+		"head": {"word": "Pengiran Anak Mohammad Alam", "id": "m.09x71"},
+		"tail": {"word": "Pengiran Anak Hajah Besar", "id": "m.umir1"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "[ 5 ] she played the role of daan in the film jackie ( 2012 ) , alongside her sister carice van houten , and she was nominated for the golden calf for best actress but did not win . ",
+		"head": {"word": "Jelka van Houten", "id": "m.r8lyu"},
+		"tail": {"word": "Actress", "id": "m.vbwc6"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ citation needed ] van houten was married to koppe koppeschaar until 2016 ; they have two children . ",
+		"head": {"word": "Jelka van Houten", "id": "m.r8lyu"},
+		"tail": {"word": "Koppe Koppeschaar", "id": "m.au8xr"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "jelline floriska van houten ( dutch pronunciation : [ jɛˈlinə floːˈrɪskaː ˈjɛlkaː vɑn ˈɦʌutən ] ; born 1 september 1978 ) is a dutch actress . ",
+		"head": {"word": "Jelka van Houten", "id": "m.r8lyu"},
+		"tail": {"word": "September 1, 1978", "id": "m.0ev07"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "[ citation needed ] jelline floriska van houten was born on 1 september 1978 in culemborg in the netherlands , the daughter of margje stasse and the writer and broadcaster theodore van houten . ",
+		"head": {"word": "Jelka van Houten", "id": "m.r8lyu"},
+		"tail": {"word": "Netherlands", "id": "m.9taxc"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "she later studied production design at the netherlands film and television academy in amsterdam.while studying at the film and television academy , van houten made her film debut as an obsessed killer in liefje ( 2001 ) . ",
+		"head": {"word": "Jelka van Houten", "id": "m.r8lyu"},
+		"tail": {"word": "Netherlands Film and Television Academy", "id": "m.o9m84"},
+		"relation": "NA"
+	},
+	{
+		"sentence": "[ citation needed ] jelline floriska van houten was born on 1 september 1978 in culemborg in the netherlands , the daughter of margje stasse and the writer and broadcaster theodore van houten . ",
+		"head": {"word": "Jelka van Houten", "id": "m.r8lyu"},
+		"tail": {"word": "September 1, 1978", "id": "m.0ev07"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "she later studied production design at the netherlands film and television academy in amsterdam.while studying at the film and television academy , van houten made her film debut as an obsessed killer in liefje ( 2001 ) . ",
+		"head": {"word": "Jelka van Houten", "id": "m.r8lyu"},
+		"tail": {"word": "Netherlands", "id": "m.9taxc"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "[ 57 ] katic wrote the lyrics for `` hey blue eyes '' , which she sang for fans at the 51st zlín film festival in 2011 . ",
+		"head": {"word": "Stana Katic", "id": "m.u5j5g"},
+		"tail": {"word": "Film", "id": "m.t6wn0"},
+		"relation": "hypernym"
+	},
+	{
+		"sentence": "[ 59 ] katic married her longtime boyfriend , kris brkljac , a business efficiency consultant , in a private ceremony in croatia on 25 april 2015 , one day before her 37th birthday . ",
+		"head": {"word": "Stana Katic", "id": "m.u5j5g"},
+		"tail": {"word": "Kris Brkljac", "id": "m.5z8gf"},
+		"relation": "spouse"
+	},
+	{
+		"sentence": "stana katic ( /ˈstɑːnə ˈkætɪk/ ; [ 3 ] born 26 april 1978 [ 1 ] [ 2 ] ) is a canadian-american film and television actress . ",
+		"head": {"word": "Stana Katic", "id": "m.u5j5g"},
+		"tail": {"word": "April 26, 1978", "id": "m.je5lf"},
+		"relation": "birthDate"
+	},
+	{
+		"sentence": "she played kate beckett on the abc television romantic crime series castle ( 2009–2016 ) and agent emily byrne in the thriller series absentia ( 2017–present ) .katic was born in hamilton , ontario , canada . ",
+		"head": {"word": "Stana Katic", "id": "m.u5j5g"},
+		"tail": {"word": "Hamilton, Ontario", "id": "m.ypt42"},
+		"relation": "birthPlace"
+	},
+	{
+		"sentence": "after graduating from west aurora high school in 1996 , katic enrolled to study international relations , economics and pre-law at the university of toronto 's , trinity college [ 7 ] [ 8 ] and then at the theatre school at depaul university , where she studied toward an mfa in acting from 2000 to 2002 . ",
+		"head": {"word": "Stana Katic", "id": "m.u5j5g"},
+		"tail": {"word": "University of Toronto", "id": "m.9qj3x"},
+		"relation": "NA"
+	}
+]
