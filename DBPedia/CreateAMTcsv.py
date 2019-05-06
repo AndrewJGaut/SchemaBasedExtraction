@@ -144,7 +144,7 @@ Postcondition:
 '''
 def createCSV(dataset_path, csv_path):
     dataset = xlrd.open_workbook(dataset_path)
-    sheet = dataset.sheet_by_index(0)
+    sheet = dataset.sheet_by_index(2)
 
     new_dataset = xlwt.Workbook()
     out_sheet = new_dataset.add_sheet('Data')
@@ -217,7 +217,7 @@ def createCSV(dataset_path, csv_path):
 
 if __name__ == '__main__':
     #createCSV_fromtonyfile3('amt_data/AMT_pilot.xlsx', 'pilot_study2')
-    createCSV('AttributeDatasets/pilot_study2.xlsx', 'yes')
+    createCSV('test_split.xls', 'FULL_AMT_DATASTUDY')
 
     #convertToBatches('amt_data/pilot_study2.xls', 'amt_data/AMT_split.xls', '')
 
