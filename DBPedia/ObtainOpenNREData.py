@@ -252,7 +252,8 @@ if __name__ == '__main__':
     #relations = readDataFromDBPediaDataset('AttributeDatasets/Politican_test_h.xls')
     #relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed.xls')
     #relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed_e1e2.xls')
-    relations = readDataFromDBPediaDataset('AttributeDatasets/split.xls')
+    #relations = readDataFromDBPediaDataset('AttributeDatasets/split.xls')
+    relations = readDataFromDBPediaDataset('test_split.xls')
     # create training files for OpenNRE
     createOpenNREFiles(relations)
 
