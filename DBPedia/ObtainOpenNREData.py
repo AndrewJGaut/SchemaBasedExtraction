@@ -314,16 +314,12 @@ def readDataFromDBPediaDataset(dataset_path):
 
 
 if __name__ == '__main__':
-    # get entities and abridged relations from dataset
-    #relations = readDataFromDBPediaDataset('AttributeDatasets/Politican_test_h.xls')
-    #relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed.xls')
-    #relations = readDataFromDBPediaDataset('AttributeDatasets/nohypernym_full_train_PersonData_ttl_female_names.txt_fixed_e1e2.xls')
-    #relations = readDataFromDBPediaDataset('AttributeDatasets/split.xls')
+
+    #get relations from the dataset with the train, dev, test splits
     relations = readDataFromDBPediaDataset('test_split.xls')
+
     # create training files for OpenNRE
     createOpenNREFiles(relations)
+
+    # rewrite test data so it has ground truth distribution from AMT annotations
     getOpenNRETestDataFromAMT('AttributeDatasets/TEST2.xls')
-
-
-    #createOpenNREFiles([('spouse', 'Barack', 'Michelle', 'Barack is Michelle\'s husband'), ('father', 'John', 'Smitty', 'John fathered Smitty in 1852.'), ('father', 'Barack', 'Jeff', 'Barack fathered Jeff in 1852.')])
-   # formatWordVectorFile('vectors.txt')
