@@ -4,7 +4,16 @@ from krippendorff_alpha import *
 #import statsmodels.stats.inter_rater
 
 
-
+'''
+I obtained this from the internet
+Input:
+    -matrix where rows represent different annotators and columns represent answers to different questions
+    -ex: rater 1 [yes, yes, no, yes, no]
+         rater 2 [yes, yes, no, yes, yes]
+         ...etc
+Output:
+    Fleiss Kappa score for that matrix
+'''
 def fleiss_kappa(M):
   """
   See `Fleiss' Kappa <https://en.wikipedia.org/wiki/Fleiss%27_kappa>`_.
@@ -23,6 +32,10 @@ def fleiss_kappa(M):
 
   return kappa
 
+'''
+This function informally obtains annotator agreement for dataset at dataset_path
+This DOES NOT USE FLEISS KAPPA OR KRIPPENDORFF'S ALPHA! It was just a preliminary measurement
+'''
 def getAgreement(dataset_path):
     dataset = xlrd.open_workbook(dataset_path)
     sheet = dataset.sheet_by_index(0)
@@ -66,6 +79,11 @@ def getAgreement(dataset_path):
     print(ave)
 
 
+'''
+This function obtains Fleiss Kappa for the data
+It obtains Fleiss Kappa for each set of raters who rate the same questions.
+It then returns the average Fleiss Kappa value
+'''
 def getFleissKappa(dataset_path):
     dataset = xlrd.open_workbook(dataset_path)
     sheet = dataset.sheet_by_index(0)
@@ -74,14 +92,14 @@ def getFleissKappa(dataset_path):
 
     #get fleiss kappa of each set of three annotators
     for i in range(1, sheet.nrows, 3):
-        ratings = np.zeros([3, sheet.ncols], dtype=int)
+        ratings = np.zeros([3, sheet.ncols], dtype=int) # matrix of ratings where each row is a different rater and each column an answer to a question
         for curr_row in range(0, 3):
             for j in range(0, sheet.ncols):
-                curr_val = 0
+                curr_val = 0 # set to 0 if they say no
                 if sheet.cell_value(i + curr_row, j) == 'yes':
-                    curr_val = 1
+                    curr_val = 1 # set to 1 if they say yes
                     ratings[curr_row][j] = curr_val
-        f_kappas.append(fleiss_kappa(ratings))
+        f_kappas.append(fleiss_kappa(ratings)) # pass in ratings matrix to fleiss kappa calculator
 
     # get average fleiss kappa value
     ave = 0
@@ -96,17 +114,18 @@ def getKripAlpha(dataset_path):
 
     alphas = list()
 
+    # get kripp's alpha of each set of three annotators
     for i in range(1, sheet.nrows, 3):
-        ratings = np.zeros([3, sheet.ncols], dtype=int)
+        ratings = np.zeros([3, sheet.ncols], dtype=int) # matrix of ratings where each row is a different rater and each column an answer to a question
         for curr_row in range(0, 3):
             for j in range(0, sheet.ncols):
-                curr_val = 0
+                curr_val = 0 # set to 0 if they say no
                 if sheet.cell_value(i + curr_row, j) == 'yes':
-                    curr_val = 1
+                    curr_val = 1 # set to 1 if they say yes
                     ratings[curr_row][j] = curr_val
-        alphas.append(krippendorff_alpha(ratings))
+        alphas.append(krippendorff_alpha(ratings)) # get kripp_alpha for current ratings matrix; NOTE: the kripp_alpha function is in krippendorff_alpha.py!
 
-    # get average fleiss kappa value
+    # get average krip alpha value
     ave = 0
     for num in alphas:
         ave += num
@@ -114,6 +133,7 @@ def getKripAlpha(dataset_path):
 
 
 if __name__ == '__main__':
+    pass
     #getAgreement('FullStudyResults.xls')
     #print(getFleissKappa('Datasets/FullStudyResults.xls'))
     #print(getKripAlpha('Datasets/FullStudyResults.xls'))
