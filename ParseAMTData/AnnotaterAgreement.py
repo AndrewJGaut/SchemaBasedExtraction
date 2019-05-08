@@ -11,6 +11,13 @@ Input:
     -ex: rater 1 [yes, yes, no, yes, no]
          rater 2 [yes, yes, no, yes, yes]
          ...etc
+         WRONG!!!!
+    -should be
+                    yes no
+                q1
+                q2
+                q3
+                q4
 Output:
     Fleiss Kappa score for that matrix
 '''
@@ -84,7 +91,7 @@ This function obtains Fleiss Kappa for the data
 It obtains Fleiss Kappa for each set of raters who rate the same questions.
 It then returns the average Fleiss Kappa value
 '''
-def getFleissKappa(dataset_path):
+def getFleissKappa2(dataset_path):
     dataset = xlrd.open_workbook(dataset_path)
     sheet = dataset.sheet_by_index(0)
 
@@ -99,6 +106,32 @@ def getFleissKappa(dataset_path):
                 if sheet.cell_value(i + curr_row, j) == 'yes':
                     curr_val = 1 # set to 1 if they say yes
                     ratings[curr_row][j] = curr_val
+        f_kappas.append(fleiss_kappa(ratings)) # pass in ratings matrix to fleiss kappa calculator
+
+    # get average fleiss kappa value
+    ave = 0
+    for num in f_kappas:
+        ave += num
+    return float( float(ave) / float(len(f_kappas)))
+
+
+def getFleissKappa(dataset_path):
+    dataset = xlrd.open_workbook(dataset_path)
+    sheet = dataset.sheet_by_index(0)
+
+    f_kappas = list()
+
+    #get fleiss kappa of each set of three annotators
+    for i in range(1, sheet.nrows, 3):
+        #ratings = np.zeros([3, sheet.ncols], dtype=int) # matrix of ratings where each row is a different rater and each column an answer to a question
+        ratings = np.zeros([3,2], dtype=int)
+        for curr_row in range(0, 3):
+            for j in range(0, sheet.ncols):
+                curr_val = 0 # set to 0 if they say no
+                if sheet.cell_value(i + curr_row, j) == 'yes':
+                    curr_val = 1 # set to 1 if they say yes
+                    #ratings[curr_row][j] = curr_val
+                ratings[curr_row][curr_val] += 1
         f_kappas.append(fleiss_kappa(ratings)) # pass in ratings matrix to fleiss kappa calculator
 
     # get average fleiss kappa value
@@ -133,10 +166,9 @@ def getKripAlpha(dataset_path):
 
 
 if __name__ == '__main__':
-    pass
-    #getAgreement('FullStudyResults.xls')
-    #print(getFleissKappa('Datasets/FullStudyResults.xls'))
-    #print(getKripAlpha('Datasets/FullStudyResults.xls'))
+    getAgreement('Datasets/FullStudyResults.xls')
+    print(getFleissKappa('Datasets/FullStudyResults.xls'))
+    print(getKripAlpha('Datasets/FullStudyResults.xls'))
 
     '''
     dataset = xlrd.open_workbook("Datasets/test_please_tell_not_true.xlsx")
