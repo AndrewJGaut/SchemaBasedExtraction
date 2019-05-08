@@ -45,5 +45,6 @@ def getAgreement(dataset_path):
 
 if __name__ == '__main__':
     #getAgreement('Batch_3631670_batch_results.xls')
-    getAgreement('batch_cheap_answers.xlsx')
+    #getAgreement('batch_cheap_answers.xlsx')
+    getAgreement('FullStudyResults.xls')
 
