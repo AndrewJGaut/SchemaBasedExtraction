@@ -1,4 +1,5 @@
 import xlrd
+import statsmodels.stats.inter_rater
 
 
 def getAgreement(dataset_path):
@@ -43,8 +44,32 @@ def getAgreement(dataset_path):
     print(num_complete_agreement / num_total)
     print(ave)
 
+
+def getFleissKappa(dataset_path):
+    dataset = xlrd.open_workbook(dataset_path)
+    sheet = dataset.sheet_by_index(0)
+
+    f_kappas = list()
+
+    #get fleiss kappa of each set of three annotators
+    for i in range(1, sheet.nrows, 3):
+        ratings = [['' for x in range(sheet.ncols)] for y in range(3)]
+        for curr_row in range(0, 3):
+            for j in range(0, sheet.ncols):
+                ratings[curr_row][j] = sheet.cell_value(i + curr_row, j)
+        f_kappas.append(statsmodels.stats.inter_rater.fleiss_kappa(ratings))
+
+    # get average fleiss kappa value
+    ave = 0
+    for num in f_kappas:
+        ave += num
+    return float( float(ave) / float(len(f_kappas)))
+
+
+
 if __name__ == '__main__':
     #getAgreement('Batch_3631670_batch_results.xls')
     #getAgreement('batch_cheap_answers.xlsx')
-    getAgreement('FullStudyResults.xls')
+    #getAgreement('FullStudyResults.xls')
+    getFleissKappa('FullStudyResults.xls')
 

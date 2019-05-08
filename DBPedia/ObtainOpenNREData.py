@@ -314,7 +314,6 @@ def readDataFromDBPediaDataset(dataset_path):
 
 
 if __name__ == '__main__':
-
     #get relations from the dataset with the train, dev, test splits
     relations = readDataFromDBPediaDataset('test_split.xls')
 
