@@ -34,6 +34,8 @@ class RelSentsCols:
 write the matrix to the sheet starting at the curr_row
 '''
 def writeMatrix(curr_write_row, sheet, matrix):
+    if matrix[0][0] == 'John Key':
+        test = 1
     for i in range(len(matrix)):
         curr_write_row += 1
         for j in range(len(matrix[i])):
@@ -52,43 +54,6 @@ def majorityVote(answers):
         return 'yes'
     else:
         return 'no'
-
-'''
-Precondition:
-    sent_col is the column for this survey questionNumber's sentence
-    rel_col is the column in the Excel sheet with this questionNumber's relation (i.e. (brad pitt; hyperhym; actor)
-    answer_col is the column in the Excel sheet with this questionNumber's answers (i.e. yes yes no etc)
-    sheet is the Excel sheet
-    e1_2_rels is a dict mapping an entity to a dict mapping (relation, e2) tuples to sentences
-    NOTE: we say questionNumber because each column has questions from mnay different surveys, so each column has different questions
-Postcondition:
-    updates e1_2_rels, the dict mapping an entity to a dict mapping relations to sentences
-'''
-def convertQuestion2(sent_col, rel_col, answer_col, sheet, e1_2_rels):
-    for row in (1, sheet.nrows, 3):
-        curr_rel = sheet.cell_value(row, rel_col)
-        curr_sent = sheet.cell_value(row, sent_col)
-
-        curr_answers = list()
-        for j in range(row, row+3):
-            curr_answers.append(sheet.cell_value(j, answer_col))
-        curr_answer = majorityVote(curr_answers)
-        if curr_answer == 'no':
-            curr_rel = "NA"
-
-        words = curr_rel.split(';')
-        e1 = words[0][1:].strip()
-        rel = words[1].strip()
-        e2 = words[2][:-1].strip()
-
-        if not e1 in e1_2_rels:
-            e1_2_rels[e1] = dict()
-        if (rel, e2) not in e1_2_rels[e1]:
-            e1_2_rels[e1][(rel, e2)] = list()
-        e1_2_rels[e1][(rel, e2)].append(curr_sent)
-
-    return e1_2_rels
-
 
 '''
 Precondition:
@@ -124,6 +89,9 @@ def convertQuestion(sent_col, rel_col, answer_col, sheet, e1_2_rels, attribs):
         rel = words[1].strip()
         e2 = words[2][:-1].strip()
 
+        if e1 == 'John Key':
+            test = 1
+
         if not e1 in e1_2_rels:
             # then, init the matrix
             matrix_to_write = [["" for x in range(len(attribs) + 1)] for y in range(4)]
@@ -134,34 +102,46 @@ def convertQuestion(sent_col, rel_col, answer_col, sheet, e1_2_rels, attribs):
         #write values and sentences
         for j in range(len(attribs)):
             if attribs[j].strip() == rel:
+
+
                 #now, we want to add e2 here
                 if matrix_to_write[0][j+1] == "":
                     matrix_to_write[0][j + 1] = e2.strip()
 
-
-                ''''NOTE!!!! WE NEED TO FIX THIS! NA E2S ARE OFTEN WRONG!'''
+                # special check for NA case when we might have multiple e2s
                 if curr_rel.split(';')[1].strip() == 'NA':
-                    if matrix_to_write[0][len(attribs)] != curr_rel.split(';')[2][:-1].strip():
-                        print(str(matrix_to_write[0][len(attribs)]) + "NOTE EQUIV TO " + str(curr_rel.split(';')[2][:-1].strip()))
+                    while matrix_to_write[0][j+1] != curr_rel.split(';')[2][:-1].strip() and matrix_to_write[0][j+1] != '':
+                        overlap = True
+                        print("OVERLAP at " + str(row) + ", " + str(j) + "; values: " + str(e2) + " and " + str(matrix_to_write[0][j+1]))
+                        print("entity: " + str(e1))
+                        j += 1
+                        if j+1 == len(matrix_to_write[0]):
+                            matrix_to_write = resize_cols(matrix_to_write, len(matrix_to_write), len(matrix_to_write[0]))
+                    if matrix_to_write[0][j+1] == '':
+                        matrix_to_write[0][j+1] = e2.strip()
+
 
                 #now, add sentence
-                #first, find first empty column
+                #first, find first empty row in column
                 i = 1
-                while(matrix_to_write[i][j] != ""):
+                while(matrix_to_write[i][j+1] != ""):
                     #print('i:' + str(i) + ", j:" + str(j))
                     i+=1
                     if i == len(matrix_to_write):
-                        matrix_to_write = resize(matrix_to_write, i, attribs)
+                        matrix_to_write = resize_rows(matrix_to_write, i, len(matrix_to_write[0]))
                 #now, we know we're at an emtpy column
                 matrix_to_write[i][j+1] = curr_sent
+        e1_2_rels[e1] = matrix_to_write
+
+    printMatrix(e1_2_rels['John Key'])
     return e1_2_rels
 
 
 '''
 Returns copy of matrix with double the row count
 '''
-def resize(matrix, old_row_count, attribs):
-    new_mat = [["" for x in range(len(attribs) + 1)] for y in range(old_row_count * 2)]
+def resize_rows(matrix, old_row_count, old_col_count):
+    new_mat = [["" for x in range(old_col_count)] for y in range(old_row_count * 2)]
 
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
@@ -170,65 +150,16 @@ def resize(matrix, old_row_count, attribs):
     return new_mat
 
 '''
-Preconditoin:
-    e1_2_rels is a dict mapping e1 to a dict mapping rel,e2 tuples to lists of sentences
-    attribs is a list of sentences IN THE ORDER THEY SHOULD BE OUTPUT to the Excel sheet
-Postcondition:
-    return a mapping from e1 to the matrix that we will write for e1
+Returns copy of matrix with double the col count
 '''
-'''
-def convertToMatrix(e1_2_rels, attribs):
-    e1_2_matrix = dict()
+def resize_cols(matrix, old_row_count, old_col_count):
+    new_mat = [["" for x in range(old_col_count*2)] for y in range(old_row_count)]
 
-    for e1 in e1_2_rels:
-        matrix_2_write = [["" for x in range(len(attribs) + 1)] for y in range(50)]
-        matrix_2_write[0][0] = e1
-        for j in range(len(attribs)):
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            new_mat[i][j] = matrix[i][j]
 
-        curr_dict = e1_2_rels[e1]
-'''
-
-
-
-
-'''
-def getEntityWriteFormatting(sheet):
-    e1_2_writematrix = dict()
-
-    i = 1
-    already_wrote = False
-    row_incr = 1
-    while i < sheet.nrows:
-        has_sentences_for_attributes = [0] * (sheet.ncols - 1)
-        curr_row = i + 1
-        while (curr_row < sheet.nrows and sheet.cell_value(curr_row, 0) == ""):
-            curr_row += 1
-        entity_rows = curr_row - i
-
-        # the matrix of values we'll write if this entity still has sentences
-        matrix_to_write = [["" for x in range(sheet.ncols)] for y in range(entity_rows + 1)]
-
-        # first, add the header column to matrix
-        for j in range(0, sheet.ncols):
-            matrix_to_write[0][j] = sheet.cell_value(i, j)
-
-        # next, get e1
-        e1 = sheet.cell_value(i, 0)
-        prev_i = i
-
-        curr_row = 0
-        while (i < prev_i + entity_rows and i < sheet.nrows):
-            for j in range(sheet.ncols):
-                matrix_to_write[curr_row][j] = sheet.cell_value(i,j)
-            i += 1
-            curr_row += 1
-
-        e1_2_writematrix[e1] = matrix_to_write
-
-    return e1_2_writematrix
-'''
-
-
+    return new_mat
 
 
 '''input.r1 input.s1'''
