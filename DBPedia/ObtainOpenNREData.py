@@ -42,7 +42,7 @@ Postcondition:
 def opennreFormatSentence(sentence):
     new_sentence = ""
     for word in nltk.word_tokenize(sentence):
-        new_sentence += word.lower() + " "
+        new_sentence += word + " "
 
     return new_sentence
 
@@ -221,6 +221,72 @@ def getRelationsFromSheet(dataset_sheet, relation_types):
 
     return relations
 
+
+'''
+Returns the list of tuples of the relations found in the sheet passed in as a parameter
+BUT this function works with multiple e2s for NA relations which is found in AMT data!
+'''
+def getRelationsFromAMTTestSheet(dataset_sheet, relation_types):
+    relations = list()  # list of relations
+    i = 1
+    while i < dataset_sheet.nrows:
+
+        # first, get the number of rows until next entity
+        curr_row = i + 1
+        while (curr_row < dataset_sheet.nrows and dataset_sheet.cell_value(curr_row, 0) == ""):
+            curr_row += 1
+        entity_rows = curr_row - i
+
+        # now, get entity name
+        e1 = dataset_sheet.cell_value(i, 0)
+        print("CURR NAME: " + e1)
+
+        # get list of e2s by column
+        e2_vals = list()
+        for j in range(1, dataset_sheet.ncols):
+            e2_vals.append(dataset_sheet.cell_value(i, j))
+
+        # now, get the tuples
+        prev_i = i
+        i += 1
+        while (i < prev_i + entity_rows and i < dataset_sheet.nrows):
+            for j in range(1, dataset_sheet.ncols):
+                if dataset_sheet.cell_value(i, j) != "":
+                    print("getting sentence...")
+                    if e1 == 'John Key':
+                        test = 1
+
+                    rel_type = ""
+                    if j >= len(relation_types) - 1:
+                        rel_type = "NA"
+                    else:
+                        rel_type = relation_types[j - 1]
+                    relation = (rel_type, e1, e2_vals[j - 1], opennreFormatSentence(dataset_sheet.cell_value(i, j)))
+                    relations.append(relation)
+            i += 1
+
+    print("done getting relations")
+
+    return relations
+
+'''
+Precondition:
+    dataset_path is path to a dataset obtained from labelled AMT data (i.e. it can have multiple e2 values for NA relation)
+Postcondition:
+    creates JSON testing file for OpenNRE from AMT labelled data
+'''
+def getOpenNRETestDataFromAMT(dataset_path):
+    dataset = xlrd.open_workbook(dataset_path)
+    test_sheet = dataset.sheet_by_index(0)
+
+    # get the types of relations
+    relation_types = list()
+    for i in range(1, test_sheet.ncols):
+        relation_types.append(test_sheet.cell_value(0, i))
+
+    rels = getRelationsFromAMTTestSheet(test_sheet, relation_types)
+    createOpenNRESplitFile(rels, 'test')
+
 '''
 Precondition:
     dataset_path is a path to an Excel dataset with sturctured data from a KB
@@ -256,6 +322,7 @@ if __name__ == '__main__':
     relations = readDataFromDBPediaDataset('test_split.xls')
     # create training files for OpenNRE
     createOpenNREFiles(relations)
+    getOpenNRETestDataFromAMT('AttributeDatasets/TEST2.xls')
 
 
     #createOpenNREFiles([('spouse', 'Barack', 'Michelle', 'Barack is Michelle\'s husband'), ('father', 'John', 'Smitty', 'John fathered Smitty in 1852.'), ('father', 'Barack', 'Jeff', 'Barack fathered Jeff in 1852.')])
