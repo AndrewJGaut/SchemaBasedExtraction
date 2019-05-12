@@ -114,17 +114,37 @@ def getFleissKappa2(dataset_path):
         ave += num
     return float( float(ave) / float(len(f_kappas)))
 
+def concatMatrices(matrix1, matrix2):
+    new_mat = [[0 for x in range(2)] for y in range(len(matrix1) + len(matrix2))]
+
+    i = 0
+    while i < len(matrix1):
+        for j in range(len(matrix1[i])):
+            new_mat[i][j] = matrix1[i][j]
+        i+=1
+
+    i2 = 0
+    while i2 < len(matrix2):
+        for j in range(len(matrix2[i2])):
+            new_mat[i + i2][j] = matrix2[i2][j]
+        i2+=1
+
+    return new_mat
+
 
 def getFleissKappa(dataset_path):
     dataset = xlrd.open_workbook(dataset_path)
     sheet = dataset.sheet_by_index(0)
 
-    f_kappas = list()
+    matrix = [[0 for x in range(2)] for y in range(1)]
+
+    #a = np.zeros((1,1), dtype=int)
 
     #get fleiss kappa of each set of three annotators
     for i in range(1, sheet.nrows, 3):
         #ratings = np.zeros([3, sheet.ncols], dtype=int) # matrix of ratings where each row is a different rater and each column an answer to a question
-        ratings = np.zeros([3,2], dtype=int)
+        #ratings = np.zeros([3,2], dtype=int)
+        ratings = [[0 for x in range(2)] for y in range(3)]
         for curr_row in range(0, 3):
             for j in range(0, sheet.ncols):
                 curr_val = 0 # set to 0 if they say no
@@ -132,13 +152,12 @@ def getFleissKappa(dataset_path):
                     curr_val = 1 # set to 1 if they say yes
                     #ratings[curr_row][j] = curr_val
                 ratings[curr_row][curr_val] += 1
-        f_kappas.append(fleiss_kappa(ratings)) # pass in ratings matrix to fleiss kappa calculator
+        #f_kappas.append(fleiss_kappa(ratings)) # pass in ratings matrix to fleiss kappa calculator
+        matrix = concatMatrices(matrix, ratings)
 
     # get average fleiss kappa value
-    ave = 0
-    for num in f_kappas:
-        ave += num
-    return float( float(ave) / float(len(f_kappas)))
+    mat = np.matrix(matrix)
+    return fleiss_kappa(mat)
 
 
 def getKripAlpha(dataset_path):
