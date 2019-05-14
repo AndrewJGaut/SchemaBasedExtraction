@@ -172,9 +172,9 @@ def getBestEpochs(epochs):
             max_auc = epoch.get_auc()
             mauc_epoch = epoch.get_epoch_num()
 
-    print('{}, {}, {}, {}'.format(maagpstraining_epoch, maagpstesting_epoch, maldps_epoch, mauc_epoch))
-    print('{}, {}, {}, {}'.format(max_ave_acc_gain_per_step_training, max_ave_acc_gain_per_step_testing, max_ave_loss_decr_per_step, max_auc))
-
+    #print('{}, {}, {}, {}'.format(maagpstraining_epoch, maagpstesting_epoch, maldps_epoch, mauc_epoch))
+    #print('{}, {}, {}, {}'.format(max_ave_acc_gain_per_step_training, max_ave_acc_gain_per_step_testing, max_ave_loss_decr_per_step, max_auc))
+    return(max_ave_acc_gain_per_step_training, max_ave_acc_gain_per_step_testing, max_ave_loss_decr_per_step, max_auc)
 
 
 def getAvesBetweenEpochs(epochs):
@@ -190,22 +190,49 @@ def getAvesBetweenEpochs(epochs):
         ave_incr_in_loss_decr_per_epoch = abs(epochs[i].get_ave_loss_dec_per_step() - epochs[i+1].get_ave_loss_dec_per_step())
         ave_auc_gain = abs(epochs[i].get_auc() - epochs[i+1].get_auc())
 
-    print('{}, {}, {}, {}'.format(ave_max_acc_gain_training, ave_max_acc_gain_testing, ave_incr_in_loss_decr_per_epoch, ave_auc_gain))
+    #print('{}, {}, {}, {}'.format(ave_max_acc_gain_training, ave_max_acc_gain_testing, ave_incr_in_loss_decr_per_epoch, ave_auc_gain))
+    return(ave_max_acc_gain_training, ave_max_acc_gain_testing, ave_incr_in_loss_decr_per_epoch, ave_auc_gain)
+
+def getBestModel(model_stats):
+    best_model = 0
+    best_auc = 0
+
+    for i in range(len(model_stats)):
+        model = model_stats[i][1]
+        max_auc = getBestEpochs(model)[3]
+        if max_auc > best_auc:
+            best_auc = max_auc
+            best_model = i
+
+    return model_stats[best_model][0]
+
 
 
 if __name__ == '__main__':
     nohup_file = open('GRID_SEARCH_OUTPUT.txt', 'r')
-    model_outputs = nohup_file.read().split('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************---------------^^^^^^^^^^^^')
+    model_outputs = nohup_file.read().split('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************---------------^^^^^^^^^^^^')[1:]
     model_stats = list()
     for model in model_outputs:
+        name = model.split('\n')[1].split(' ')
+        batch = name[2]
+        learningrate = name[3]
+        model_name = batch + " " + learningrate
+        print(model_name)
+
         #print(model[0].split(':')[1])
         #epochs = parse(nohup_file.readlines()
         epochs = parse(model.split('\n'))
         if epochs:
-            model_stats.append(epochs)
+            model_stats.append((model_name, epochs))
             getBestEpochs(epochs)
             getAvesBetweenEpochs(epochs)
 
+    print('BEST: ' + str(getBestModel(model_stats)))
+
+    print("---------------------------------------------")
+
+    for model in model_stats:
+        print('{}: {}'.format(model[0], getBestEpochs(model[1])[3]))
 
 
 
