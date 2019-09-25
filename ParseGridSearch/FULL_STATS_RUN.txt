@@ -1,0 +1,828 @@
+rnn att test_male.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 890
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:52: __init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:61: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:626: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.949580, accuracy: 0.706250
+[TEST] step 1 | not NA accuracy: 0.943089, accuracy: 0.725000
+[TEST] step 2 | not NA accuracy: 0.931319, accuracy: 0.706250
+[TEST] step 3 | not NA accuracy: 0.936345, accuracy: 0.712500
+[TEST] step 4 | not NA accuracy: 0.928571, accuracy: 0.698750
+[TEST] step 5 | not NA accuracy: 0.933241, accuracy: 0.698958
+[TEST] step 6 | not NA accuracy: 0.933518, accuracy: 0.740179
+[TEST] auc: 0.876273216839
+Finish testing
+SPOUSE: numcorrect=173, numtot=180, percentage=0.961111111111
+BIRTHDATE: numcorrect=236, numtot=240, percentage=0.983333333333
+BIRTHPLACE: numcorrect=117, numtot=137, percentage=0.85401459854
+HYPERNYM: numcorrect=148, numtot=165, percentage=0.89696969697
+rnn att test_female.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 972
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:52: __init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:61: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:626: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.948276, accuracy: 0.687500
+[TEST] step 1 | not NA accuracy: 0.945607, accuracy: 0.706250
+[TEST] step 2 | not NA accuracy: 0.938547, accuracy: 0.700000
+[TEST] step 3 | not NA accuracy: 0.938298, accuracy: 0.689063
+[TEST] step 4 | not NA accuracy: 0.935374, accuracy: 0.687500
+[TEST] step 5 | not NA accuracy: 0.931915, accuracy: 0.684375
+[TEST] step 6 | not NA accuracy: 0.932903, accuracy: 0.707143
+[TEST] auc: 0.896587900159
+Finish testing
+SPOUSE: numcorrect=141, numtot=150, percentage=0.94
+BIRTHDATE: numcorrect=250, numtot=261, percentage=0.95785440613
+BIRTHPLACE: numcorrect=129, numtot=145, percentage=0.889655172414
+HYPERNYM: numcorrect=203, numtot=219, percentage=0.926940639269
+cnn att test_male.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 890
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:24: conv1d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv1d instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.882353, accuracy: 0.656250
+[TEST] step 1 | not NA accuracy: 0.873984, accuracy: 0.671875
+[TEST] step 2 | not NA accuracy: 0.870879, accuracy: 0.660417
+[TEST] step 3 | not NA accuracy: 0.864476, accuracy: 0.657813
+[TEST] step 4 | not NA accuracy: 0.858804, accuracy: 0.646250
+[TEST] step 5 | not NA accuracy: 0.867872, accuracy: 0.650000
+[TEST] step 6 | not NA accuracy: 0.867036, accuracy: 0.697321
+[TEST] auc: 0.858288335455
+Finish testing
+SPOUSE: numcorrect=165, numtot=180, percentage=0.916666666667
+BIRTHDATE: numcorrect=214, numtot=240, percentage=0.891666666667
+BIRTHPLACE: numcorrect=112, numtot=137, percentage=0.817518248175
+HYPERNYM: numcorrect=135, numtot=165, percentage=0.818181818182
+cnn att test_female.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 972
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:24: conv1d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv1d instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.862069, accuracy: 0.625000
+[TEST] step 1 | not NA accuracy: 0.878661, accuracy: 0.656250
+[TEST] step 2 | not NA accuracy: 0.874302, accuracy: 0.652083
+[TEST] step 3 | not NA accuracy: 0.876596, accuracy: 0.643750
+[TEST] step 4 | not NA accuracy: 0.877551, accuracy: 0.645000
+[TEST] step 5 | not NA accuracy: 0.872340, accuracy: 0.640625
+[TEST] step 6 | not NA accuracy: 0.867097, accuracy: 0.661607
+[TEST] auc: 0.852942601268
+Finish testing
+SPOUSE: numcorrect=131, numtot=150, percentage=0.873333333333
+BIRTHDATE: numcorrect=233, numtot=261, percentage=0.892720306513
+BIRTHPLACE: numcorrect=118, numtot=145, percentage=0.813793103448
+HYPERNYM: numcorrect=190, numtot=219, percentage=0.867579908676
+pcnn att test_male.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 890
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:24: conv1d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv1d instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.932773, accuracy: 0.693750
+[TEST] step 1 | not NA accuracy: 0.918699, accuracy: 0.706250
+[TEST] step 2 | not NA accuracy: 0.903846, accuracy: 0.685417
+[TEST] step 3 | not NA accuracy: 0.903491, accuracy: 0.687500
+[TEST] step 4 | not NA accuracy: 0.897010, accuracy: 0.675000
+[TEST] step 5 | not NA accuracy: 0.897079, accuracy: 0.671875
+[TEST] step 6 | not NA accuracy: 0.897507, accuracy: 0.578571
+[TEST] auc: 0.860475612864
+Finish testing
+SPOUSE: numcorrect=167, numtot=180, percentage=0.927777777778
+BIRTHDATE: numcorrect=228, numtot=240, percentage=0.95
+BIRTHPLACE: numcorrect=110, numtot=137, percentage=0.802919708029
+HYPERNYM: numcorrect=143, numtot=165, percentage=0.866666666667
+pcnn att test_female.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 972
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:24: conv1d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv1d instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.913793, accuracy: 0.662500
+[TEST] step 1 | not NA accuracy: 0.907950, accuracy: 0.678125
+[TEST] step 2 | not NA accuracy: 0.905028, accuracy: 0.675000
+[TEST] step 3 | not NA accuracy: 0.908511, accuracy: 0.667188
+[TEST] step 4 | not NA accuracy: 0.906463, accuracy: 0.666250
+[TEST] step 5 | not NA accuracy: 0.903546, accuracy: 0.663542
+[TEST] step 6 | not NA accuracy: 0.901935, accuracy: 0.624107
+[TEST] auc: 0.864724320024
+Finish testing
+SPOUSE: numcorrect=131, numtot=150, percentage=0.873333333333
+BIRTHDATE: numcorrect=250, numtot=261, percentage=0.95785440613
+BIRTHPLACE: numcorrect=119, numtot=145, percentage=0.820689655172
+HYPERNYM: numcorrect=199, numtot=219, percentage=0.908675799087
+birnn att test_male.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 890
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:52: __init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:71: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:443: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:626: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.966387, accuracy: 0.718750
+[TEST] step 1 | not NA accuracy: 0.955285, accuracy: 0.734375
+[TEST] step 2 | not NA accuracy: 0.945055, accuracy: 0.716667
+[TEST] step 3 | not NA accuracy: 0.940452, accuracy: 0.715625
+[TEST] step 4 | not NA accuracy: 0.928571, accuracy: 0.698750
+[TEST] step 5 | not NA accuracy: 0.933241, accuracy: 0.698958
+[TEST] step 6 | not NA accuracy: 0.933518, accuracy: 0.740179
+[TEST] auc: 0.889759579929
+Finish testing
+SPOUSE: numcorrect=173, numtot=180, percentage=0.961111111111
+BIRTHDATE: numcorrect=235, numtot=240, percentage=0.979166666667
+BIRTHPLACE: numcorrect=118, numtot=137, percentage=0.861313868613
+HYPERNYM: numcorrect=148, numtot=165, percentage=0.89696969697
+birnn att test_female.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 972
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:52: __init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:71: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:443: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:626: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.956897, accuracy: 0.693750
+[TEST] step 1 | not NA accuracy: 0.945607, accuracy: 0.706250
+[TEST] step 2 | not NA accuracy: 0.941341, accuracy: 0.702083
+[TEST] step 3 | not NA accuracy: 0.929787, accuracy: 0.682813
+[TEST] step 4 | not NA accuracy: 0.931973, accuracy: 0.685000
+[TEST] step 5 | not NA accuracy: 0.929078, accuracy: 0.682292
+[TEST] step 6 | not NA accuracy: 0.929032, accuracy: 0.704464
+[TEST] auc: 0.888602698019
+Finish testing
+SPOUSE: numcorrect=132, numtot=150, percentage=0.88
+BIRTHDATE: numcorrect=250, numtot=261, percentage=0.95785440613
+BIRTHPLACE: numcorrect=130, numtot=145, percentage=0.896551724138
+HYPERNYM: numcorrect=208, numtot=219, percentage=0.949771689498
+rnn ave test_male.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 890
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:52: __init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:61: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:626: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.957983, accuracy: 0.712500
+[TEST] step 1 | not NA accuracy: 0.959350, accuracy: 0.737500
+[TEST] step 2 | not NA accuracy: 0.942308, accuracy: 0.714583
+[TEST] step 3 | not NA accuracy: 0.942505, accuracy: 0.717187
+[TEST] step 4 | not NA accuracy: 0.935216, accuracy: 0.703750
+[TEST] step 5 | not NA accuracy: 0.940195, accuracy: 0.704167
+[TEST] step 6 | not NA accuracy: 0.940443, accuracy: 0.744643
+[TEST] auc: 0.929119221428
+Finish testing
+SPOUSE: numcorrect=173, numtot=180, percentage=0.961111111111
+BIRTHDATE: numcorrect=238, numtot=240, percentage=0.991666666667
+BIRTHPLACE: numcorrect=116, numtot=137, percentage=0.846715328467
+HYPERNYM: numcorrect=152, numtot=165, percentage=0.921212121212
+rnn ave test_female.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 972
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:52: __init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:61: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:626: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.931034, accuracy: 0.675000
+[TEST] step 1 | not NA accuracy: 0.928870, accuracy: 0.693750
+[TEST] step 2 | not NA accuracy: 0.927374, accuracy: 0.691667
+[TEST] step 3 | not NA accuracy: 0.929787, accuracy: 0.682813
+[TEST] step 4 | not NA accuracy: 0.921769, accuracy: 0.677500
+[TEST] step 5 | not NA accuracy: 0.924823, accuracy: 0.679167
+[TEST] step 6 | not NA accuracy: 0.929032, accuracy: 0.704464
+[TEST] auc: 0.929034372537
+Finish testing
+SPOUSE: numcorrect=141, numtot=150, percentage=0.94
+BIRTHDATE: numcorrect=250, numtot=261, percentage=0.95785440613
+BIRTHPLACE: numcorrect=125, numtot=145, percentage=0.862068965517
+HYPERNYM: numcorrect=204, numtot=219, percentage=0.931506849315
+cnn ave test_male.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 890
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:24: conv1d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv1d instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.924370, accuracy: 0.687500
+[TEST] step 1 | not NA accuracy: 0.918699, accuracy: 0.706250
+[TEST] step 2 | not NA accuracy: 0.903846, accuracy: 0.685417
+[TEST] step 3 | not NA accuracy: 0.893224, accuracy: 0.679688
+[TEST] step 4 | not NA accuracy: 0.890365, accuracy: 0.670000
+[TEST] step 5 | not NA accuracy: 0.894298, accuracy: 0.669792
+[TEST] step 6 | not NA accuracy: 0.894737, accuracy: 0.715179
+[TEST] auc: 0.910114906453
+Finish testing
+SPOUSE: numcorrect=173, numtot=180, percentage=0.961111111111
+BIRTHDATE: numcorrect=229, numtot=240, percentage=0.954166666667
+BIRTHPLACE: numcorrect=102, numtot=137, percentage=0.744525547445
+HYPERNYM: numcorrect=142, numtot=165, percentage=0.860606060606
+cnn ave test_female.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 972
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:24: conv1d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv1d instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.905172, accuracy: 0.656250
+[TEST] step 1 | not NA accuracy: 0.899582, accuracy: 0.671875
+[TEST] step 2 | not NA accuracy: 0.893855, accuracy: 0.666667
+[TEST] step 3 | not NA accuracy: 0.900000, accuracy: 0.660937
+[TEST] step 4 | not NA accuracy: 0.901361, accuracy: 0.662500
+[TEST] step 5 | not NA accuracy: 0.899291, accuracy: 0.660417
+[TEST] step 6 | not NA accuracy: 0.900645, accuracy: 0.684821
+[TEST] auc: 0.912885557698
+Finish testing
+SPOUSE: numcorrect=138, numtot=150, percentage=0.92
+BIRTHDATE: numcorrect=250, numtot=261, percentage=0.95785440613
+BIRTHPLACE: numcorrect=108, numtot=145, percentage=0.744827586207
+HYPERNYM: numcorrect=202, numtot=219, percentage=0.922374429224
+pcnn ave test_male.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 890
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:24: conv1d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv1d instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.957983, accuracy: 0.712500
+[TEST] step 1 | not NA accuracy: 0.918699, accuracy: 0.706250
+[TEST] step 2 | not NA accuracy: 0.901099, accuracy: 0.683333
+[TEST] step 3 | not NA accuracy: 0.901437, accuracy: 0.685937
+[TEST] step 4 | not NA accuracy: 0.898671, accuracy: 0.676250
+[TEST] step 5 | not NA accuracy: 0.901252, accuracy: 0.675000
+[TEST] step 6 | not NA accuracy: 0.901662, accuracy: 0.719643
+[TEST] auc: 0.898852525013
+Finish testing
+SPOUSE: numcorrect=170, numtot=180, percentage=0.944444444444
+BIRTHDATE: numcorrect=228, numtot=240, percentage=0.95
+BIRTHPLACE: numcorrect=113, numtot=137, percentage=0.824817518248
+HYPERNYM: numcorrect=140, numtot=165, percentage=0.848484848485
+pcnn ave test_female.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 972
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:24: conv1d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv1d instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.905172, accuracy: 0.656250
+[TEST] step 1 | not NA accuracy: 0.907950, accuracy: 0.678125
+[TEST] step 2 | not NA accuracy: 0.905028, accuracy: 0.675000
+[TEST] step 3 | not NA accuracy: 0.902128, accuracy: 0.662500
+[TEST] step 4 | not NA accuracy: 0.906463, accuracy: 0.666250
+[TEST] step 5 | not NA accuracy: 0.906383, accuracy: 0.665625
+[TEST] step 6 | not NA accuracy: 0.907097, accuracy: 0.689286
+[TEST] auc: 0.91391884541
+Finish testing
+SPOUSE: numcorrect=134, numtot=150, percentage=0.893333333333
+BIRTHDATE: numcorrect=246, numtot=261, percentage=0.942528735632
+BIRTHPLACE: numcorrect=124, numtot=145, percentage=0.855172413793
+HYPERNYM: numcorrect=199, numtot=219, percentage=0.908675799087
+birnn ave test_male.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 890
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:52: __init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:71: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:443: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:626: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.957983, accuracy: 0.712500
+[TEST] step 1 | not NA accuracy: 0.959350, accuracy: 0.737500
+[TEST] step 2 | not NA accuracy: 0.947802, accuracy: 0.718750
+[TEST] step 3 | not NA accuracy: 0.944559, accuracy: 0.718750
+[TEST] step 4 | not NA accuracy: 0.935216, accuracy: 0.703750
+[TEST] step 5 | not NA accuracy: 0.940195, accuracy: 0.704167
+[TEST] step 6 | not NA accuracy: 0.940443, accuracy: 0.744643
+[TEST] auc: 0.933793750195
+Finish testing
+SPOUSE: numcorrect=175, numtot=180, percentage=0.972222222222
+BIRTHDATE: numcorrect=239, numtot=240, percentage=0.995833333333
+BIRTHPLACE: numcorrect=115, numtot=137, percentage=0.839416058394
+HYPERNYM: numcorrect=150, numtot=165, percentage=0.909090909091
+birnn ave test_female.json
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 16687
+Pre-processed files exist. Loading them...
+Finish loading
+Total relation fact: 972
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Testing...
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/keras/layers/core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:52: __init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+WARNING:tensorflow:From /home/ec2-user/OpenNRE/nrekit/network/encoder.py:71: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:443: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py:626: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Calculating weights_table...
+test2.py:108: RuntimeWarning: divide by zero encountered in divide
+  _weights_table = 1 / (_weights_table ** 0.05)
+Finish calculating
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ec2-user/anaconda3/envs/tensorflow_p27/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1272: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+[TEST] step 0 | not NA accuracy: 0.956897, accuracy: 0.693750
+[TEST] step 1 | not NA accuracy: 0.945607, accuracy: 0.706250
+[TEST] step 2 | not NA accuracy: 0.930168, accuracy: 0.693750
+[TEST] step 3 | not NA accuracy: 0.927660, accuracy: 0.681250
+[TEST] step 4 | not NA accuracy: 0.925170, accuracy: 0.680000
+[TEST] step 5 | not NA accuracy: 0.923404, accuracy: 0.678125
+[TEST] step 6 | not NA accuracy: 0.926452, accuracy: 0.702679
+[TEST] auc: 0.933438860394
+Finish testing
+SPOUSE: numcorrect=141, numtot=150, percentage=0.94
+BIRTHDATE: numcorrect=247, numtot=261, percentage=0.946360153257
+BIRTHPLACE: numcorrect=130, numtot=145, percentage=0.896551724138
+HYPERNYM: numcorrect=200, numtot=219, percentage=0.913242009132

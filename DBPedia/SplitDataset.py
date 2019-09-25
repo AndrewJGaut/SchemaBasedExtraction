@@ -2,6 +2,7 @@ import xlrd
 import xlwt
 #from sklearn.model_selection import train_test_split
 import random
+import json
 
 
 '''
@@ -265,9 +266,29 @@ def createSplitDataset(trainDict, devDict, testDict, oldDatasetPathMale, oldData
     splits_set.save(newDatasetPath)
 
 
+def getTotalRelStats(data_file_path):
+    file = open(data_file_path, 'r')
+    data = json.loads(file.read())
+    codes = {'spouse':0, 'hypernym':1, 'birthDate':2, 'birthPlace':3, 'NA':4}
+    counts2 = {'spouse':0, 'hypernym':0, 'birthDate':0, 'birthPlace':0, 'NA':0}
+
+    #counts = list() #0 is spouse, 1 is hypernym, 2 is birthDate, 3 is hpernym
+    #counts = [0, 0, 0, 0, 0]
+    for entry in data:
+        relation = entry['relation']
+        #counts[codes[relation]] += 1
+        counts2[relation] += 1
+
+    print(counts2)
+    return counts2
+
+
+
 
 
 if __name__ == '__main__':
     #getSplits('hypernyms_dataset.xlsx')
-    trainDict, devDict, testDict = getSplits('AttributeDatasets/FULL_DATASET_FEMALE.xls.xls', 'AttributeDatasets/FULL_DATASET_MALE.xls.xls')
-    createSplitDataset(trainDict, devDict, testDict, 'AttributeDatasets/FULL_DATASET_MALE.xls.xls', 'AttributeDatasets/FULL_DATASET_FEMALE.xls.xls', 'test_split2.xls')
+    #trainDict, devDict, testDict = getSplits('AttributeDatasets/FULL_DATASET_FEMALE.xls.xls', 'AttributeDatasets/FULL_DATASET_MALE.xls.xls')
+    #createSplitDataset(trainDict, devDict, testDict, 'AttributeDatasets/FULL_DATASET_MALE.xls.xls', 'AttributeDatasets/FULL_DATASET_FEMALE.xls.xls', 'test_split2.xls')
+    getTotalRelStats('OpenNRETrainingData/test_female.json')
+
