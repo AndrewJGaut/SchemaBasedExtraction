@@ -1,6 +1,7 @@
 import xlrd
 import numpy as np
 from krippendorff_alpha import *
+import itertools
 #import statsmodels.stats.inter_rater
 
 
@@ -184,10 +185,77 @@ def getKripAlpha(dataset_path):
     return float( float(ave) / float(len(alphas)))
 
 
+
+def get_agreement_pairwise(matrix):
+    num_agreements = 0
+    x = range(len(matrix))
+    combos = itertools.combinations(x, 2)
+    for combo in combos:
+        rater1 = combo[0]
+        rater2 = combo[1]
+        for j in range(len(matrix[0])):
+            if matrix[rater1][j] == matrix[rater2][j]:
+                num_agreements += 1
+
+    return num_agreements
+
+'''
+Pairwise inter-annotator agreement as told by Mai
+First, get mapping from id to reviewer object
+Then, save all answers in reviewer object as some id
+'''
+def interAnnotatorAgreement(dataset_path):
+    dataset = xlrd.open_workbook(dataset_path)
+    sheet = dataset.sheet_by_index(0)
+
+    matrix = [[0 for x in range(2)] for y in range(1)]
+
+    num_sentences = 0
+    agreements = 0
+
+    # get fleiss kappa of each set of three annotators
+    for i in range(1, sheet.nrows, 3):
+        num_sentences += 10
+
+
+        ratings = [[0 for x in range(10)] for y in range(3)]
+        for curr_row in range(0, 3):
+            for j in range(0, sheet.ncols):
+                curr_val = 0  # set to 0 if they say no
+                if sheet.cell_value(i + curr_row, j) == 'yes':
+                    curr_val = 1  # set to 1 if they say yes
+                    # ratings[curr_row][j] = curr_val
+                ratings[curr_row][curr_val] += 1
+        agreements += get_agreement_pairwise(ratings)
+        #matrix = concatMatrices(matrix, ratings)
+
+    return agreements / (num_sentences * 3)
+
+    '''
+    num_pairs = 3 * num_sentences
+
+    num_pairs = 3 * num_sentences  # incase you have 3 workers
+    agreements = 0
+    for sen in sentences:
+        pair1 = agreement(w1, w2)
+        pair2 = agreement(w1, w3)
+        pair3 = agreement(w2, w3)
+
+    if pair1: agreements += 1
+    if pair2: agreements += 1
+    if pair3: agreements += 1
+
+% agreement = agreements / num_pairs
+'''
+
+
+
 if __name__ == '__main__':
-    getAgreement('Datasets/FullStudyResults.xls')
-    print(getFleissKappa('Datasets/FullStudyResults.xls'))
-    print(getKripAlpha('Datasets/FullStudyResults.xls'))
+    #getAgreement('Datasets/FullStudyResults.xls')
+    #print(getFleissKappa('Datasets/FullStudyResults.xls'))
+    #print(getKripAlpha('Datasets/FullStudyResults.xls'))
+    print(interAnnotatorAgreement('Datasets/FullStudyResults.xls'))
+
 
     '''
     dataset = xlrd.open_workbook("Datasets/test_please_tell_not_true.xlsx")

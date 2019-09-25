@@ -1,3 +1,5 @@
+import xlwt
+
 
 class EpochStats():
     def __init__(self):
@@ -158,6 +160,11 @@ def getBestEpochs(epochs):
     max_auc = 0
     mauc_epoch = 0
 
+    max_acc_training = 0
+    mat_epoch = 0
+    max_acc_testing = 0
+    matest_epoch = 0
+
     for epoch in epochs:
         if epoch.get_ave_acc_gain_per_training() > max_ave_acc_gain_per_step_training:
             max_ave_acc_gain_per_step_training = epoch.get_ave_acc_gain_per_training()
@@ -171,10 +178,14 @@ def getBestEpochs(epochs):
         if epoch.get_auc() > max_auc:
             max_auc = epoch.get_auc()
             mauc_epoch = epoch.get_epoch_num()
+        if epoch.get_max_acc_training() > max_acc_training:
+            max_acc_training = epoch.get_max_acc_training()
+        if epoch.get_max_acc_testing() > max_acc_testing:
+            max_acc_testing = epoch.get_max_acc_testing()
 
     #print('{}, {}, {}, {}'.format(maagpstraining_epoch, maagpstesting_epoch, maldps_epoch, mauc_epoch))
     #print('{}, {}, {}, {}'.format(max_ave_acc_gain_per_step_training, max_ave_acc_gain_per_step_testing, max_ave_loss_decr_per_step, max_auc))
-    return(max_ave_acc_gain_per_step_training, max_ave_acc_gain_per_step_testing, max_ave_loss_decr_per_step, max_auc)
+    return(max_ave_acc_gain_per_step_training, max_ave_acc_gain_per_step_testing, max_ave_loss_decr_per_step, max_auc, max_acc_training, max_acc_testing)
 
 
 def getAvesBetweenEpochs(epochs):
@@ -207,11 +218,71 @@ def getBestModel(model_stats):
     return model_stats[best_model][0]
 
 
+def getStats(str):
+    spouse = str.split(' ')
+    spouse_stats = list()
+    for i in range(1, len(spouse)):
+        stat = spouse[i]
+        spouse_stats.append(getNum(stat[:-1]))
+    return spouse_stats
+
+def getNum(str):
+    print(str)
+    return float(str.split('=')[1])
+
+def writeStats(sheet, stats_list, col_counter, row_counter):
+    for stats in stats_list:
+        for stat in stats:
+            sheet.write(row_counter, col_counter, stat)
+            col_counter += 1
+    return sheet
+
 
 if __name__ == '__main__':
-    nohup_file = open('GRID_SEARCH_OUTPUT.txt', 'r')
-    model_outputs = nohup_file.read().split('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************---------------^^^^^^^^^^^^')[1:]
+    workbook = xlwt.Workbook()
+    sheet = workbook.add_sheet('statsitics')
+    row_write_counter = 0
+    sheet.write(0, 1, 'SPOUSE')
+    sheet.write(0, 4, 'BIRTHDATE')
+    sheet.write(0, 7, 'BIRTHPLACE')
+    sheet.write(0, 10, 'HYPERNYM')
+
+    stats=['numcorrect', 'numtotal', 'percentage']
+
+    for i in range(4):
+        for j in range(3):
+            sheet.write(1, i*3+j + 1, stats[j])
+
+    row_write_counter = 2
+
+    #nohup_file = open('GRID_SEARCH_OUTPUT.txt', 'r')
+    nohup_file = open('DEBIASED_TESTING.out', 'r+')
+    #nohup_file.seek(0)
+    model_outputs = nohup_file.read().split('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************^^^^^^^^^^^^^&&&&&$$$$$$$$$$$$$$$$$$$$$$$$$$$')[1:]
     model_stats = list()
+    nohup_file.seek(0)
+    model_name = nohup_file.readlines()[0].strip()
+    for model in model_outputs:
+        lines = model.split('\n')
+        for i in range(len(lines)):
+            if 'Finish testing' in lines[i]:
+                #then take next 4 lines for our dark purposes
+                spouse_stats = getStats(lines[i+1])
+                birthdate_stats = getStats(lines[i+2])
+                birthplace_stats = getStats(lines[i+3])
+                hypernym_stats = getStats(lines[i+4])
+                col_counter = 1
+                sheet = writeStats(sheet, [spouse_stats, birthdate_stats, birthplace_stats, hypernym_stats], col_counter, row_write_counter)
+                sheet.write(row_write_counter, 0, model_name)
+                row_write_counter += 1
+
+            if i+6 < len(lines):
+                model_name = lines[i+6].strip()
+    workbook.save('STATS_DEB.xls')
+
+
+
+    '''
     for model in model_outputs:
         name = model.split('\n')[1].split(' ')
         batch = name[2]
@@ -232,7 +303,8 @@ if __name__ == '__main__':
     print("---------------------------------------------")
 
     for model in model_stats:
-        print('{}: {}'.format(model[0], getBestEpochs(model[1])[3]))
+        print('{}, AUC: {}, MAX_TRAIN_ACC: {}, MAX_TEST_ACC: {}'.format(model[0], getBestEpochs(model[1])[3], getBestEpochs(model[1])[4], getBestEpochs(model[1])[5]))
+    '''
 
 
 

@@ -11,7 +11,8 @@ from random import randint
 import string
 import xlrd
 from collections import defaultdict
-
+import json
+import re
 
 '''
 Precondition:
@@ -31,6 +32,49 @@ def getArticleForPerson(name, browser):
     return curr_article_text
 
 
+'''
+Cleans out all issues that could mess up JSON formatting
+'''
+'''
+    new_entry = ""
+    for c in entry:
+        if c.isalnum():
+            new_entry += c
+    return new_entry
+    '''
+def cleanEntry(entry):
+    new_entry = ""
+    for c in entry:
+        if c == '\"' or c == '\n' or c == '\\':
+            pass
+        else:
+            new_entry += c
+    return new_entry
+
+'''
+def cleanSent(sent):
+    new_sent = ""
+    for c in sent:
+        if c == "\\":
+            pass
+        else:
+            new_sent += c
+
+    return new_sent
+'''
+
+def cleanSent(sent):
+    sent = re.sub('\[\s\d\s\]', '', sent)
+    words = list()
+    for word in nltk.word_tokenize(sent):
+        curr_word = ""
+        for c in word:
+            if word.isalnum():
+                curr_word += c
+
+        words.append(curr_word)
+
+    return ' '.join(words)
 
 
 '''
@@ -55,7 +99,8 @@ Postcondition:
 def genId():
     chars = "abcdefghijklmnopqrstuvwxyz0123456789"
 
-    id = "m."
+    #id = "m."
+    id = '/guid/9202a8c04000641f80000000000'
 
     for i in range(5):
         id += chars[randint(0, 35)]
@@ -107,9 +152,9 @@ def createOpenNRESplitFile(relations, split_type):
 
             # add to the training_json string
             training_json_string += "\t{" + "\n"
-            training_json_string += "\t\t\"sentence\": " + "\"" + str(relation[3]) + "\",\n"
-            training_json_string += "\t\t\"head\": {\"word\": " + "\"" + str(relation[1]) + "\", \"id\": \"" + id_e1 + "\"},\n"
-            training_json_string += "\t\t\"tail\": {\"word\": " + "\"" + str(relation[2]) + "\", \"id\": \"" + id_e2 + "\"},\n"
+            training_json_string += "\t\t\"sentence\": " + "\"" + str(cleanSent(relation[3])) + "\",\n"
+            training_json_string += "\t\t\"head\": {\"word\": " + "\"" + str(cleanEntry(relation[1])) + "\", \"id\": \"" + id_e1 + "\"},\n"
+            training_json_string += "\t\t\"tail\": {\"word\": " + "\"" + str(cleanEntry(relation[2])) + "\", \"id\": \"" + id_e2 + "\"},\n"
             training_json_string += "\t\t\"relation\": \"" + relation[0] + "\"\n"
             training_json_string += "\t},\n"
         except:
@@ -311,9 +356,51 @@ def readDataFromDBPediaDataset(dataset_path):
     return [train_rels, dev_rels, test_rels]
 
 
+def getGender(gender_names_file):
+    gender_names = set()
+
+    names_file = open(gender_names_file, 'r')
+    for line in names_file.readlines():
+        name = line.strip()
+        gender_names.add(name)
+
+    return gender_names
+
+def createGenderSplitTestFiles(test_file_path):
+    file = open(test_file_path, 'r')
+    entities = json.loads(file.read())
+
+    male_set = getGender('PersonData_ttl/male_names.txt')
+    female_set = getGender('PersonData_ttl/female_names.txt')
+
+    male_entities = dict()
+    female_entities = dict()
+
+    male_relations = list()
+    female_relations = list()
+
+    for entity in entities:
+        if entity['head']['word'] in male_set:
+            #(relation_type, entity1, entity2, sentence)
+            relation = (entity['relation'], entity['head']['word'], entity['tail']['word'], entity['sentence'])
+            male_relations.append(relation)
+            #male_entities[entity['Full Name']] = entity
+        elif entity['head']['word'] in female_set:
+            relation = (entity['relation'], entity['head']['word'], entity['tail']['word'], entity['sentence'])
+            female_relations.append(relation)
+
+    createOpenNRESplitFile(male_relations, 'test_male')
+    createOpenNRESplitFile(female_relations, 'test_female')
+
+
+
+
+
 
 
 if __name__ == '__main__':
+
+
     #get relations from the dataset with the train, dev, test splits
     relations = readDataFromDBPediaDataset('test_split.xls')
 
@@ -322,3 +409,6 @@ if __name__ == '__main__':
 
     # rewrite test data so it has ground truth distribution from AMT annotations
     getOpenNRETestDataFromAMT('AttributeDatasets/TEST2.xls')
+
+
+    createGenderSplitTestFiles('OpenNRETrainingData/test.json')

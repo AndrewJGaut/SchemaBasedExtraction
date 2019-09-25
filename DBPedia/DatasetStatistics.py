@@ -2,13 +2,23 @@ import xlrd
 import nltk
 import sys
 
+
+'''
+def getGenderStats(dataset_path, sheet_num):
+    dataset = xlrd.open_workbook(dataset_path)
+    sheet = dataset.sheet_by_index(sheet_num)
+'''
+
+
+
+
 '''
 Postcondition:
     Returns a tuple representing #entities, #attributes, #sentences per entity, #sentences per attribute, average token length of sentence
 '''
-def getStats(dataset_path):
+def getStats(dataset_path, sheet_num):
     dataset = xlrd.open_workbook(dataset_path)
-    sheet = dataset.sheet_by_index(0)
+    sheet = dataset.sheet_by_index(sheet_num)
 
     attribs_2_sentencenums = dict()
     attribs = list()
@@ -64,5 +74,5 @@ def getStats(dataset_path):
 
 if __name__ == '__main__':
     #getStats('test_split.xls')
-    getStats('AttributeDatasets/FULL_DATASET_FEMALE.xls.xls')
-    #getStats('AttributeDatasets/split.xls')
+    #getStats('AttributeDatasets/split_splitgenders.xls', 1)
+    getStats('AttributeDatasets/FULL_DATASET_FEMALE.xls.xls', 0)
