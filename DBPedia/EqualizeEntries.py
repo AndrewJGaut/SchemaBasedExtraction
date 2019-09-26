@@ -1,3 +1,10 @@
+'''
+This file takes the original dataset and equalizes the number of datapoints of each gender in the training and dev sets
+NOTE: !!! CURRENT EQUAL GENDER SPLIT DATASET IS WG_GEQUAL_SPLIT.XLS !!!
+
+'''
+
+
 import xlrd
 import xlwt
 import json
@@ -265,6 +272,10 @@ def addNewGenderEqualizedSheet(book, new_book, male_names, female_names, sheet_i
     writeEntries(sheet, new_sheet, combineEntries([male_entries, female_entries]))
 
 
+#def addNewCountAdjustedTestData(book, new_book, sheet_index_for_train_data_from_old_book):
+
+
+
 '''
 Parametes:
 - olddatasetname is the dataset we're copying data from
@@ -278,7 +289,14 @@ def createGenderEqualizedDataset(old_dataset_name, new_dataset_name):
     book = createWorkbook(old_dataset_name)
     new_book = xlwt.Workbook()
     addNewGenderEqualizedSheet(book, new_book, male_names, female_names, 0)
-    addNewGenderEqualizedSheet(book, new_book, male_names, female_names, 1)
+    #addNewGenderEqualizedSheet(book, new_book, male_names, female_names, 1)
+
+
+    # for test data, we just want to take enough so that 5% is that.
+    #addNewCountAdjustedTestData(book, new_book, 0)
+
+
+
 
 
     # now, copy over all other sheets from the old book.
@@ -289,11 +307,42 @@ def createGenderEqualizedDataset(old_dataset_name, new_dataset_name):
 
     new_book.save(new_dataset_name)
 
+'''
+Parameters:
+- workbook_name is the name of the workbook we want to open
+What it does:
+- This function will check what proportion of the total data items (which are the sentences) are made up in each sheet
+- basically, we can see if our datasets splits are correct; train should have 80% of the sentences, dev 10%, etc.
+'''
+def checkPercentages(workbook_name):
+    new_book = xlrd.open_workbook(workbook_name)
+
+    total_sentences = 0
+    for sheet_index in range(new_book.nsheets):
+        curr_sheet = new_book.sheet_by_index(sheet_index)
+
+        entries = getEntries(curr_sheet)
+        sentences = getSentencesFromEntries(entries)
+        total_sentences += len(sentences)
+
+    for sheet_index in range(new_book.nsheets):
+        curr_sheet = new_book.sheet_by_index(sheet_index)
+
+        entries = getEntries(curr_sheet)
+        sentences = getSentencesFromEntries(entries)
+        percentage = (len(sentences) / total_sentences) * 100
+        print("{} has percent: {}%".format(sheet_index, percentage))
 
 
 
 if __name__ == '__main__':
-    createGenderEqualizedDataset('AttributeDatasets/Wikigender.xls', 'AttributeDatasets/WikigenderGENDER_EQUALIZED.xls')
+    #createGenderEqualizedDataset('AttributeDatasets/WG_for_resplit.xls', 'AttributeDatasets/WG_GEqual_AllTrain.xls')
+
+
+
+    # now, let's check the percentages
+    checkPercentages('AttributeDatasets/WG_GEqual_Split.xls')
+
 
 '''
 STILL TO DO:
