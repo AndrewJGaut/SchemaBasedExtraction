@@ -250,7 +250,7 @@ def addNewGenderEqualizedSheet(book, new_book, male_names, female_names, sheet_i
     sheet = book.sheet_by_index(sheet_index)
 
     entries = getEntries(sheet)  # get a dictionary with info for all the entities
-    json_dataset = json.dumps(entries)
+    #json_dataset = json.dumps(entries)
 
     female_entries = getSpecificEntries(entries, female_names)
     male_entries = getSpecificEntries(entries, male_names)
