@@ -1,0 +1,2 @@
+model_checkpoint_path: "Wikigender_pcnn_att"
+all_model_checkpoint_paths: "Wikigender_pcnn_att"
