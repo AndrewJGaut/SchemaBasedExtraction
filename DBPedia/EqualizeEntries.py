@@ -1,6 +1,6 @@
 '''
 This file takes the original dataset and equalizes the number of datapoints of each gender in the training and dev sets
-NOTE: !!! CURRENT EQUAL GENDER SPLIT DATASET IS WG_GEQUAL_SPLIT.XLS !!!
+NOTE: !!! CURRENT EQUAL GENDER SPLIT DATASET IS Wikigender_GENDERBALANCED.XLS !!!
 
 '''
 
@@ -342,13 +342,6 @@ if __name__ == '__main__':
 
     # now, let's check the percentages
     checkPercentages('AttributeDatasets/WG_GEqual_Split.xls')
-
-
-'''
-STILL TO DO:
-- Rebalance the test sets too (we need to have 80 10 10 splits)!
-'''
-
 
 
 
