@@ -64,14 +64,6 @@ def getEqualizedEntriesThroughSampling(entries, male_names, female_names):
             added_entries.append(random_sample[index])
             index += 1
 
-    '''
-    # add all entries from smaller set twice if we have to
-    number_of_additions = int(larger_entries / smaller_entries)
-    for i in range(number_of_additions):
-        for entry in smaller_entries:
-            entries.append(entry)
-    '''
-
     return entries
 
 
@@ -101,3 +93,13 @@ def createEqualizedJsonDataset(old_dataset_name, new_dataset_name):
 
 if __name__ == '__main__':
     createEqualizedJsonDataset('JsonData/Wikigender.json', 'JsonData/Wikigender_GenderEqualized.json')
+
+    data = readFromJsonFile('JsonData/Wikigender_GenderEqualized.json')
+    male_names = getNamesFromFileToDict('../DBPedia/PersonData_ttl/male_names.txt')
+    female_names = getNamesFromFileToDict('../DBPedia/PersonData_ttl/female_names.txt')
+    male_entries = getSpecificEntries(data['train'], male_names)
+    female_entries = getSpecificEntries(data['train'], female_names)
+
+    print(len(male_entries))
+    print(len(female_entries))
+

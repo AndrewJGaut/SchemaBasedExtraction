@@ -26,6 +26,21 @@ def getNumberOfRowsForEntity(sheet, prev_row):
     return row_counter
 
 
+def writeToJsonFile(data, outfile_name, prettify):
+    with open(outfile_name, 'w') as outfile:
+        if(prettify):
+            json.dump(data, outfile, indent=4, sort_keys=True)
+        else:
+            json.dump(data, outfile)
+
+'''
+Paramters:
+- excelbook_name: gives the name of the dataset we're reading from
+- outfile_name: gives the name of the json toufiel
+- prettufy: if true, then the json file will print out nicely formatted and indented JSON data; else, it'll be minifeid
+What it does:
+- converts the excel dataset to json in the format at the top of the file
+'''
 def convertExcelDatasetToJson(excelbook_name, outfile_name, prettify=False):
     book = xlrd.open_workbook(excelbook_name)
 
@@ -37,11 +52,7 @@ def convertExcelDatasetToJson(excelbook_name, outfile_name, prettify=False):
     data['female_test'] = convertExcelSheetToJsonObject(book.sheet_by_index(3))
 
     # create the file
-    with open(outfile_name, 'w') as outfile:
-        if(prettify):
-            json.dump(data, outfile, indent=4, sort_keys=True)
-        else:
-            json.dump(data, outfile)
+    writeToJsonFile(data, outfile_name, prettify)
 
 '''
 Paramters:
