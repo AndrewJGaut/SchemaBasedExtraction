@@ -221,31 +221,37 @@ def combineEntries(list_of_entries_objects):
 This function writes all entries to a sheet
 we copy the top columns in the old sheet as well
 '''
-def writeEntries(old_sheet, new_sheet, entries):
+def writeEntries(old_sheet, new_sheet, entries, number_of_write_times = None):
     for col_index in range(old_sheet.ncols):
         new_sheet.write(0, col_index, old_sheet.cell_value(0, col_index))
 
     curr_row = 1
 
 
-    for e1 in entries.keys():
-        max_num_rows = 0
+    for e1 in entries:
+        curr_number_of_write_times = 1
+        if(number_of_write_times != None and e1 in number_of_write_times):
+            curr_number_of_write_times = number_of_write_times[e1]
 
-        new_sheet.write(curr_row, 0, e1)
-        for index in range(len(entries[e1])):
-            new_sheet.write(curr_row, index+1, entries[e1][index]['e2'])
+        i = 0
+        for i in range(curr_number_of_write_times):
+            max_num_rows = 0
 
-            sentences = entries[e1][index]['sentences']
-            curr_write_row = curr_row + 1
-            for sentence in sentences:
-                new_sheet.write(curr_write_row, index+1, sentence)
-                curr_write_row += 1
+            new_sheet.write(curr_row, 0, e1)
+            for index in range(len(entries[e1])):
+                new_sheet.write(curr_row, index+1, entries[e1][index]['e2'])
 
-            curr_entity_rows = curr_write_row - curr_row
-            if curr_entity_rows > max_num_rows:
-                max_num_rows = curr_entity_rows
+                sentences = entries[e1][index]['sentences']
+                curr_write_row = curr_row + 1
+                for sentence in sentences:
+                    new_sheet.write(curr_write_row, index+1, sentence)
+                    curr_write_row += 1
 
-        curr_row += max_num_rows + 2
+                curr_entity_rows = curr_write_row - curr_row
+                if curr_entity_rows > max_num_rows:
+                    max_num_rows = curr_entity_rows
+
+            curr_row += max_num_rows + 2
 
     return new_sheet
 
