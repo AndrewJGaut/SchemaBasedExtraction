@@ -1,29 +1,9 @@
 import json
 import random
+from Utility import *
 
 DataTypes = ['train', 'dev', 'male_test', 'female_test']
 
-def writeToJsonFile(data, outfile_name, prettify=False):
-    with open(outfile_name, 'w') as outfile:
-        if(prettify):
-            json.dump(data, outfile, indent=4, sort_keys=True)
-        else:
-            json.dump(data, outfile)
-
-def readFromJsonFile(infile_name):
-    with open(infile_name, 'r') as infile:
-        return json.load(infile)
-    return ""
-
-
-def getNamesFromFileToDict(filename):
-    file = open(filename, 'r')
-    namesDict = set()
-
-    for line in file.readlines():
-        namesDict.add(line.strip())
-
-    return namesDict
 
 '''
 Parameters:
@@ -41,7 +21,17 @@ def getSpecificEntries(entries, names):
 
     return specific_entries
 
+
 def getEqualizedEntriesThroughSampling(entries, male_names, female_names):
+    '''
+
+    :param entries: the list of JSON dictionary entries in the dataset; includes entity1, and all entity2,sentences pairs for each attribute
+    :param male_names: hashset of male names from Wikipedia
+    :param female_names: hashset of female names from wikipedia
+    :return: entries, but with equalized gender numbers in train and dev set
+                here, for example, if there are less male datapoints than female, then we duplicate the male datapoints until there are as many male as female datapoints
+                note that we randomly sample to do this duplication, so the order is randomized
+    '''
     # get male and female entries
     male_entries = getSpecificEntries(entries, male_names)
     female_entries = getSpecificEntries(entries, female_names)

@@ -13,8 +13,20 @@ This converts the Excel dataset into a JSON dataset with a format like so:
         }
 
     ]
-} ], ...
+} ],
+'dev' : [ {
+    entity1: NAME,
+    relations: [
+        {
+            name: spouse,
+            entity2: NAME,
+            sentences: [
+            ]
+        }
 
+    ]
+}, ... ], ...
+}
 '''
 import json
 import xlrd
