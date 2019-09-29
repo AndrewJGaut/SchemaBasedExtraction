@@ -40,14 +40,15 @@ def genderSwapSubsetOfDataset(entries, swap_names):
         entry = entries[index] # get the current entry
 
         relations = entry['relations']
-        for relation in relations:
+        for relation_index in range(len(relations)):
+            relation = relations[relation_index]
             sentences = relation['sentences']
             for sentence_index in range(len(sentences)):
                 sentence = sentences[sentence_index] # get current sentence
                 genderswapped_sentence = genderSwap(sentence, swap_names)
 
                 # now, save that genderswapped sentence where the original sentence was previously
-                entry['relations']['sentences'][index] = genderswapped_sentence
+                entry['relations'][relation_index]['sentences'][index] = genderswapped_sentence
 
         # now, set overwrite the old entry in entries with the new entry with gender_swapped sentences
         entries[index] = entry
@@ -423,3 +424,4 @@ def createDebiasedDataset(infile_name, equalized=False, name_anonymized=False, g
 '''main'''
 if __name__ == '__main__':
     # now, create the different datasets
+    pass

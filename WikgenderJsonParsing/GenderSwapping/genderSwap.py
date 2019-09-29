@@ -30,12 +30,16 @@ engine = inflect.engine()
 
 sys.path.insert(0, './')
 from os.path import dirname, abspath, join
-sys.path.insert(0, join(dirname(dirname(dirname(abspath(__file__)))), 'Utility/'))
+#sys.path.insert(0, join(dirname(dirname(dirname(abspath(__file__)))), 'Utility/'))
 
 
 def getTextfile(directory, filename):
+    return open(os.path.join(directory, filename), 'r')
+    '''
     with open(os.path.join(directory, filename), 'r') as infile:
         return infile
+    raise IOError("Bad file name")
+    '''
 
 '''
 What it does:
@@ -125,7 +129,7 @@ What it does:
     Creates lists -- maleNamesList and femaleNamesList -- that contain NameProbs with names and their probabilities
 '''
 def createGenderedSetsAndLists():
-    os.chdir(dirname(abspath(__file__)))
+    #os.chdir(dirname(abspath(__file__)))
 
     maleNames = dict()
     femaleNames = dict()
@@ -149,7 +153,7 @@ def createGenderedSetsAndLists():
                 else:
                     femaleNames[name] += probability
             else:
-                print("GENDER NOT VALID")
+                print("Sorry, this code only works for the Male and Female genders")
         curr_names_file.close()
 
 
@@ -251,6 +255,6 @@ def genderSwap(in_str, swap_names = False):
             elif word in genderPairs:
                 words[i] = genderPairs[word]
         line = ' '.join(join_punctuation(words))
-        out_str += line + "\n"
+        out_str += line
     return out_str
 
